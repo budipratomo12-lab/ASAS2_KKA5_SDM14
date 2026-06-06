@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran Pendidikan Pancasila - Kelas 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f9ff;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .quiz-option {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            background-color: #e0f2fe;
+            border-color: #3b82f6;
+        }
+
+        .correct { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #166534; }
+        .wrong { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b; }
+        
+        .level-easy { color: #16a34a; background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+        .level-medium { color: #d97706; background-color: #fffbeb; border: 1px solid #fef3c7; }
+        .level-hard { color: #dc2626; background-color: #fef2f2; border: 1px solid #fee2e2; }
+
+        .materi-section {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .history-box {
+            background: linear-gradient(135deg, #fff9db 0%, #fff3bf 100%);
+            border: 1px solid #fab005;
+        }
+    </style>
+</head>
+<body class="bg-blue-50">
+
+    <!-- Header / Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                🇮🇩 Media Pancasila Kelas 5
+            </h1>
+            <div class="hidden md:flex gap-4">
+                <button onclick="showSection('beranda')" class="hover:text-blue-200">Beranda</button>
+                <button onclick="showSection('materi')" class="hover:text-blue-200">Materi Lengkap</button>
+                <button onclick="showSection('kuis')" class="hover:text-blue-200">Kuis (20 Soal)</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- SECTION: BERANDA -->
+        <section id="beranda" class="section fade-in">
+            <div class="bg-white rounded-3xl p-8 shadow-sm text-center max-w-4xl mx-auto">
+                <div class="mb-6 inline-block p-4 bg-blue-100 rounded-full text-5xl">🎓</div>
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Mari Membangun Persatuan & Kebersamaan!</h2>
+                <p class="text-gray-600 mb-8 text-lg leading-relaxed">Selamat datang di modul interaktif Pendidikan Pancasila. Kita akan mempelajari bagaimana kontribusi kecilmu dapat menciptakan sekolah yang nyaman dan damai melalui semangat Bhinneka Tunggal Ika.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-8">
+                    <div class="bg-blue-50 p-5 rounded-2xl border border-blue-100">
+                        <h3 class="font-bold text-blue-700 flex items-center gap-2">🤝 Persatuan</h3>
+                        <p class="text-sm mt-2 text-gray-600">Menghargai perbedaan di sekolah sebagai kekayaan bangsa.</p>
+                    </div>
+                    <div class="bg-green-50 p-5 rounded-2xl border border-green-100">
+                        <h3 class="font-bold text-green-700 flex items-center gap-2">🏫 Kenyamanan</h3>
+                        <p class="text-sm mt-2 text-gray-600">Menjaga kebersihan dan ketertiban lingkungan belajar.</p>
+                    </div>
+                    <div class="bg-orange-50 p-5 rounded-2xl border border-orange-100">
+                        <h3 class="font-bold text-orange-700 flex items-center gap-2">✨ Kontribusi</h3>
+                        <p class="text-sm mt-2 text-gray-600">Aksi nyata dalam membantu teman dan warga sekolah.</p>
+                    </div>
+                </div>
+                <button onclick="showSection('materi')" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition transform hover:scale-105 shadow-lg">Buka Materi Lengkap</button>
+            </div>
+        </section>
+
+        <!-- SECTION: MATERI -->
+        <section id="materi" class="section hidden fade-in max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Modul Pembelajaran Lengkap</h2>
+            
+            <!-- Materi Tambahan: Bhinneka Tunggal Ika & Sejarahnya -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm mb-8 border-t-8 border-yellow-500">
+                <div class="materi-section border-yellow-500">
+                    <h3 class="text-2xl font-bold text-yellow-700 mb-2">Pilar Utama: Bhinneka Tunggal Ika</h3>
+                    <p class="text-gray-600">Semboyan yang tertulis pada lambang negara kita, Garuda Pancasila.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <div class="history-box p-6 rounded-2xl">
+                        <h4 class="font-bold text-yellow-900 mb-3 flex items-center gap-2">📜 Sejarah Asal-Usul</h4>
+                        <p class="text-sm text-gray-800 leading-relaxed">
+                            Kalimat ini diambil dari bahasa Jawa Kuno yang terdapat dalam <b>Kitab Sutasoma</b> karangan <b>Mpu Tantular</b>, seorang pujangga besar dari Kerajaan Majapahit pada abad ke-14. 
+                            <br><br>
+                            Awalnya, kalimat ini digunakan untuk mendamaikan perbedaan kepercayaan antara umat Buddha dan Hindu di zaman Majapahit agar bisa hidup berdampingan dengan damai.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                        <h4 class="font-bold text-gray-700 mb-3 flex items-center gap-2">🔍 Makna Kata</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><b>Bhinneka:</b> Beraneka ragam atau berbeda-beda.</li>
+                            <li><b>Tunggal:</b> Satu.</li>
+                            <li><b>Ika:</b> Itu.</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-white rounded-xl border border-yellow-200 font-semibold text-center text-blue-800">
+                            "Walaupun berbeda-beda, tetapi tetap satu jua."
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Materi 1: Persatuan & Kebersamaan -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm mb-8">
+                <div class="materi-section">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-2">1. Membangun Persatuan dan Kebersamaan</h3>
+                    <p class="text-gray-600">Persatuan di sekolah adalah cara kita mempraktekkan semboyan negara kita dalam kehidupan sehari-hari.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-3 underline decoration-blue-300">Cara Mewujudkannya:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-blue-100 text-blue-600 rounded-full p-1 text-xs mt-1">✔</span>
+                                <span><b>Toleransi Beragama:</b> Memberi kesempatan teman beribadah meski berbeda keyakinan.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-blue-100 text-blue-600 rounded-full p-1 text-xs mt-1">✔</span>
+                                <span><b>Menghargai Latar Belakang:</b> Tidak mengejek logat bicara atau asal daerah teman.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-blue-100 text-blue-600 rounded-full p-1 text-xs mt-1">✔</span>
+                                <span><b>Gotong Royong:</b> Bekerja sama tanpa memilah-milih teman dalam kerja kelompok.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-2xl border-dashed border-2 border-blue-200 italic text-sm text-gray-700">
+                        "Persatuan bukan berarti harus sama, tetapi saling melengkapi seperti pelangi yang indah karena warna-warninya."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materi 2: Kenyamanan Sekolah -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm mb-8">
+                <div class="materi-section border-green-500">
+                    <h3 class="text-2xl font-bold text-green-700 mb-2">2. Kontribusi Menciptakan Kenyamanan</h3>
+                    <p class="text-gray-600">Kenyamanan adalah hak setiap siswa, namun menjaganya adalah kewajiban kita semua.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <div class="bg-green-50 p-5 rounded-2xl text-center card-hover">
+                        <div class="text-3xl mb-2">🧹</div>
+                        <h4 class="font-bold text-green-800 mb-2">Lingkungan Fisik</h4>
+                        <p class="text-xs text-gray-600">Menjaga kelas bersih, tidak mencoret meja, dan mematikan lampu setelah selesai digunakan.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-5 rounded-2xl text-center card-hover">
+                        <div class="text-3xl mb-2">🤝</div>
+                        <h4 class="font-bold text-yellow-800 mb-2">Lingkungan Sosial</h4>
+                        <p class="text-xs text-gray-600">Bersikap ramah (5S: Senyum, Sapa, Salam, Sopan, Santun) kepada seluruh warga sekolah.</p>
+                    </div>
+                    <div class="bg-red-50 p-5 rounded-2xl text-center card-hover">
+                        <div class="text-3xl mb-2">🔇</div>
+                        <h4 class="font-bold text-red-800 mb-2">Ketertiban</h4>
+                        <p class="text-xs text-gray-600">Menghargai waktu tenang saat teman sedang belajar atau saat beribadah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-10">
+                <button onclick="showSection('kuis')" class="bg-orange-500 text-white px-12 py-4 rounded-full font-extrabold hover:bg-orange-600 transition shadow-xl uppercase tracking-wider">Mulai Uji Nyali (Kuis)</button>
+            </div>
+        </section>
+
+        <!-- SECTION: KUIS -->
+        <section id="kuis" class="section hidden fade-in max-w-3xl mx-auto">
+            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl border border-blue-100">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="text-2xl font-black text-gray-800">TANTANGAN <span id="current-q-num">1</span></h2>
+                        <span id="level-tag" class="text-xs px-3 py-1 rounded-full font-bold uppercase shadow-sm"></span>
+                    </div>
+                    <div class="text-right">
+                        <span id="score-display" class="bg-blue-600 text-white px-5 py-2 rounded-2xl font-bold shadow-md">Skor: 0</span>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="w-full bg-gray-100 rounded-full h-3 mb-8 shadow-inner">
+                    <div id="progress-bar" class="bg-gradient-to-r from-blue-400 to-blue-700 h-3 rounded-full transition-all duration-700" style="width: 5%"></div>
+                </div>
+
+                <div id="quiz-container">
+                    <div id="question-box">
+                        <p id="question-text" class="text-xl font-bold mb-8 text-gray-800 leading-relaxed"></p>
+                        <div id="options-container" class="space-y-4">
+                            <!-- Opsi -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="result-container" class="hidden text-center py-10">
+                    <div id="result-icon" class="text-8xl mb-6"></div>
+                    <h3 id="result-title" class="text-3xl font-black mb-3"></h3>
+                    <p id="final-score-text" class="text-gray-600 mb-8 text-lg"></p>
+                    <div class="flex flex-col gap-4 max-w-sm mx-auto">
+                        <button onclick="resetQuiz()" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-lg transform active:scale-95 transition">Main Lagi</button>
+                        <button onclick="showSection('materi')" class="bg-gray-100 text-gray-700 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 transition">Baca Materi Lagi</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 py-8 bg-gray-800 text-white text-center">
+        <div class="container mx-auto px-4">
+            <p class="font-bold mb-2">🇮🇩 Pendidikan Pancasila Kelas 5 SD</p>
+            <p class="text-gray-400 text-sm">Mari Bersatu, Berbagi, dan Beraksi untuk Sekolah Nyaman.</p>
+        </div>
+    </footer>
+
+    <script>
+        const quizData = [
+            // MUDAH (8 Soal)
+            { level: "Mudah", question: "Siapakah pujangga yang menuliskan kalimat Bhinneka Tunggal Ika?", options: ["Patih Gajah Mada", "Mpu Tantular", "Raja Hayam Wuruk", "Mpu Prapanca"], correct: 1 },
+            { level: "Mudah", question: "Kalimat Bhinneka Tunggal Ika terdapat dalam kitab...", options: ["Negarakertagama", "Sutasoma", "Mahabharata", "Arjunawiwaha"], correct: 1 },
+            { level: "Mudah", question: "Arti dari kata 'Bhinneka' adalah...", options: ["Satu", "Beraneka ragam", "Persatuan", "Kekuatan"], correct: 1 },
+            { level: "Mudah", question: "Bhinneka Tunggal Ika berasal dari bahasa...", options: ["Sanskerta", "Jawa Kuno", "Melayu", "Indonesia"], correct: 1 },
+            { level: "Mudah", question: "Jika ada teman yang terjatuh di halaman sekolah, sikap kita sebaiknya...", options: ["Menertawakannya", "Pura-pura tidak tahu", "Segera menolong dan membantunya berdiri", "Meninggalkannya pergi"], correct: 2 },
+            { level: "Mudah", question: "Kebersihan ruang kelas merupakan tanggung jawab dari...", options: ["Penjaga sekolah saja", "Wali kelas saja", "Seluruh warga kelas", "Ketua kelas saja"], correct: 2 },
+            { level: "Mudah", question: "Bermain bersama teman tanpa membeda-bedakan suku merupakan perwujudan nilai...", options: ["Ketuhanan", "Persatuan", "Keadilan", "Kemanusiaan"], correct: 1 },
+            { level: "Mudah", question: "Salah satu contoh menjaga kenyamanan di kelas saat guru menjelaskan adalah...", options: ["Mengobrol dengan teman sebangku", "Mendengarkan dengan tenang dan tertib", "Menggambar di buku tulis", "Tidur di meja"], correct: 1 },
+
+            // SEDANG (7 Soal)
+            { level: "Sedang", question: "Bhinneka Tunggal Ika pertama kali digunakan untuk mendamaikan perbedaan antara umat...", options: ["Islam dan Kristen", "Hindu dan Buddha", "Islam dan Hindu", "Suku Jawa dan Sunda"], correct: 1 },
+            { level: "Sedang", question: "Semboyan Bhinneka Tunggal Ika tertulis pada lambang negara kita, yaitu...", options: ["Bendera Merah Putih", "Garuda Pancasila", "UUD 1945", "Teks Proklamasi"], correct: 1 },
+            { level: "Sedang", question: "Andi berbeda agama dengan Budi. Saat Budi beribadah, sikap Andi yang benar adalah...", options: ["Mengajak Budi bermain paksa", "Menghormati dan tidak mengganggunya", "Berteriak di depan tempat ibadah", "Menyuruh Budi beribadah nanti saja"], correct: 1 },
+            { level: "Sedang", question: "Apa manfaat dari melakukan musyawarah dalam pembagian tugas piket?", options: ["Agar ketua kelas bisa menentukan semuanya", "Agar tidak ada yang bekerja", "Agar keputusan adil dan disepakati bersama", "Agar kelas menjadi ramai"], correct: 2 },
+            { level: "Sedang", question: "Jika kamu melihat kran air di sekolah terbuka padahal tidak digunakan, kontribusimu adalah...", options: ["Melaporkan ke guru saja", "Menutup kran tersebut agar hemat air", "Membiarkannya karena bukan tugasmu", "Bermain air tersebut"], correct: 1 },
+            { level: "Sedang", question: "Menjaga fasilitas sekolah seperti kursi dan meja agar tidak dicoret-coret adalah bentuk...", options: ["Pemborosan", "Tanggung jawab terhadap milik bersama", "Kewajiban guru", "Hobi yang bagus"], correct: 1 },
+            { level: "Sedang", question: "Ciri sekolah yang menerapkan nilai kebersamaan adalah...", options: ["Sering terjadi pertengkaran", "Siswa saling mendukung dalam hal kebaikan", "Siswa berkompetisi secara tidak sehat", "Kantin sekolah sangat mahal"], correct: 1 },
+
+            // SULIT (5 Soal)
+            { level: "Sulit", question: "Mengapa Bhinneka Tunggal Ika sangat cocok dijadikan semboyan bangsa Indonesia?", options: ["Karena Indonesia hanya terdiri dari satu suku", "Karena Indonesia memiliki ribuan pulau dan keberagaman budaya", "Karena Indonesia adalah negara kerajaan", "Karena Indonesia berada di benua Asia"], correct: 1 },
+            { level: "Sulit", question: "Seorang teman sering menyendiri karena merasa berbeda dengan yang lain. Tindakan bijak yang sesuai nilai Pancasila adalah...", options: ["Membiarkannya karena itu hak pribadinya", "Menghampirinya dan mengajaknya bergabung secara perlahan", "Menyuruh teman lain untuk menjauhinya juga", "Melaporkan ke kepala sekolah agar dia dihukum"], correct: 1 },
+            { level: "Sulit", question: "Dalam diskusi kelompok, pendapatmu tidak diterima oleh teman-teman. Sikap yang mencerminkan persatuan adalah...", options: ["Keluar dari kelompok dan bekerja sendiri", "Marah dan tidak mau berbicara lagi", "Menerima keputusan kelompok dengan lapang dada", "Memaksa mereka menerima pendapatmu"], correct: 2 },
+            { level: "Sulit", question: "Persatuan di sekolah merupakan modal awal untuk membangun...", options: ["Kehebatan diri sendiri", "Persatuan bangsa yang lebih besar", "Kekayaan sekolah", "Kebencian terhadap sekolah lain"], correct: 1 },
+            { level: "Sulit", question: "Salah satu tantangan dalam menjaga persatuan di sekolah saat ini adalah berita bohong (hoaks). Cara mengatasinya adalah...", options: ["Ikut menyebarkannya agar teman tahu", "Mengecek kebenaran informasi sebelum percaya", "Langsung memusuhi teman yang diberitakan", "Diam saja meski tahu itu salah"], correct: 1 }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+            if(sectionId === 'kuis') resetQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function loadQuestion() {
+            const optionsContainer = document.getElementById('options-container');
+            const qText = document.getElementById('question-text');
+            const levelTag = document.getElementById('level-tag');
+            const progress = document.getElementById('progress-bar');
+            
+            const qData = quizData[currentQuestion];
+            
+            levelTag.innerText = qData.level;
+            levelTag.className = `text-xs px-3 py-1 rounded-full font-bold uppercase shadow-sm level-${qData.level.toLowerCase()}`;
+            
+            document.getElementById('current-q-num').innerText = currentQuestion + 1;
+            qText.innerText = qData.question;
+            progress.style.width = `${((currentQuestion + 1) / quizData.length) * 100}%`;
+            
+            optionsContainer.innerHTML = '';
+            qData.options.forEach((opt, index) => {
+                const btn = document.createElement('div');
+                btn.className = 'quiz-option p-5 border-2 border-gray-100 rounded-2xl font-bold text-gray-700 shadow-sm transition-all';
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(index, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, element) {
+            const correctIndex = quizData[currentQuestion].correct;
+            const options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach(opt => opt.onclick = null);
+
+            if(selectedIndex === correctIndex) {
+                element.classList.add('correct');
+                score += 5;
+                document.getElementById('score-display').innerText = `Skor: ${score}`;
+            } else {
+                element.classList.add('wrong');
+                options[correctIndex].classList.add('correct');
+            }
+
+            setTimeout(() => {
+                currentQuestion++;
+                if(currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            }, 1500);
+        }
+
+        function showResult() {
+            document.getElementById('question-box').classList.add('hidden');
+            const resCont = document.getElementById('result-container');
+            const resTitle = document.getElementById('result-title');
+            const resIcon = document.getElementById('result-icon');
+            resCont.classList.remove('hidden');
+            
+            if(score >= 80) {
+                resIcon.innerText = "🏆";
+                resTitle.innerText = "Sempurna! Kamu Duta Pancasila!";
+            } else if (score >= 60) {
+                resIcon.innerText = "🌟";
+                resTitle.innerText = "Hebat! Pertahankan!";
+            } else {
+                resIcon.innerText = "💪";
+                resTitle.innerText = "Terus Berjuang!";
+            }
+            
+            document.getElementById('final-score-text').innerText = `Kamu telah menyelesaikan 20 tantangan dengan skor total ${score}.`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('score-display').innerText = `Skor: 0`;
+            document.getElementById('question-box').classList.remove('hidden');
+            document.getElementById('result-container').classList.add('hidden');
+            loadQuestion();
+        }
+
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>
