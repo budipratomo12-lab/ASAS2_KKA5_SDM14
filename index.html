@@ -47,7 +47,6 @@
   appId: "1:386075209574:web:a04942bf5edd28635be2a7",
   measurementId: "G-8FKH8NWFN7"
 };
-
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
         }
@@ -194,10 +193,10 @@
         };
 
         const mockClassData = [
-            { id: "s1", name: "Andi Pratama", uid: "andi-5isa", classCode: "kelas-isa", misi1Completed: true, misi2Completed: true, misi3Completed: true, quizScore: 92, points: 195, lastUpdated: new Date(Date.now() - 3 * 60000).toISOString() },
-            { id: "s2", name: "Siti Aminah", uid: "siti-5isa", classCode: "kelas-isa", misi1Completed: true, misi2Completed: true, misi3Completed: false, quizScore: null, points: 110, lastUpdated: new Date(Date.now() - 12 * 60000).toISOString() },
-            { id: "s3", name: "Rian Wijaya", uid: "rian-5yahya", classCode: "kelas-yahya", misi1Completed: true, misi2Completed: false, misi3Completed: false, quizScore: null, points: 40, lastUpdated: new Date(Date.now() - 25 * 60000).toISOString() },
-            { id: "s4", name: "Keyla Putri", uid: "keyla-5yunus", classCode: "kelas-yunus", misi1Completed: true, misi2Completed: true, misi3Completed: true, quizScore: 84, points: 175, lastUpdated: new Date(Date.now() - 1 * 60000).toISOString() }
+            { id: "s1", name: "Andi Pratama", uid: "andi-5isa", classCode: "kelas-isa", misi1Nilai: 100, misi2Nilai: 100, misi3Nilai: 100, quizScore: 92, lastUpdated: new Date(Date.now() - 3 * 60000).toISOString() },
+            { id: "s2", name: "Siti Aminah", uid: "siti-5isa", classCode: "kelas-isa", misi1Nilai: 100, misi2Nilai: 100, misi3Nilai: 60, quizScore: null, lastUpdated: new Date(Date.now() - 12 * 60000).toISOString() },
+            { id: "s3", name: "Rian Wijaya", uid: "rian-5yahya", classCode: "kelas-yahya", misi1Nilai: 40, misi2Nilai: 0, misi3Nilai: 0, quizScore: null, lastUpdated: new Date(Date.now() - 25 * 60000).toISOString() },
+            { id: "s4", name: "Keyla Putri", uid: "keyla-5yunus", classCode: "kelas-yunus", misi1Nilai: 100, misi2Nilai: 100, misi3Nilai: 100, quizScore: 84, lastUpdated: new Date(Date.now() - 1 * 60000).toISOString() }
         ];
 
         const standardMcQuestions = [
@@ -255,7 +254,7 @@
                 options: [
                     "Ke guru sekolah pasti memiliki sensor pendeteksi kebohongan di matanya.",
                     "Karena tindakan itu tidak melatih otak kita untuk mandiri berpikir kritis dan kreatif, sekaligus merupakan ketidakjujuran akademis.",
-                    "Karena komputer AI akan menuntut kita membayar denda hak cipta penulisan.",
+                    "Because komputer AI akan menuntut kita membayar denda hak cipta penulisan.",
                     "Karena AI akan merasa lelah jika harus mengerjakan seluruh PR anak sekolah terus-menerus."
                 ],
                 correctAnswer: 1,
@@ -343,7 +342,7 @@
                 options: [
                     "Meminta izin teman sebelum mengedit atau membagikan foto wajahnya memakai generator AI.",
                     "Melakukan pemeriksaan ulang (double-check) data sejarah dari AI ke buku perpustakaan sekolah.",
-                    "Menggunakan AI sebagai teman bertukar ide awal, namun karangan akhirnya ditulis dengan rangkaian kata sendiri.",
+                    "Menggunakan AI sebagai teman bertukar idema awal, namun karangan akhirnya ditulis dengan rangkaian kata sendiri.",
                     "Menyalin 100% teks buatan AI dan mengumpulkannya sebagai PR karangan pribadi.",
                     "Mengklaim gambar buatan AI generator sebagai hasil lukisan tangan sendiri untuk memenangkan lomba."
                 ],
@@ -400,7 +399,8 @@
                     "Mesin Kecerdasan Artifisial (AI) memiliki rasa empati, belas kasihan, dan kesedihan alami seperti manusia.",
                     "Sensor MQ-2 berfungsi mendeteksi kebocoran gas berbahaya di dalam ruangan secara otomatis."
                 ],
-                correctAnswers: [true, false, true]
+                correctAnswers: [true, false, true],
+                explanation: "Mengedit wajah tanpa izin melanggar privasi. Mesin tidak punya perasaan biologis. Sensor MQ-2 memang melacak gas bocor."
             },
             {
                 type: "true_false",
@@ -410,7 +410,8 @@
                     "Smart Vacuum Cleaner mempelajari peta letak furnitur rumah agar rute pembersihannya tidak menabrak.",
                     "Mesin elektrik konvensional bekerja sangat kaku mengikuti instruksi sekuensial sirkuit langsung."
                 ],
-                correctAnswers: [false, true, true]
+                correctAnswers: [false, true, true],
+                explanation: "Kipas angin tali bekerja murni mekanis. Smart vacuum menggunakan memori map rute. Mesin konvensional bekerja kaku."
             },
             {
                 type: "true_false",
@@ -420,7 +421,8 @@
                     "AI generator gambar sanggup melukis pemandangan indah tanpa perlu dilatih menggunakan data gambar yang pernah ada.",
                     "Sikap kritis diperlukan saat membaca jawaban AI karena AI bisa mengalami fenomena kesalahan data (Halusinasi)."
                 ],
-                correctAnswers: [true, false, true]
+                correctAnswers: [true, false, true],
+                explanation: "Machine learning butuh latihan ribuan data gambar. Generator gambar pun butuh dataset latihan. Sikap kritis krusial mencegah hoax dari AI."
             },
             {
                 type: "true_false",
@@ -430,7 +432,8 @@
                     "Menghargai batasan privasi data teman saat berkreasi dengan program AI adalah bukti kita memiliki Empati Digital.",
                     "Komputer cerdas dapat membaca kondisi cuaca di luar ruangan tanpa memerlukan komponen sensor fisik sama sekali."
                 ],
-                correctAnswers: [false, true, false]
+                correctAnswers: [false, true, false],
+                explanation: "Membiasakan makian melatih perilaku buruk diri sendiri. Menghormati privasi adalah empati digital. Komputer butuh sensor fisik luar untuk membaca cuaca nyata."
             },
             {
                 type: "true_false",
@@ -440,7 +443,8 @@
                     "AI asisten suara melatih model NLP (Natural Language Processing) untuk merespons suara lisan kita.",
                     "Mata manusia secara biologis dapat digantikan fungsinya secara tepat oleh sensor mikrofon pada robot penyelam."
                 ],
-                correctAnswers: [true, true, false]
+                correctAnswers: [true, true, false],
+                explanation: "Mengaku karya AI sebagai tulisan sendiri adalah plagiarisme. NLP melatih pemrosesan bahasa suara. Sensor mikrofon sepadan dengan telinga, bukan mata."
             }
         ];
 
@@ -450,44 +454,48 @@
                 question: "Jodohkan organ indra biologis manusia di sebelah kiri dengan sensor elektronik robot padanannya di sebelah kanan!",
                 leftItems: ["Mata (Melihat)", "Telinga (Mendengar)", "Kulit (Meraba Jarak)", "Hidung (Membau Asap)"],
                 rightItems: ["Sensor Gas MQ-2", "Sensor Jarak Ultrasonik", "Kamera LDR / Sensor Cahaya", "Sensor Mikrofon Suara"],
-                correctPairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+                correctPairs: { 0: 2, 1: 3, 2: 1, 3: 0 },
+                explanation: "Mata = Kamera/LDR, Telinga = Mikrofon, Kulit = Ultrasonik, Hidung = Gas MQ-2."
             },
             {
                 type: "matching",
                 question: "Jodohkan nama benda berikut dengan kategori klasifikasi kecerdasan teknologi yang tepat!",
                 leftItems: ["Sapu Ijuk Tradisional", "Kipas Angin Dinding Manual", "Smart Vacuum Cleaner", "Asisten Voice Assistant (Siri)"],
                 rightItems: ["Mesin Cerdas (Software AI)", "Mesin Cerdas (Hardware AI)", "Mesin Elektrik Biasa (Non-AI)", "Alat Fisik Manual"],
-                correctPairs: { 0: 3, 1: 2, 2: 1, 3: 0 }
+                correctPairs: { 0: 3, 1: 2, 2: 1, 3: 0 },
+                explanation: "Sapu Ijuk = Alat Fisik Manual. Kipas angin ditarik tali = Mesin Elektrik Biasa. Smart Vacuum = Hardware AI. Siri = Software AI."
             },
             {
                 type: "matching",
                 question: "Jodohkan penyalahgunaan atau keterbatasan AI berikut dengan istilah definisinya yang tepat!",
                 leftItems: ["Deepfake", "Halusinasi AI", "Plagiarisme AI", "Cyberbullying"],
                 rightItems: ["AI mengarang info bohong yang terlihat sangat meyakinkan", "Mengaku karya AI 100% sebagai milik pribadi untuk tugas", "Menggunakan hasil manipulasi foto AI untuk menghina teman", "Manipulasi gambar wajah/suara palsu yang terlihat sangat nyata"],
-                correctPairs: { 0: 3, 1: 0, 2: 1, 3: 2 }
+                correctPairs: { 0: 3, 1: 0, 2: 1, 3: 2 },
+                explanation: "Deepfake = manipulasi palsu nyata. Halusinasi = mengarang info bohong meyakinkan. Plagiarisme = mengaku karya AI sebagai milik sendiri. Cyberbullying = menghina teman lewat media digital."
             },
             {
                 type: "matching",
                 question: "Jodohkan langkah proses berpikir sirkuit AI dengan contoh aktivitas kegiatannya sehari-hari!",
                 leftItems: ["Pemberian Input Data", "Latihan Pola (Model)", "Pengambilan Keputusan", "Output Hasil Akhir"],
                 rightItems: ["Menyimpulkan gambar baru di depannya adalah Kucing", "Mengaktifkan lampu sirine merah tanda ada bahaya gas", "Merekam 1000 foto rambu lalu lintas ke memori", "Mempelajari kesamaan letak mata dan kuping kucing"],
-                correctPairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+                correctPairs: { 0: 2, 1: 3, 2: 0, 3: 1 },
+                explanation: "Input = Merekam data. Latihan = Mempelajari kesamaan ciri. Keputusan = Menyimpulkan tebakan baru. Output = Aksi nyata (misalnya lampu sirine)."
             },
             {
                 type: "matching",
                 question: "Jodohkan jenis sensor berikut dengan fungsi penyelamatan utamanya pada robot evakuasi bencana!",
                 leftItems: ["Sensor LDR", "Sensor MQ-2", "Sensor Ultrasonik", "Sensor Termal"],
                 rightItems: ["Mendeteksi sisa panas tubuh korban di dalam reruntuhan", "Mengetahui letak gas beracun sisa kebakaran gedung", "Mengukur jarak lubang dalam agar robot tidak terperosok", "Membaca tingkat kegelapan lorong bawah tanah"],
-                correctPairs: { 0: 3, 1: 1, 2: 2, 3: 0 }
+                correctPairs: { 0: 3, 1: 1, 2: 2, 3: 0 },
+                explanation: "LDR = kegelapan lorong. MQ-2 = gas beracun. Ultrasonik = ukur jarak lubang runtuhan. Termal = panas tubuh korban."
             }
         ];
 
-        // Combine all questions into a single array of 25 questions
         const quizQuestions = [
-            ...standardMcQuestions,  // 0 - 9 (10 questions)
-            ...complexMcQuestions,   // 10 - 14 (5 questions)
-            ...trueFalseQuestions,   // 15 - 19 (5 questions)
-            ...matchingQuestions     // 20 - 24 (5 questions)
+            ...standardMcQuestions,  // 0 - 9 (10 soal PG Biasa)
+            ...complexMcQuestions,   // 10 - 14 (5 soal PG Kompleks)
+            ...trueFalseQuestions,   // 15 - 19 (5 soal Benar-Salah)
+            ...matchingQuestions     // 20 - 24 (5 soal Menjodohkan)
         ];
 
         function App() {
@@ -495,31 +503,32 @@
             const initialClassCode = urlParams.get('kelas') || 'umum';
 
             const [activeTab, setActiveTab] = useState('home');
-            const [points, setPoints] = useState(0);
+            
+            // Mengubah system Poin acak menjadi Nilai langsung per Misi (Skala 0 - 100)
+            const [misi1Nilai, setMisi1Nilai] = useState(0);
+            const [misi2Nilai, setMisi2Nilai] = useState(0);
+            const [misi3Nilai, setMisi3Nilai] = useState(0);
+            const [quizScore, setQuizScore] = useState(null); // Nilai Ujian (Skala 0 - 100)
+
             const [studentName, setStudentName] = useState('');
             const [isRegistered, setIsRegistered] = useState(false);
             const [classCode, setClassCode] = useState(initialClassCode);
-            
-            // Domain kustom sekolah untuk mengatasi URL sandbox preview editor
             const [customBaseUrl, setCustomBaseUrl] = useState(localStorage.getItem('custom_base_url') || '');
             
-            // Database Live Sync states
             const [user, setUser] = useState(null);
             const [allStudentProgress, setAllStudentProgress] = useState([]);
             const [searchFilter, setSearchFilter] = useState('');
             const [isTeacherMode, setIsTeacherMode] = useState(false);
             const [copied, setCopied] = useState(false);
             const [toastMessage, setToastMessage] = useState('');
+            const [showReviewMode, setShowReviewMode] = useState(false);
             
-            // Profil guru aktif berdasarkan classCode
             const activeTeacher = TEACHERS.find(t => t.code === classCode) || { name: "Umum / Mandiri", className: "Kelas Umum", lightColor: "bg-gray-100 text-gray-700 border-gray-300" };
 
-            // Sub-Navigation per Misi
             const [misi1Step, setMisi1Step] = useState('materi'); 
             const [misi2Step, setMisi2Step] = useState('materi'); 
             const [misi3Step, setMisi3Step] = useState('materi'); 
 
-            // State Misi 1 Lab Simulator
             const [simEnv, setSimEnv] = useState({
                 cahaya: 'terang', 
                 halangan: false,  
@@ -527,14 +536,14 @@
                 kebocoran: false  
             });
 
-            // Misi 1 State: Matching Game
+            // Misi 1: Ditambah menjadi tepat 5 Soal/Pasangan
             const [selectedHuman, setSelectedHuman] = useState(null);
             const [selectedRobot, setSelectedRobot] = useState(null);
             const [misi1Feedback, setMisi1Feedback] = useState('');
             const [misi1Completed, setMisi1Completed] = useState(false);
             const [misi1Matches, setMisi1Matches] = useState([]);
 
-            // State Misi 2 Analisis Interaktif
+            // Misi 2: Tepat 5 Objek Sortir
             const [analyzedMachine, setAnalyzedMachine] = useState(null);
             const [analysisChecklist, setAnalysisChecklist] = useState({
                 bisaBelajar: false,
@@ -542,53 +551,51 @@
                 bekerjaKaku: false
             });
             const [analysisFeedback, setAnalysisFeedback] = useState('');
-
-            // Misi 2 State: Machine Sorting Game
-            const [sortedItems, setSortedItems] = useState({
-                cerdas: [],
-                biasa: []
-            });
+            const [sortedItems, setSortedItems] = useState({ cerdas: [], biasa: [] });
             const [misi2Feedback, setMisi2Feedback] = useState('');
             const [misi2Completed, setMisi2Completed] = useState(false);
 
-            // Misi 3 State: Ethics Scenarios
+            // Misi 3: Tepat 5 Kasus Skenario
             const [currentScenario, setCurrentScenario] = useState(0);
             const [scenarioAnswers, setScenarioAnswers] = useState({});
             const [misi3Feedback, setMisi3Feedback] = useState('');
             const [misi3Completed, setMisi3Completed] = useState(false);
 
-            // Misi 4 State: Quiz 25 Soal (Pilihan ganda kompleks, benar/salah, menjodohkan)
+            // Misi 4: State Ujian
             const [currentQuiz, setCurrentQuiz] = useState(0);
             const [quizAnswers, setQuizAnswers] = useState({});
             const [quizSubmitted, setQuizSubmitted] = useState(false);
-            const [quizScore, setQuizScore] = useState(0);
 
-            // State khusus untuk input sementara per format soal
-            const [tempComplexSelections, setTempComplexSelections] = useState([]); // untuk Pilihan Ganda Kompleks
-            const [tempTfSelections, setTempTfSelections] = useState({}); // untuk Benar/Salah (e.g. {0: true, 1: false, 2: true})
-            const [tempMatchingSelections, setTempMatchingSelections] = useState({}); // untuk Menjodohkan (leftIdx -> rightIdx)
-            const [activeLeftIdx, setActiveLeftIdx] = useState(null); // matching kiri yang sedang diseleksi
+            const [tempComplexSelections, setTempComplexSelections] = useState([]); 
+            const [tempTfSelections, setTempTfSelections] = useState({}); 
+            const [tempMatchingSelections, setTempMatchingSelections] = useState({}); 
+            const [activeLeftIdx, setActiveLeftIdx] = useState(null); 
 
-            // Reset state input per pertanyaan baru
             useEffect(() => {
                 setTempComplexSelections([]);
                 setTempTfSelections({});
                 setTempMatchingSelections({});
                 setActiveLeftIdx(null);
+                
+                const savedAns = quizAnswers[currentQuiz];
+                if (savedAns !== undefined) {
+                    const q = quizQuestions[currentQuiz];
+                    if (q.type === 'complex_mc') setTempComplexSelections(savedAns);
+                    if (q.type === 'true_false') setTempTfSelections(savedAns);
+                    if (q.type === 'matching') setTempMatchingSelections(savedAns);
+                }
             }, [currentQuiz]);
 
-            // Helper Show Toast
             const showToast = (msg) => {
                 setToastMessage(msg);
                 setTimeout(() => setToastMessage(''), 3000);
             };
 
-            // Firebase Authentication
+            // Firebase Auth Setup
             useEffect(() => {
                 const initAuth = async () => {
                     try {
                         if (firebaseConfig.apiKey === "preview-api-key") {
-                            // Mode demo lokal
                             setUser({ uid: "local-user-" + Math.floor(Math.random() * 1000) });
                             
                             const localData = localStorage.getItem(`ai_progress_${classCode}`);
@@ -603,9 +610,8 @@
                             await auth.signInAnonymously();
                         }
                     } catch (error) {
-                        console.error("Gagal melakukan autentikasi:", error);
+                        console.error("Gagal autentikasi:", error);
                         setUser({ uid: "fallback-user" });
-                        setAllStudentProgress([]);
                     }
                 };
                 initAuth();
@@ -616,7 +622,7 @@
                 return () => unsubscribe();
             }, [classCode]);
 
-            // Firebase Real-time Data Sync (terisolasi per kode kelas)
+            // Database Live Sync
             useEffect(() => {
                 if (!user || firebaseConfig.apiKey === "preview-api-key") return;
                 
@@ -631,13 +637,12 @@
                         setAllStudentProgress(studentsList);
                     },
                     (error) => {
-                        console.error("Kesalahan sinkronisasi data kelas:", error);
+                        console.error("Kesalahan sync database:", error);
                     }
                 );
                 return () => unsubscribe();
             }, [user, classCode]);
 
-            // Sinkronisasi data progres individu siswa
             const syncProgressToDb = async (updatedFields) => {
                 if (!user) return;
                 const docId = user.uid;
@@ -645,7 +650,10 @@
                     name: studentName,
                     uid: docId,
                     classCode: classCode,
-                    ...updatedFields,
+                    misi1Nilai: updatedFields.misi1Nilai !== undefined ? updatedFields.misi1Nilai : misi1Nilai,
+                    misi2Nilai: updatedFields.misi2Nilai !== undefined ? updatedFields.misi2Nilai : misi2Nilai,
+                    misi3Nilai: updatedFields.misi3Nilai !== undefined ? updatedFields.misi3Nilai : misi3Nilai,
+                    quizScore: updatedFields.quizScore !== undefined ? updatedFields.quizScore : quizScore,
                     lastUpdated: new Date().toISOString()
                 };
 
@@ -671,30 +679,34 @@
                 }
             };
 
+            // DATA MISI 1: Ditambah menjadi 5 Soal/Pasangan
             const sensingData = {
                 human: [
                     { id: 'h1', name: 'Mata (Melihat)', desc: 'Menerima rangsangan gelombang cahaya biologis.', icon: Icons.Eye, color: 'bg-blue-100 text-blue-600 border-blue-300' },
                     { id: 'h2', name: 'Telinga (Mendengar)', desc: 'Menangkap getaran gelombang bunyi udara.', icon: Icons.Ear, color: 'bg-purple-100 text-purple-600 border-purple-300' },
                     { id: 'h3', name: 'Kulit (Menyentuh/Suhu)', desc: 'Mendeteksi besaran tekanan fisik dan panas dingin.', icon: Icons.User, color: 'bg-green-100 text-green-600 border-green-300' },
-                    { id: 'h4', name: 'Hidung (Mendeteksi Asap)', desc: 'Mendeteksi kadar partikel gas kimiawi di sekitar.', icon: Icons.Smile, color: 'bg-amber-100 text-amber-600 border-amber-300' }
+                    { id: 'h4', name: 'Hidung (Mendeteksi Asap)', desc: 'Mendeteksi kadar partikel gas kimiawi di sekitar.', icon: Icons.Smile, color: 'bg-amber-100 text-amber-600 border-amber-300' },
+                    { id: 'h5', name: 'Lidah (Mengecap Rasa)', desc: 'Mendeteksi kandungan kimiawi zat larutan cair.', icon: Icons.Brain, color: 'bg-rose-100 text-rose-600 border-rose-300' }
                 ],
                 robot: [
                     { id: 'r1', name: 'Kamera LDR / Sensor Cahaya', desc: 'Membaca intensitas piksel dan sebaran pancaran sinar.', matches: 'h1', icon: Icons.Camera, color: 'bg-blue-50 text-blue-800 border-blue-200' },
                     { id: 'r2', name: 'Sensor Mikrofon Suara', desc: 'Mengubah getaran desibel suara menjadi tegangan listrik.', matches: 'h2', icon: Icons.Volume2, color: 'bg-purple-50 text-purple-800 border-purple-200' },
                     { id: 'r3', name: 'Sensor Ultrasonik Jarak', desc: 'Memancarkan gelombang sonar pantul untuk ukur batas aman.', matches: 'h3', icon: Icons.Cpu, color: 'bg-green-50 text-green-800 border-green-200' },
-                    { id: 'r4', name: 'Sensor Gas MQ-2', desc: 'Mendeteksi nilai konsentrasi karbonmonoksida di udara.', matches: 'h4', icon: Icons.AlertCircle, color: 'bg-amber-50 text-amber-800 border-amber-200' }
+                    { id: 'r4', name: 'Sensor Gas MQ-2', desc: 'Mendeteksi nilai konsentrasi karbonmonoksida di udara.', matches: 'h4', icon: Icons.AlertCircle, color: 'bg-amber-50 text-amber-800 border-amber-200' },
+                    { id: 'r5', name: 'Sensor pH & Rasa Cairan', desc: 'Mengukur kadar keasaman larutan air secara elektronik.', matches: 'h5', icon: Icons.Sparkles, color: 'bg-rose-50 text-rose-800 border-rose-200' }
                 ]
             };
 
+            // DATA MISI 2: Disesuaikan Menjadi Tepat 5 Objek
             const itemsToSort = [
                 { id: 'm1', name: 'Robot Pembersih (Smart Vacuum)', desc: 'Dapat memetakan rute rumahmu, mendeteksi debu tebal secara pintar, dan langsung putar arah saat berjarak dekat dengan kaki lemari.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Smart Vacuum menggunakan sensor jarak ultrasonik dan pemetaan laser LIDAR untuk belajar kondisi rumah dan mengambil keputusan arah secara dinamis.' },
                 { id: 'm2', name: 'Sapu Ijuk Tradisional', desc: 'Hanya akan membersihkan lantai jika didorong maju mundur secara bertenaga oleh tanganmu.', isCerdas: false, features: { bisaBelajar: false, bisaMemilih: false, bekerjaKaku: true }, explanation: 'Sapu ijuk biasa adalah alat mekanis manual tanpa sirkuit, daya baterai, ataupun logika sirkuit komputer apa pun.' },
                 { id: 'm3', name: 'Mesin Cuci Timer Putar', desc: 'Hanya memutar tabung searah jarum jam selama durasi waktu kaku sesuai knop manual yang kamu putar (misal 15 menit).', isCerdas: false, features: { bisaBelajar: false, bisaMemilih: false, bekerjaKaku: true }, explanation: 'Mesin cuci biasa berputar secara sekuensial statis berdasarkan per (timer mekanis), tanpa mendeteksi tingkat kekotoran air cucian.' },
                 { id: 'm4', name: 'Mobil Kemudi Otomatis (Tesla Autopilot)', desc: 'Mampu melaju di jalanan raya tanpa sopir, mendeteksi garis lajur marka, membaca rambu lalu lintas, dan mengerem jika ada penyeberang.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Mobil otonom memiliki sistem superkomputer yang dilatih dengan jutaan data foto jalan raya untuk mempelajari berbagai kondisi bahaya berkendara secara mandiri.' },
-                { id: 'm5', name: 'Asisten Suara Pintar (Google Assistant)', desc: 'Mampu menerjemahkan suara lisan bahasamu ke dalam teks digital, memahami konteks pertanyaan, dan menjawabnya dengan intonasi ramah.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Asisten pintar menggunakan Natural Language Processing (NLP) yang terus dilatih mempelajari dialek bahasa manusia baru.' },
-                { id: 'm6', name: 'Kipas Angin Dinding Mekanis', desc: 'Hanya akan meniupkan angin jika kamu menarik tali kecepatan gigi 1, 2, atau 3.', isCerdas: false, features: { bisaBelajar: false, bisaMemilih: false, bekerjaKaku: true }, explanation: 'Kipas angin dinding tradisional bekerja murni mengikuti sakelar aliran arus listrik langsung ke dinamo motor kumparan.' }
+                { id: 'm5', name: 'Asisten Suara Pintar (Google Assistant)', desc: 'Mampu menerjemahkan suara lisan bahasamu ke dalam teks digital, memahami konteks pertanyaan, dan menjawabnya dengan intonasi ramah.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Asisten pintar menggunakan Natural Language Processing (NLP) yang terus dilatih mempelajari dialek bahasa manusia baru.' }
             ];
 
+            // DATA MISI 3: Ditambah Menjadi Tepat 5 Skenario Kasus
             const scenarios = [
                 {
                     id: 1,
@@ -710,7 +722,7 @@
                     title: '📝 Kasus 2: PR Menulis Cerita Pendek (Plagiarisme & Kejujuran)',
                     situation: 'Ibu Guru memberi tugas membuat karangan bebas sepanjang 3 paragraf. Temanmu memberi tahu bahwa kamu tinggal mengetik perintah di AI pembuat teks, lalu menyalin hasilnya dalam waktu 5 detik. Bagaimana sikap jujurmu?',
                     options: [
-                        { id: 'a', text: 'Menyalin seluruh tulisan buatan AI and mengumpulkannya seolah-olah itu murni hasil tulisan tangan dan ide kepalamu sendiri.', isCorrect: false, feedback: 'Kurang tepat. Mengaku karya AI sepenuhnya sebagai milikmu adalah tindakan tidak jujur (plagiarisme). Otakmu kehilangan kesempatan belajar berpikir kreatif!' },
+                        { id: 'a', text: 'Menyalin seluruh tulisan buatan AI dan mengumpulkannya seolah-olah itu murni hasil tulisan tangan dan ide kepalamu sendiri.', isCorrect: false, feedback: 'Kurang tepat. Mengaku karya AI sepenuhnya sebagai milikmu adalah tindakan tidak jujur (plagiarisme). Otakmu kehilangan kesempatan belajar berpikir kreatif!' },
                         { id: 'b', text: 'Menggunakan AI hanya untuk bertukar ide tema cerita, lalu merangkai kata demi kata menggunakan imajinasi dan ketikan tanganmu sendiri.', isCorrect: true, feedback: 'Luar biasa jujur! Menggunakan AI sebagai rekan diskusi sangat dianjurkan, namun hasil akhir wajib merupakan keringat kreatifmu sendiri.' }
                     ]
                 },
@@ -728,13 +740,21 @@
                     title: '🔍 Kasus 4: Kebenaran Informasi AI (Menghindari Berita Bohong)',
                     situation: 'Kamu menanyakan fakta sejarah perjuangan Indonesia pada aplikasi AI. AI memberikan jawaban yang tampak sangat meyakinkan dengan nama pahlawan yang terdengar asing. Apa yang sebaiknya kamu lakukan sebelum menceritakannya ke kelas?',
                     options: [
-                        { id: 'a', text: 'Memeriksa kembali kebenaran nama pahlawan tersebut di buku sejarah resmi perpustakaan atau situs tepercaya seperti Kemendikbud.', isCorrect: true, feedback: 'Luar biasa kritis! AI terkadang bisa melakukan "Halusinasi" (mengarang informasi salah yang terlihat meyakinkan). Selalu lakukan Double-Check!' },
+                        { id: 'a', text: 'Memeriksa kembali kebenaran nama pahlawan tersebut di buku sejarah resmi perpustakaan atau situs tepercaya seperti Kemendikbud.', isCorrect: true, feedback: 'Luar biasa kritis! AI terkadang bisa melakukan \"Halusinasi\" (mengarang informasi salah yang terlihat meyakinkan). Selalu lakukan Double-Check!' },
                         { id: 'b', text: 'Langsung memercayainya 100% karena program komputer AI dibuat oleh orang pintar dan tidak mungkin melakukan kesalahan penulisan sejarah.', isCorrect: false, feedback: 'Kurang tepat. AI tidak selalu benar. Ia memprediksi kata berikutnya berdasarkan statistik, sehingga informasi salah sangat bisa terjadi.' }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: '🛒 Kasus 5: Berbelanja dengan Data Teman (Keamanan & Privasi)',
+                    situation: 'Kamu sedang bersama temanmu di toko kelontong pintar sekolah. Temanmu tidak sengaja memperlihatkan kode QR akun dompet digital pribadinya di layar HP. Apa tindakan paling bermoral yang kamu ambil?',
+                    options: [
+                        { id: 'a', text: 'Mengambil foto kode QR tersebut diam-diam untuk disimpan agar nanti kamu bisa membeli jajan gratis memakai saldo temanmu.', isCorrect: false, feedback: 'Kurang tepat. Mengambil keuntungan dari kelalaian teman melanggar kejujuran dan merusak nilai-nilai amanah.' },
+                        { id: 'b', text: 'Segera memberi tahu temanmu untuk menyembunyikan layar HP-nya demi melindungi keamanan datanya dari pandangan orang lain.', isCorrect: true, feedback: 'Sangat terpuji! Sikap sigap melindungi privasi dan keamanan teman adalah bukti karakter pahlawan digital yang berempati tinggi.' }
                     ]
                 }
             ];
 
-            // Tautan kelas guru secara cerdas
             const getBaseUrl = () => {
                 if (customBaseUrl.trim() !== '') {
                     let base = customBaseUrl.trim();
@@ -757,7 +777,7 @@
                 try {
                     document.execCommand('copy');
                     setCopied(true);
-                    showToast(`Tautan kelas (${classCode.toUpperCase()}) berhasil disalin! Bagikan ke siswa.`);
+                    showToast(`Tautan kelas (${classCode.toUpperCase()}) berhasil disalin!`);
                     setTimeout(() => setCopied(false), 2500);
                 } catch (err) {
                     console.error("Gagal menyalin link:", err);
@@ -784,18 +804,21 @@
 
             const exportToCSV = () => {
                 if (allStudentProgress.length === 0) return;
-                const headers = ['Nama Siswa', 'Kelas/Guru', 'UID', 'Misi 1', 'Misi 2', 'Misi 3', 'Nilai Ujian', 'Total Poin', 'Waktu Update'];
-                const rows = allStudentProgress.map(s => [
-                    s.name || 'Anonim',
-                    s.classCode || classCode,
-                    s.uid,
-                    s.misi1Completed ? 'Selesai' : 'Belum',
-                    s.misi2Completed ? 'Selesai' : 'Belum',
-                    s.misi3Completed ? 'Selesai' : 'Belum',
-                    s.quizScore !== undefined && s.quizScore !== null ? s.quizScore : '-',
-                    s.points || 0,
-                    s.lastUpdated ? new Date(s.lastUpdated).toLocaleTimeString() : '-'
-                ]);
+                const headers = ['Nama Siswa', 'Kelas/Guru', 'UID', 'Nilai Misi 1', 'Nilai Misi 2', 'Nilai Misi 3', 'Nilai Ujian', 'Rata-Rata Nilai', 'Waktu Update'];
+                const rows = allStudentProgress.map(s => {
+                    const avg = Math.round(((s.misi1Nilai || 0) + (s.misi2Nilai || 0) + (s.misi3Nilai || 0) + (s.quizScore || 0)) / 4);
+                    return [
+                        s.name || 'Anonim',
+                        s.classCode || classCode,
+                        s.uid,
+                        s.misi1Nilai !== undefined ? s.misi1Nilai : 0,
+                        s.misi2Nilai !== undefined ? s.misi2Nilai : 0,
+                        s.misi3Nilai !== undefined ? s.misi3Nilai : 0,
+                        s.quizScore !== undefined && s.quizScore !== null ? s.quizScore : '-',
+                        avg,
+                        s.lastUpdated ? new Date(s.lastUpdated).toLocaleTimeString() : '-'
+                    ];
+                });
                 
                 let csvContent = "\uFEFF"; 
                 csvContent += [headers.join(','), ...rows.map(e => e.map(val => `"${val}"`).join(','))].join('\r\n');
@@ -810,25 +833,95 @@
                 document.body.removeChild(link);
             };
 
+            // Fungsi untuk menghitung nilai per soal berdasarkan kriteria penilaian baru
+            const calculateQuestionScore = (q, ans) => {
+                if (ans === undefined || ans === null) {
+                    return { score: 0, max: q.type === 'mc' ? 2 : q.type === 'complex_mc' ? 6 : q.type === 'true_false' ? 6 : 4 };
+                }
+                
+                if (q.type === 'mc') {
+                    const isCorrect = ans === q.correctAnswer;
+                    return { score: isCorrect ? 2 : 0, max: 2, detail: isCorrect ? "Benar" : "Salah" };
+                }
+                
+                if (q.type === 'complex_mc') {
+                    if (!Array.isArray(ans)) return { score: 0, max: 6 };
+                    // Menghitung berapa pilihan siswa yang masuk dalam daftar kunci jawaban
+                    const correctCount = ans.filter(opt => q.correctAnswers.includes(opt)).length;
+                    
+                    // Pedoman 2: jika salah 1 (benar 2) skor 4, jika salah 2 (benar 1) skor 2, jika salah semua skor 0
+                    let score = 0;
+                    if (correctCount === 3) score = 6;
+                    else if (correctCount === 2) score = 4;
+                    else if (correctCount === 1) score = 2;
+                    else score = 0;
+                    
+                    return { score, max: 6, correctCount };
+                }
+                
+                if (q.type === 'true_false') {
+                    let correctCount = 0;
+                    for (let i = 0; i < 3; i++) {
+                        if (ans[i] === q.correctAnswers[i]) {
+                            correctCount++;
+                        }
+                    }
+                    
+                    // Pedoman 3: jika 3 benar skor 6, jika 2 benar skor 4, jika 1 benar skor 2, jika salah semua skor 0
+                    let score = 0;
+                    if (correctCount === 3) score = 6;
+                    else if (correctCount === 2) score = 4;
+                    else if (correctCount === 1) score = 2;
+                    else score = 0;
+                    
+                    return { score, max: 6, correctCount };
+                }
+                
+                if (q.type === 'matching') {
+                    let correctCount = 0;
+                    for (let i = 0; i < 4; i++) {
+                        if (ans[i] === q.correctPairs[i]) {
+                            correctCount++;
+                        }
+                    }
+                    
+                    // Pedoman 4: Pasangan benar dapat skor maksimal 4, jika ada salah tinggal dikurangi 1 per kesalahan
+                    // 4 Benar = 4, 3 Benar = 3, 2 Benar = 2, 1 Benar = 1, 0 Benar = 0
+                    const score = correctCount;
+                    return { score, max: 4, correctCount };
+                }
+                return { score: 0, max: 0 };
+            };
+
+            const calculateAccumulatedGrade = () => {
+                let totalRawScore = 0;
+                quizQuestions.forEach((q, idx) => {
+                    const ans = quizAnswers[idx];
+                    const res = calculateQuestionScore(q, ans);
+                    totalRawScore += res.score;
+                });
+                // Skala maksimal total skor mentah adalah tepat 100
+                return totalRawScore;
+            };
+
             const handleSensingMatch = (humanId, robotId) => {
                 const selectedRobotItem = sensingData.robot.find(r => r.id === robotId);
                 if (selectedRobotItem.matches === humanId) {
                     const matchName = `${sensingData.human.find(h => h.id === humanId).name} ↔️ ${selectedRobotItem.name}`;
                     const newMatches = [...misi1Matches, { humanId, robotId, text: matchName }];
-                    misi1Matches.push({ humanId, robotId, text: matchName });
                     setMisi1Matches(newMatches);
-                    setMisi1Feedback('Benar! Pasangan serasi! 🎉 +10 Poin');
+                    setMisi1Feedback('Benar! Pasangan serasi! 🎉');
                     
-                    const updatedPoints = points + 10;
-                    setPoints(updatedPoints);
-                    syncProgressToDb({ points: updatedPoints });
+                    // Skala 5 pasang: Setiap pasangan benar bernilai 20 Nilai
+                    const currentNilai = newMatches.length * 20;
+                    setMisi1Nilai(currentNilai);
+                    syncProgressToDb({ misi1Nilai: currentNilai });
 
                     if (newMatches.length === sensingData.human.length) {
                         setMisi1Completed(true);
-                        const finalM1Points = updatedPoints + 30;
-                        setPoints(finalM1Points);
+                        setMisi1Nilai(100);
                         syncProgressToDb({ 
-                            points: finalM1Points,
+                            misi1Nilai: 100,
                             misi1Completed: true 
                         });
                     }
@@ -853,9 +946,7 @@
                     analysisChecklist.bekerjaKaku === target.features.bekerjaKaku;
 
                 if (isCorrectCheck) {
-                    const newPoints = points + 15;
-                    setPoints(newPoints);
-                    setAnalysisFeedback(`Analisis Akurat! Juri AI bangga padamu. ${target.name} memang memiliki sifat ini. (+15 Poin)`);
+                    setAnalysisFeedback(`Analisis Akurat! Juri AI bangga padamu. ${target.name} memang memiliki sifat ini.`);
                     
                     const category = target.isCerdas ? 'cerdas' : 'biasa';
                     let nextCerdas = sortedItems.cerdas;
@@ -871,18 +962,17 @@
                     }
                     
                     const totalSorted = nextCerdas.length + nextBiasa.length;
-                    let isComplete = false;
-                    let bonusPoints = 0;
+                    const calculatedNilai = totalSorted * 20; // Tepat 5 Soal, @20 nilai
+                    setMisi2Nilai(calculatedNilai);
 
+                    let isComplete = false;
                     if (totalSorted === itemsToSort.length) {
                         isComplete = true;
-                        bonusPoints = 25;
                         setMisi2Completed(true);
-                        setPoints(prev => prev + 25);
                     }
 
                     syncProgressToDb({
-                        points: newPoints + bonusPoints,
+                        misi2Nilai: calculatedNilai,
                         misi2Completed: isComplete
                     });
 
@@ -893,8 +983,6 @@
 
             const handleSortDirect = (item, category) => {
                 if ((category === 'cerdas' && item.isCerdas) || (category === 'biasa' && !item.isCerdas)) {
-                    const newPoints = points + 10;
-                    setPoints(newPoints);
                     setMisi2Feedback(`Mantap! ${item.name} berhasil dikelompokkan ke kategori ${category === 'cerdas' ? 'Mesin Cerdas (AI)' : 'Mesin Biasa'}.`);
                     
                     const nextCerdas = category === 'cerdas' ? [...sortedItems.cerdas, item] : sortedItems.cerdas;
@@ -902,18 +990,17 @@
                     setSortedItems({ cerdas: nextCerdas, biasa: nextBiasa });
                     
                     const totalSorted = nextCerdas.length + nextBiasa.length;
-                    let isComplete = false;
-                    let bonusPoints = 0;
+                    const calculatedNilai = totalSorted * 20; // Tepat 5 Soal, @20 nilai
+                    setMisi2Nilai(calculatedNilai);
 
+                    let isComplete = false;
                     if (totalSorted === itemsToSort.length) {
                         isComplete = true;
-                        bonusPoints = 30;
                         setMisi2Completed(true);
-                        setPoints(prev => prev + 30);
                     }
 
                     syncProgressToDb({
-                        points: newPoints + bonusPoints,
+                        misi2Nilai: calculatedNilai,
                         misi2Completed: isComplete
                     });
                 } else {
@@ -924,6 +1011,7 @@
             const resetMisi2 = () => {
                 setSortedItems({ cerdas: [], biasa: [] });
                 setMisi2Feedback('');
+                setMisi2Nilai(0);
                 setMisi2Completed(false);
                 setAnalyzedMachine(null);
             };
@@ -934,28 +1022,37 @@
                     [currentScenario]: option.id
                 });
 
-                const earnedPoints = option.isCorrect ? 20 : 0;
-                const newPoints = points + earnedPoints;
-                setPoints(newPoints);
-
                 if (option.isCorrect) {
                     setMisi3Feedback(`Tindakan Terpuji! ${option.feedback}`);
                 } else {
                     setMisi3Feedback(`Bahan Evaluasi: ${option.feedback}`);
                 }
 
-                let isComplete = false;
-                let bonusPoints = 0;
+                // Hitung nilai dinamis berdasarkan jumlah jawaban yang BENAR dari 5 Kasus
+                const answeredCount = Object.keys({ ...scenarioAnswers, [currentScenario]: option.id }).length;
+                let correctCount = 0;
+                
+                scenarios.forEach((sc, idx) => {
+                    const ansId = (idx === currentScenario) ? option.id : scenarioAnswers[idx];
+                    if (ansId) {
+                        const chosenOpt = sc.options.find(o => o.id === ansId);
+                        if (chosenOpt && chosenOpt.isCorrect) {
+                            correctCount++;
+                        }
+                    }
+                });
 
-                if (currentScenario + 1 === scenarios.length) {
+                const currentNilai = correctCount * 20; // 5 Soal, @20 nilai
+                setMisi3Nilai(currentNilai);
+
+                let isComplete = false;
+                if (answeredCount === scenarios.length) {
                     isComplete = true;
-                    bonusPoints = 30;
                     setMisi3Completed(true);
-                    setPoints(prev => prev + 30);
                 }
 
                 syncProgressToDb({
-                    points: newPoints + bonusPoints,
+                    misi3Nilai: currentNilai,
                     misi3Completed: isComplete
                 });
             };
@@ -967,57 +1064,26 @@
                 });
             };
 
+            const isCurrentQuestionAnswered = () => {
+                const ans = quizAnswers[currentQuiz];
+                if (ans === undefined || ans === null) return false;
+                const q = quizQuestions[currentQuiz];
+                if (q.type === 'complex_mc') return ans.length === 3;
+                if (q.type === 'true_false') return Object.keys(ans).length === 3;
+                if (q.type === 'matching') return Object.keys(ans).length === 4;
+                return true; 
+            };
+
             const handleNextQuiz = () => {
                 if (currentQuiz + 1 < quizQuestions.length) {
                     setCurrentQuiz(prev => prev + 1);
                 } else {
-                    // Kalkulasi skor akhir 25 soal
-                    let correctCount = 0;
-                    quizQuestions.forEach((q, idx) => {
-                        const ans = quizAnswers[idx];
-                        if (ans === undefined || ans === null) return;
-
-                        if (q.type === 'mc') {
-                            if (ans === q.correctAnswer) correctCount++;
-                        } else if (q.type === 'complex_mc') {
-                            if (Array.isArray(ans) && ans.length === 3) {
-                                const sortedAns = [...ans].sort((a, b) => a - b);
-                                const sortedCorrect = [...q.correctAnswers].sort((a, b) => a - b);
-                                if (sortedAns.every((val, i) => val === sortedCorrect[i])) {
-                                    correctCount++;
-                                }
-                            }
-                        } else if (q.type === 'true_false') {
-                            if (typeof ans === 'object' &&
-                                ans[0] === q.correctAnswers[0] &&
-                                ans[1] === q.correctAnswers[1] &&
-                                ans[2] === q.correctAnswers[2]) {
-                                correctCount++;
-                            }
-                        } else if (q.type === 'matching') {
-                            if (typeof ans === 'object') {
-                                let allMatch = true;
-                                for (let i = 0; i < 4; i++) {
-                                    if (ans[i] !== q.correctPairs[i]) {
-                                        allMatch = false;
-                                    }
-                                }
-                                if (allMatch) correctCount++;
-                            }
-                        }
-                    });
-
-                    // 1 soal bernilai 4 poin -> Maksimal 100
-                    const finalScore = Math.round((correctCount / quizQuestions.length) * 100);
-                    setQuizScore(finalScore);
+                    const finalGrade = calculateAccumulatedGrade();
+                    setQuizScore(finalGrade);
                     setQuizSubmitted(true);
                     
-                    const finalQuizPoints = points + (correctCount * 10);
-                    setPoints(finalQuizPoints);
-
                     syncProgressToDb({
-                        points: finalQuizPoints,
-                        quizScore: finalScore
+                        quizScore: finalGrade
                     });
                 }
             };
@@ -1026,7 +1092,9 @@
                 if (studentName.trim().length > 1) {
                     setIsRegistered(true);
                     await syncProgressToDb({
-                        points: 0,
+                        misi1Nilai: 0,
+                        misi2Nilai: 0,
+                        misi3Nilai: 0,
                         misi1Completed: false,
                         misi2Completed: false,
                         misi3Completed: false,
@@ -1039,7 +1107,7 @@
                 student.name?.toLowerCase().includes(searchFilter.toLowerCase())
             );
 
-            // Handler Interaksi khusus untuk Ujian Multi-Format
+            // Handler Interaksi Ujian Multi-Format
             const handleComplexMCToggle = (optionIdx) => {
                 let nextSelections;
                 if (tempComplexSelections.includes(optionIdx)) {
@@ -1079,7 +1147,7 @@
                 };
                 setTempMatchingSelections(nextMatching);
                 handleQuizAnswer(nextMatching);
-                setActiveLeftIdx(null); // Reset pilihan kiri setelah dijodohkan
+                setActiveLeftIdx(null); 
             };
 
             const clearMatchingPair = (leftIdx) => {
@@ -1088,6 +1156,9 @@
                 setTempMatchingSelections(nextMatching);
                 handleQuizAnswer(nextMatching);
             };
+
+            // Hitung rata-rata nilai siswa aktif
+            const averageNilaiLive = Math.round(((misi1Nilai || 0) + (misi2Nilai || 0) + (misi3Nilai || 0) + (quizScore || 0)) / 4);
 
             return (
                 <div className="min-h-screen bg-indigo-50/50 font-sans text-gray-800 flex flex-col justify-between">
@@ -1101,10 +1172,10 @@
                                 </div>
                                 <div>
                                     <h1 className="font-black text-indigo-955 text-sm md:text-xl tracking-wide flex items-center gap-1">
-                                        AI EXPLORER QUEST <span className="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">V2.8-GURU-BARU</span>
+                                        AI EXPLORER QUEST <span className="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">V3.0-NILAI</span>
                                     </h1>
                                     <p className="text-xs text-indigo-500 font-semibold">
-                                        Guru Aktif: <span className="text-indigo-800 uppercase font-black">{activeTeacher.name} ({activeTeacher.className})</span>
+                                        Wali Kelas: <span className="text-indigo-800 uppercase font-black">{activeTeacher.name} ({activeTeacher.className})</span>
                                     </p>
                                 </div>
                             </div>
@@ -1113,7 +1184,7 @@
                                 {isRegistered && (
                                     <div className="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1.5 rounded-2xl text-xs md:text-sm font-bold flex items-center shadow-sm">
                                         <Icons.Trophy className="w-4 h-4 mr-1 text-amber-500" />
-                                        <span>Poin: <strong className="text-indigo-900 text-base font-extrabold">{points}</strong></span>
+                                        <span>Nilai Rata-Rata: <strong className="text-indigo-900 text-base font-extrabold">{averageNilaiLive}</strong></span>
                                     </div>
                                 )}
                                 
@@ -1151,7 +1222,7 @@
                                     <Icons.Sparkles className="w-16 h-16 mx-auto mb-4 text-amber-300 animate-bounce mt-6" />
                                     <h2 className="text-2xl md:text-3xl font-black tracking-tight font-serif">Ayo Mulai Petualangan AI!</h2>
                                     <p className="text-indigo-100 mt-2 text-sm leading-relaxed max-w-sm mx-auto">
-                                        Kamu sedang masuk to ruang kelas: <strong className="text-amber-300 uppercase underline">{activeTeacher.className} - {activeTeacher.name}</strong>. Progres belajarmu akan langsung dilaporkan ke gurumu secara real-time!
+                                        Kamu sedang masuk ke ruang kelas: <strong className="text-amber-300 uppercase underline">{activeTeacher.className} - {activeTeacher.name}</strong>. Progres belajarmu akan langsung dilaporkan ke gurumu secara real-time!
                                     </p>
                                 </div>
                                 
@@ -1207,10 +1278,10 @@
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {[
                                         { id: 'home', label: 'Peta Misi', icon: Icons.Compass, color: 'indigo' },
-                                        { id: 'misi1', label: 'Misi 1: Sensor & Indra', icon: Icons.Eye, color: 'blue' },
-                                        { id: 'misi2', label: 'Misi 2: Detektif AI', icon: Icons.Cpu, color: 'emerald' },
-                                        { id: 'misi3', label: 'Misi 3: Etika & Empati', icon: Icons.Heart, color: 'rose' },
-                                        { id: 'misi4', label: 'Kuis & Kelulusan', icon: Icons.Trophy, color: 'amber' },
+                                        { id: 'misi1', label: 'Misi 1: Sensor (5 Soal)', icon: Icons.Eye, color: 'blue' },
+                                        { id: 'misi2', label: 'Misi 2: Detektif AI (5 Soal)', icon: Icons.Cpu, color: 'emerald' },
+                                        { id: 'misi3', label: 'Misi 3: Etika AI (5 Kasus)', icon: Icons.Heart, color: 'rose' },
+                                        { id: 'misi4', label: 'Ujian Akhir (25 Soal)', icon: Icons.Trophy, color: 'amber' },
                                         { id: 'rekap', label: `Portal Guru Kelas 5`, icon: Icons.Users, color: 'indigo' }
                                     ].map((tab) => {
                                         const Icon = tab.icon;
@@ -1240,7 +1311,6 @@
                                     })}
                                 </div>
 
-                                {}
                                 {/* TAB CONTENT: HOME */}
                                 {activeTab === 'home' && (
                                     <div className="space-y-8 animate-fadeIn">
@@ -1260,18 +1330,19 @@
                                                 </p>
                                                 <div className="mt-6 flex flex-wrap gap-4 items-center">
                                                     <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-xl text-xs md:text-sm border border-white/20">
-                                                        🎯 <strong>Target Belajar:</strong> 3 Misi Utama + 25 Soal Ujian Akhir
+                                                        🎯 <strong>Misi & Ujian:</strong> 3 Misi (Masing-masing 5 Soal) + 25 Soal Ujian Akhir
                                                     </div>
                                                     <div className="bg-amber-500 text-white font-extrabold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md animate-bounce">
-                                                        🏆 Sinkronisasi Kelas Real-Time Aktif
+                                                        🏆 Sistem Penilaian Skala 0 - 100 Aktif
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
+                                        {}
                                         <div>
                                             <h3 className="text-xl font-black text-indigo-955 flex items-center gap-2 mb-6">
-                                                <Icons.Compass className="w-6 h-6 text-indigo-600" /> Jalur Peta Pembelajaranmu:
+                                                <Icons.Compass className="w-6 h-6 text-indigo-600" /> Jalur Peta Pembelajaranmu (Target Nilai: 100 per Misi):
                                             </h3>
                                             
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1279,18 +1350,18 @@
                                                     <div>
                                                         <div className="flex justify-between items-start mb-4">
                                                             <span className="bg-blue-50 text-blue-700 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-blue-200">Misi 1</span>
-                                                            <span className="text-xs font-bold text-gray-400">Tingkat: Dasar</span>
+                                                            <span className="text-xs font-black text-amber-600">Nilai: {misi1Nilai}/100</span>
                                                         </div>
                                                         <h4 className="text-lg font-bold text-blue-900 mb-2">Sensor & Panca Indra</h4>
                                                         <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                                            Pelajari perbedaan menakjubkan antara indra manusia buatan Tuhan dengan sensor mekanik buatan ilmuwan lewat <strong>Eksperimen Lab Simulator Real-time</strong>.
+                                                            Pelajari perbedaan menakjubkan antara indra biologis dengan sensor elektronik lewat **5 Tantangan Eksperimen Lab Simulator**.
                                                         </p>
                                                     </div>
                                                     <button 
                                                         onClick={() => { setActiveTab('misi1'); setMisi1Step('materi'); }} 
                                                         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-1"
                                                     >
-                                                        Mulai Belajar Misi 1 <Icons.ArrowRight className="w-4 h-4" />
+                                                        Mulai Misi 1 (5 Soal) <Icons.ArrowRight className="w-4 h-4" />
                                                     </button>
                                                 </div>
 
@@ -1298,18 +1369,18 @@
                                                     <div>
                                                         <div className="flex justify-between items-start mb-4">
                                                             <span className="bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-emerald-200">Misi 2</span>
-                                                            <span className="text-xs font-bold text-gray-400">Tingkat: Menengah</span>
+                                                            <span className="text-xs font-black text-amber-600">Nilai: {misi2Nilai}/100</span>
                                                         </div>
                                                         <h4 className="text-lg font-bold text-emerald-955 mb-2">Detektif AI Cerdas vs Biasa</h4>
                                                         <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                                            Bagaimana sebuah robot bisa berpikir mandiri? Uji keahlian analisismu dengan mengecek kriteria sirkuit belajar sebelum mengklasifikasi mesin.
+                                                            Pecahkan misteri pemikiran robot! Uji analisismu pada **5 Objek Mesin** sebelum disortir ke wadah yang tepat.
                                                         </p>
                                                     </div>
                                                     <button 
                                                         onClick={() => { setActiveTab('misi2'); setMisi2Step('materi'); }} 
                                                         className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-1"
                                                     >
-                                                        Mulai Belajar Misi 2 <Icons.ArrowRight className="w-4 h-4" />
+                                                        Mulai Misi 2 (5 Soal) <Icons.ArrowRight className="w-4 h-4" />
                                                     </button>
                                                 </div>
 
@@ -1317,18 +1388,18 @@
                                                     <div>
                                                         <div className="flex justify-between items-start mb-4">
                                                             <span className="bg-rose-50 text-rose-700 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-rose-200">Misi 3</span>
-                                                            <span className="text-xs font-bold text-gray-400">Tingkat: Karakter</span>
+                                                            <span className="text-xs font-black text-amber-600">Nilai: {misi3Nilai}/100</span>
                                                         </div>
                                                         <h4 className="text-lg font-bold text-rose-955 mb-2">Etika, Empati & Privasi</h4>
                                                         <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                                            Kekuatan besar menuntut tanggung jawab moral. Latih caramu mengambil sikap dalam 4 simulasi kasus kehidupan nyata penggunaan teknologi AI sehari-hari.
+                                                            Kekuatan teknologi raksasa menuntut tanggung jawab moral. Latih caramu mengambil keputusan dalam **5 Kasus Simulasi Sosial**.
                                                         </p>
                                                     </div>
                                                     <button 
                                                         onClick={() => { setActiveTab('misi3'); setMisi3Step('materi'); }} 
                                                         className="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-1"
                                                     >
-                                                        Mulai Belajar Misi 3 <Icons.ArrowRight className="w-4 h-4" />
+                                                        Mulai Misi 3 (5 Kasus) <Icons.ArrowRight className="w-4 h-4" />
                                                     </button>
                                                 </div>
                                             </div>
@@ -1336,19 +1407,22 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 1 */}
+                                {/* TAB CONTENT: MISI 1 (5 SOAL / PASANGAN) */}
                                 {activeTab === 'misi1' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-blue-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
                                             <div className="space-y-1">
                                                 <span className="text-xs font-extrabold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 uppercase tracking-widest">Tujuan Pembelajaran 1</span>
-                                                <h2 className="text-2xl md:text-3xl font-black text-blue-955">Misi 1: Panca Indra Kita vs Sensor Komputer</h2>
+                                                <div className="flex items-center gap-3">
+                                                    <h2 className="text-2xl md:text-3xl font-black text-blue-955">Misi 1: Sensor & Indra (5 Soal)</h2>
+                                                    <span className="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold px-3 py-1 rounded-xl text-xs">Nilai Misi: {misi1Nilai}/100</span>
+                                                </div>
                                             </div>
                                             
                                             <div className="flex bg-gray-100 p-1 rounded-2xl border border-gray-200">
                                                 <button onClick={() => setMisi1Step('materi')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi1Step === 'materi' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>📖 1. Materi</button>
                                                 <button onClick={() => setMisi1Step('simulator')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi1Step === 'simulator' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🧪 2. Simulator</button>
-                                                <button onClick={() => setMisi1Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi1Step === 'game' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🎮 3. Game</button>
+                                                <button onClick={() => setMisi1Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi1Step === 'game' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🎮 3. Game (5 Soal)</button>
                                             </div>
                                         </div>
 
@@ -1360,12 +1434,12 @@
                                                         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-2xl">
                                                             <h4 className="font-bold text-blue-900 text-sm">Bagaimana Caranya Komputer Mengenal Sekitarnya?</h4>
                                                             <p className="text-xs text-gray-700 leading-relaxed mt-1.5">
-                                                                Manusia diciptakan luar biasa dengan **organ tubuh alami biologis** yang disebut Panca Indra. Ketika mata melihat apel merah, otak kita langsung paham "itu apel lezat". 
+                                                                Manusia diciptakan luar biasa dengan **organ tubuh alami biologis** yang disebut Panca Indra. Ketika lidah mengecap larutan asam, otak kita langsung paham "itu kecut". 
                                                                 Sedangkan komputer hanyalah mesin logam dan sirkuit mati. Komputer tidak punya sel mata atau kulit biologis. Agar bisa mengumpulkan data dunia luar, komputer dipasangkan perangkat sirkuit kecil elektronik khusus bernama **SENSOR**.
                                                             </p>
                                                         </div>
                                                         <p className="text-xs text-gray-600 leading-relaxed">
-                                                            Sensor bertindak sebagai gerbang pertama data bagi komputer. Data fisik dari dunia luar (suhu, cahaya, gelombang suara) dikonversi oleh sensor menjadi bilangan angka-angka listrik agar prosesor komputer bisa memahaminya.
+                                                            Sensor bertindak sebagai gerbang pertama data bagi komputer. Data fisik dari dunia luar (suhu, rasa, cahaya) dikonversi oleh sensor menjadi bilangan angka-angka listrik agar prosesor komputer bisa memahaminya.
                                                         </p>
                                                     </div>
 
@@ -1380,7 +1454,8 @@
                                                                 { h: 'Mata (Melihat)', r: 'Kamera / Sensor LDR' },
                                                                 { h: 'Telinga (Mendengar)', r: 'Sensor Mikrofon' },
                                                                 { h: 'Kulit (Suhu & Jarak)', r: 'Sensor Jarak Ultrasonik' },
-                                                                { h: 'Hidung (Mendeteksi Asap)', r: 'Sensor Gas MQ-2' }
+                                                                { h: 'Hidung (Mendeteksi Asap)', r: 'Sensor Gas MQ-2' },
+                                                                { h: 'Lidah (Mengecap Rasa)', r: 'Sensor pH & Rasa Cairan' }
                                                             ].map((row, idx) => (
                                                                 <div key={idx} className="grid grid-cols-2 gap-2 text-xs p-2 bg-white rounded-lg border border-gray-150 text-center">
                                                                     <span className="text-indigo-900 font-semibold">{row.h}</span>
@@ -1466,12 +1541,12 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 3: GIM PENCOCOKAN */}
+                                        {/* LANGKAH 3: GIM PENCOCOKAN (KINI 5 PASANG) */}
                                         {misi1Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1.5 max-w-xl mx-auto">
-                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">🎮 Gim Kokocan (Koneksi Komputer & Indra)</h3>
-                                                    <p className="text-xs text-gray-500 leading-relaxed">Klik satu kartu **Panca Indra Manusia** di sebelah kiri terlebih dahulu, kemudian klik kartu **Sensor Robot** yang sepadan di sebelah kanan untuk menyambungkan kabel datanya!</p>
+                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">🎮 Gim Kokocan (5 Soal Padanan)</h3>
+                                                    <p className="text-xs text-gray-500 leading-relaxed">Klik satu kartu **Panca Indra Manusia** di sebelah kiri terlebih dahulu, kemudian klik kartu **Sensor Robot** yang sepadan di sebelah kanan! Setiap pasang bernilai **20 Nilai**.</p>
                                                 </div>
 
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
@@ -1532,7 +1607,7 @@
                                                 <div className="p-4 bg-gray-50 rounded-2xl border">
                                                     <div className="flex justify-between text-xs font-bold text-gray-600 mb-2">
                                                         <span>Penyelesaian Misi 1:</span>
-                                                        <span>{misi1Matches.length} / {sensingData.human.length} Terpasang</span>
+                                                        <span>{misi1Matches.length} / {sensingData.human.length} Terpasang (Nilai: {misi1Nilai}/100)</span>
                                                     </div>
                                                     <div className="w-full bg-gray-200 h-3 rounded-full overflow-hidden">
                                                         <div className="bg-green-500 h-full transition-all duration-300" style={{ width: `${(misi1Matches.length / sensingData.human.length) * 100}%` }}></div>
@@ -1542,8 +1617,8 @@
                                                 {misi1Completed && (
                                                     <div className="bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300 rounded-3xl p-6 text-center space-y-3">
                                                         <Icons.Trophy className="w-12 h-12 text-amber-500 mx-auto animate-bounce" />
-                                                        <h4 className="text-xl font-black text-emerald-955">Luar Biasa! Misi 1 Selesai! 🎉</h4>
-                                                        <p className="text-xs text-emerald-800 max-w-md mx-auto leading-relaxed">Kamu hebat! Sekarang kamu tahu bahwa di dunia koding, sensor bekerja sebagai indera mekanis bagi mesin cerdas. Data belajarmu telah terkirim secara instan ke cloud database!</p>
+                                                        <h4 className="text-xl font-black text-emerald-955">Luar Biasa! Misi 1 Selesai! 🎉 Nilai: 100/100</h4>
+                                                        <p className="text-xs text-emerald-800 max-w-md mx-auto leading-relaxed">Kamu hebat! Sekarang kamu tahu bahwa di dunia koding, sensor bekerja sebagai indera mekanis bagi mesin cerdas. Data belajarmu telah terkirim secara instan ke database!</p>
                                                         <button onClick={() => { setActiveTab('misi2'); setMisi2Step('materi'); }} className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 px-6 rounded-2xl transition text-xs shadow-md">Lanjut Ke Misi 2 (Detektif AI) <Icons.ChevronRight className="w-4 h-4" /></button>
                                                     </div>
                                                 )}
@@ -1556,19 +1631,22 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 2 */}
+                                {/* TAB CONTENT: MISI 2 (KINI TEPAT 5 SOAL ALAT) */}
                                 {activeTab === 'misi2' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-emerald-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
                                             <div className="space-y-1">
                                                 <span className="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase tracking-widest">Tujuan Pembelajaran 2</span>
-                                                <h2 className="text-2xl md:text-3xl font-black text-emerald-950">Misi 2: Detektif Mesin Pintar vs Mesin Biasa</h2>
+                                                <div className="flex items-center gap-3">
+                                                    <h2 className="text-2xl md:text-3xl font-black text-emerald-955">Misi 2: Detektif Mesin Pintar vs Mesin Biasa (5 Soal)</h2>
+                                                    <span className="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold px-3 py-1 rounded-xl text-xs">Nilai Misi: {misi2Nilai}/100</span>
+                                                </div>
                                             </div>
                                             
                                             <div className="flex bg-gray-100 p-1 rounded-2xl border border-gray-200">
                                                 <button onClick={() => setMisi2Step('materi')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi2Step === 'materi' ? 'bg-white text-emerald-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>📖 1. Materi</button>
                                                 <button onClick={() => setMisi2Step('analisis')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi2Step === 'analisis' ? 'bg-white text-emerald-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🔬 2. Uji Analisis</button>
-                                                <button onClick={() => setMisi2Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi2Step === 'game' ? 'bg-white text-emerald-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>⚙️ 3. Sortir</button>
+                                                <button onClick={() => setMisi2Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi2Step === 'game' ? 'bg-white text-emerald-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>⚙️ 3. Sortir (5 Soal)</button>
                                             </div>
                                         </div>
 
@@ -1617,10 +1695,10 @@
                                         {misi2Step === 'analisis' && (
                                             <div className="space-y-6">
                                                 <div className="bg-emerald-50 border border-emerald-150 p-4 rounded-2xl text-xs text-emerald-905">
-                                                    <strong>🔬 Meja Uji Laboratorium AI:</strong> Pilih salah satu alat di bawah ini untuk dibawa ke meja uji. Centang kriteria perilakunya dengan benar untuk membuktikan apakah ia tergolong **Mesin Cerdas (AI)** atau hanya **Mesin Biasa (Non-AI)**!
+                                                    <strong>🔬 Meja Uji Laboratorium AI:</strong> Pilih salah satu alat di bawah ini untuk dibawa ke meja uji. Centang kriteria perilakunya dengan benar untuk membuktikan apakah ia tergolong **Mesin Cerdas (AI)** atau hanya **Mesin Biasa (Non-AI)**! Setiap analisis yang tepat berkontribusi pada penambahan Nilai.
                                                 </div>
 
-                                                <div className="grid grid-cols-2 sm:grid-cols-6 gap-2">
+                                                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                                                     {itemsToSort.map((item) => (
                                                         <button key={item.id} onClick={() => startAnalysis(item)} className={`p-3 rounded-xl border text-center text-xs font-bold transition-all ${analyzedMachine?.id === item.id ? 'bg-emerald-600 text-white border-emerald-700 shadow-md' : 'bg-white text-gray-700 border-gray-200 hover:bg-emerald-50'}`}>⚙️ {item.name.split(' (')[0]}</button>
                                                     ))}
@@ -1672,12 +1750,12 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 3: GIM SORTIR */}
+                                        {/* LANGKAH 3: GIM SORTIR (TEPAT 5 ALAT) */}
                                         {misi2Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1 max-w-md mx-auto">
-                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">🕵️ Detektif Lapangan: Sortir Cepat!</h3>
-                                                    <p className="text-xs text-gray-500">Klasifikasikan sisa barang yang belum dianalisis langsung ke wadahnya dengan benar!</p>
+                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">🕵️ Detektif Lapangan: Sortir 5 Objek!</h3>
+                                                    <p className="text-xs text-gray-500">Setiap objek yang disortir dengan benar ke wadahnya akan menambah **20 Nilai** (Maksimal 100 Nilai).</p>
                                                 </div>
 
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1704,7 +1782,7 @@
                                                                 <p className="text-center text-xs text-gray-400 pt-8 italic">Wadah kosong. Klasifikasikan di bawah!</p>
                                                             ) : (
                                                                 sortedItems.biasa.map((i, idx) => (
-                                                                    <div key={idx} className="bg-white border border-amber-300 p-2.5 rounded-xl text-xs font-bold text-amber-955 flex justify-between items-center">
+                                                                    <div key={idx} className="bg-white border border-amber-300 p-2.5 rounded-xl text-xs font-bold text-emerald-955 flex justify-between items-center">
                                                                         <span>⚡ {i.name}</span>
                                                                         <Icons.Check className="w-4 h-4 text-emerald-600" />
                                                                     </div>
@@ -1716,7 +1794,7 @@
 
                                                 <div className="space-y-2.5 pt-4">
                                                     <h4 className="text-xs font-black text-gray-500 uppercase tracking-wider text-center">Tombol Klasifikasi Langsung:</h4>
-                                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                                                         {itemsToSort.map((item) => {
                                                             const isAlreadySorted = sortedItems.cerdas.some(c => c.id === item.id) || sortedItems.biasa.some(b => b.id === item.id);
                                                             return (
@@ -1740,7 +1818,7 @@
                                                 {misi2Completed && (
                                                     <div className="bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300 rounded-3xl p-6 text-center space-y-3">
                                                         <Icons.Trophy className="w-12 h-12 text-amber-500 mx-auto animate-bounce" />
-                                                        <h4 className="text-xl font-black text-emerald-950">Hebat! Misi 2 Berhasil Diselesaikan! 🏆</h4>
+                                                        <h4 className="text-xl font-black text-emerald-950">Hebat! Misi 2 Berhasil Diselesaikan! 🏆 Nilai: 100/100</h4>
                                                         <p className="text-xs text-emerald-800 max-w-md mx-auto leading-relaxed">Kamu sangat jeli layaknya juri sains andal! Hasil pengelompokanmu berhasil disimpan online.</p>
                                                         <div className="flex justify-center gap-3">
                                                             <button onClick={resetMisi2} className="bg-white border border-gray-300 text-emerald-800 font-bold py-2 px-4 rounded-xl text-xs transition">Bermain Ulang Misi</button>
@@ -1757,17 +1835,20 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 3 */}
+                                {/* TAB CONTENT: MISI 3 (KINI TEPAT 5 KASUS) */}
                                 {activeTab === 'misi3' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-rose-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
                                             <div className="space-y-1">
                                                 <span className="text-xs font-extrabold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 uppercase tracking-widest">Tujuan Pembelajaran 3</span>
-                                                <h2 className="text-2xl md:text-3xl font-black text-rose-955">Misi 3: Petualangan Etika AI & Empati Digital</h2>
+                                                <div className="flex items-center gap-3">
+                                                    <h2 className="text-2xl md:text-3xl font-black text-rose-955">Misi 3: Petualangan Etika AI & Empati Digital (5 Kasus)</h2>
+                                                    <span className="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold px-3 py-1 rounded-xl text-xs">Nilai Misi: {misi3Nilai}/100</span>
+                                                </div>
                                             </div>
                                             <div className="flex bg-gray-100 p-1 rounded-2xl border border-gray-200">
                                                 <button onClick={() => setMisi3Step('materi')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi3Step === 'materi' ? 'bg-white text-rose-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>📖 1. Aturan Etika</button>
-                                                <button onClick={() => setMisi3Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi3Step === 'game' ? 'bg-white text-rose-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🗣️ 2. Skenario</button>
+                                                <button onClick={() => setMisi3Step('game')} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${misi3Step === 'game' ? 'bg-white text-rose-850 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}>🗣️ 2. Skenario (5 Kasus)</button>
                                             </div>
                                         </div>
 
@@ -1785,17 +1866,17 @@
                                                     <div className="bg-white border rounded-2xl p-4 space-y-2 shadow-sm">
                                                         <div className="bg-rose-100 text-rose-700 w-10 h-10 rounded-xl flex items-center justify-center font-bold">1</div>
                                                         <h5 className="font-bold text-xs text-gray-900">Empati & Menjaga Privasi</h5>
-                                                        <p className="text-[11px] text-gray-505 leading-relaxed">Selalu tanyakan diri sendiri: \"Apakah tindakanku mengedit foto/video AI ini akan melukai perasaan orang lain?\" Jangan bagikan apa pun tanpa izin temanmu.</p>
+                                                        <p className="text-[11px] text-gray-550 leading-relaxed">Selalu tanyakan diri sendiri: "Apakah tindakanku mengedit foto/video AI ini akan melukai perasaan orang lain?" Jangan bagikan apa pun tanpa izin temanmu.</p>
                                                     </div>
                                                     <div className="bg-white border rounded-2xl p-4 space-y-2 shadow-sm">
                                                         <div className="bg-rose-100 text-rose-700 w-10 h-10 rounded-xl flex items-center justify-center font-bold">2</div>
                                                         <h5 className="font-bold text-xs text-gray-900">Asisten Belajar, Bukan Joki</h5>
-                                                        <p className="text-[11px] text-gray-505 leading-relaxed">Jadikan AI rekan curah pendapat (brainstorming). Jangan biarkan AI menulis tugas pribadimu 100% karena hal itu mencuri peluang otakmu untuk bertumbuh pintar.</p>
+                                                        <p className="text-[11px] text-gray-550 leading-relaxed">Jadikan AI rekan curah pendapat (brainstorming). Jangan biarkan AI menulis tugas pribadimu 100% karena hal itu mencuri peluang otakmu untuk bertumbuh pintar.</p>
                                                     </div>
                                                     <div className="bg-white border rounded-2xl p-4 space-y-2 shadow-sm">
                                                         <div className="bg-rose-100 text-rose-700 w-10 h-10 rounded-xl flex items-center justify-center font-bold">3</div>
                                                         <h5 className="font-bold text-xs text-gray-900">Sopan & Kritis Terhadap Fakta</h5>
-                                                        <p className="text-[11px] text-gray-505 leading-relaxed">Ketik kalimat perintah dengan tata krama kesopanan, dan pastikan menyaring kembali fakta yang diberikan oleh AI di sumber resmi sebelum mempercayainya.</p>
+                                                        <p className="text-[11px] text-gray-550 leading-relaxed">Ketik kalimat perintah dengan tata krama kesopanan, dan pastikan menyaring kembali fakta yang diberikan oleh AI di sumber resmi sebelum mempercayainya.</p>
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-end pt-4">
@@ -1804,17 +1885,17 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 2: GIM SKENARIO */}
+                                        {/* LANGKAH 2: GIM SKENARIO (KINI 5 KASUS) */}
                                         {misi3Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1 max-w-md mx-auto">
                                                     <h3 className="font-extrabold text-gray-900 text-base md:text-lg">📖 Skenario Kasus: Pengambilan Keputusan</h3>
-                                                    <p className="text-xs text-gray-550">Bacalah tantangan situasi moral berikut, lalu pilih keputusan yang paling terpuji!</p>
+                                                    <p className="text-xs text-gray-555">Bacalah tantangan situasi moral berikut, lalu pilih keputusan yang paling terpuji! Setiap keputusan benar bernilai **20 Nilai**.</p>
                                                 </div>
 
                                                 <div className="max-w-2xl mx-auto bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200 p-6 relative">
                                                     <div className="absolute -top-3.5 left-6 bg-indigo-600 text-white text-[10px] px-3.5 py-1 rounded-full font-black tracking-wider uppercase">KASUS {currentScenario + 1} DARI {scenarios.length}</div>
-                                                    <h4 className="font-black text-indigo-905 text-base md:text-lg mt-4 mb-3">{scenarios[currentScenario].title}</h4>
+                                                    <h4 className="font-black text-indigo-955 text-base md:text-lg mt-4 mb-3">{scenarios[currentScenario].title}</h4>
                                                     <p className="text-xs md:text-sm text-gray-700 bg-white p-4 rounded-2xl border leading-relaxed shadow-sm">{scenarios[currentScenario].situation}</p>
                                                     <div className="mt-5 space-y-2.5">
                                                         {scenarios[currentScenario].options.map((opt) => {
@@ -1841,7 +1922,7 @@
                                                 {misi3Completed && (
                                                     <div className="bg-emerald-100 border-2 border-emerald-300 rounded-3xl p-6 text-center space-y-3 max-w-2xl mx-auto">
                                                         <Icons.Trophy className="w-12 h-12 text-amber-500 mx-auto animate-bounce" />
-                                                        <h4 className="text-xl font-black text-emerald-955">Misi Etika AI Selesai Sukses! ❤️</h4>
+                                                        <h4 className="text-xl font-black text-emerald-955">Misi Etika AI Selesai Sukses! ❤️ Nilai: {misi3Nilai}/100</h4>
                                                         <p className="text-xs text-emerald-800 leading-relaxed max-w-sm mx-auto">Luar biasa, {studentName}! Kamu terbukti adalah pelopor pahlawan digital masa depan yang memegang teguh kejujuran akademis, empati sosial, dan sopan santun.</p>
                                                         <button onClick={() => setActiveTab('misi4')} className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 px-6 rounded-2xl transition text-xs inline-flex items-center gap-1 shadow-sm">Buka Gerbang Ujian Akhir <Icons.Trophy className="w-4 h-4" /></button>
                                                     </div>
@@ -1856,7 +1937,7 @@
                                 )}
 
                                 {}
-                                {/* TAB CONTENT: KUIS & KELULUSAN (25 SOAL, MULTI-FORMAT) */}
+                                {/* TAB CONTENT: KUIS & KELULUSAN (25 SOAL DENGAN SISTEM PENILAIAN SPESIFIK & REVIEW JAWABAN TRANSPARAN) */}
                                 {activeTab === 'misi4' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-amber-100 space-y-6 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
@@ -1865,21 +1946,46 @@
                                                 <h2 className="text-2xl md:text-3xl font-black text-amber-955">Ujian Kompetensi Explorer AI (25 Soal)</h2>
                                             </div>
                                             <div className="bg-amber-100 text-amber-900 font-extrabold px-4 py-2 rounded-xl text-xs flex items-center gap-2">
-                                                <Icons.Trophy className="w-4 h-4 text-amber-500" /> Verifikasi Kelayakan
+                                                <Icons.Trophy className="w-4 h-4 text-amber-500 animate-bounce" /> Akumulasi Nilai Skala 1 - 100
                                             </div>
                                         </div>
 
                                         {!quizSubmitted ? (
                                             <div className="max-w-3xl mx-auto space-y-6">
                                                 
-                                                {/* Navigasi dan Progress bar */}
-                                                <div className="flex justify-between items-center text-xs font-bold text-gray-500">
+                                                {/* Progres Navigasi Grid Visual */}
+                                                <div className="space-y-2">
+                                                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-wider block">Navigasi Lembar Jawaban ({Object.keys(quizAnswers).length}/25 Terjawab):</label>
+                                                    <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+                                                        {quizQuestions.map((_, i) => {
+                                                            const isCurrent = i === currentQuiz;
+                                                            const isAnswered = quizAnswers[i] !== undefined;
+                                                            return (
+                                                                <button
+                                                                    key={i}
+                                                                    onClick={() => setCurrentQuiz(i)}
+                                                                    className={`py-2 text-xs font-black rounded-lg transition-all border text-center ${
+                                                                        isCurrent 
+                                                                            ? 'bg-indigo-600 text-white border-indigo-700 shadow-md ring-2 ring-indigo-300' 
+                                                                            : isAnswered 
+                                                                                ? 'bg-emerald-100 text-emerald-800 border-emerald-300' 
+                                                                                : 'bg-white text-gray-500 border-gray-200 hover:bg-gray-50'
+                                                                    }`}
+                                                                >
+                                                                    {i + 1}
+                                                                </button>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex justify-between items-center text-xs font-bold text-gray-500 pt-2 border-t">
                                                     <span>Pertanyaan {currentQuiz + 1} dari {quizQuestions.length}</span>
-                                                    <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-[10px]">Tipe: {
-                                                        quizQuestions[currentQuiz].type === 'mc' ? 'Pilihan Ganda Biasa' :
-                                                        quizQuestions[currentQuiz].type === 'complex_mc' ? 'Pilihan Ganda Kompleks (Pilih 3)' :
-                                                        quizQuestions[currentQuiz].type === 'true_false' ? 'Benar / Salah (3 Pernyataan)' :
-                                                        'Menjodohkan (4 Pasang)'
+                                                    <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-[10px] font-black">Tipe: {
+                                                        quizQuestions[currentQuiz].type === 'mc' ? 'Pilihan Ganda Biasa (Skor 2)' :
+                                                        quizQuestions[currentQuiz].type === 'complex_mc' ? 'Pilihan Ganda Kompleks (Skor maks 6)' :
+                                                        quizQuestions[currentQuiz].type === 'true_false' ? 'Benar / Salah (Skor maks 6)' :
+                                                        'Menjodohkan (Skor maks 4)'
                                                     }</span>
                                                 </div>
 
@@ -1888,14 +1994,14 @@
                                                 </div>
 
                                                 {/* Soal Panel */}
-                                                <div className="bg-indigo-50/50 border-2 border-indigo-100 p-5 rounded-2xl">
-                                                    <p className="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-1">SOAL #{currentQuiz + 1}</p>
+                                                <div className="bg-indigo-50/50 border-2 border-indigo-100 p-5 rounded-2xl shadow-sm">
+                                                    <p className="text-[10px] font-black text-indigo-500 uppercase tracking-wider mb-1">PERTANYAAN KUIS #{currentQuiz + 1}</p>
                                                     <h4 className="font-extrabold text-indigo-955 text-sm md:text-base leading-relaxed">
                                                         {quizQuestions[currentQuiz].question}
                                                     </h4>
                                                 </div>
 
-                                                {/* INTERACTIVE COMPONENT RENDERING BERDASARKAN FORMAT SOAL */}
+                                                {/* RENDERING BERDASARKAN FORMAT SOAL */}
                                                 
                                                 {/* FORMAT 1: PILIHAN GANDA BIASA (MC) */}
                                                 {quizQuestions[currentQuiz].type === 'mc' && (
@@ -1903,8 +2009,8 @@
                                                         {quizQuestions[currentQuiz].options.map((opt, idx) => {
                                                             const isSelected = quizAnswers[currentQuiz] === idx;
                                                             return (
-                                                                <button key={idx} onClick={() => handleQuizAnswer(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md' : 'bg-white hover:bg-amber-50/50 hover:border-amber-300 border-gray-200 text-gray-800'}`}>
-                                                                    <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 font-black border ${isSelected ? 'bg-indigo-500 text-white border-indigo-600' : 'bg-gray-100 text-gray-500'}`}>{idx + 1}</span>
+                                                                <button key={idx} onClick={() => handleQuizAnswer(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md transform translate-x-1' : 'bg-white hover:bg-amber-50/50 hover:border-amber-300 border-gray-200 text-gray-800'}`}>
+                                                                    <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 font-black border ${isSelected ? 'bg-indigo-500 text-white border-indigo-600' : 'bg-gray-100 text-gray-500'}`}>{String.fromCharCode(65 + idx)}</span>
                                                                     <span className="flex-1 leading-relaxed">{opt}</span>
                                                                 </button>
                                                             );
@@ -1915,7 +2021,10 @@
                                                 {/* FORMAT 2: PILIHAN GANDA KOMPLEKS (COMPLEX_MC) */}
                                                 {quizQuestions[currentQuiz].type === 'complex_mc' && (
                                                     <div className="space-y-3">
-                                                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-805 font-bold mb-2">💡 Petunjuk: Pilih tepat 3 pernyataan yang paling tepat di bawah ini dengan menekan tombol pernyataan! ({tempComplexSelections.length} / 3 terpilih)</div>
+                                                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-805 font-bold mb-2 flex items-center gap-2">
+                                                            <Icons.Lightbulb className="w-4 h-4 text-amber-500 shrink-0" />
+                                                            <span>Petunjuk: Pilih tepat 3 pernyataan yang menurutmu benar! ({tempComplexSelections.length} / 3 terpilih)</span>
+                                                        </div>
                                                         <div className="space-y-2.5">
                                                             {quizQuestions[currentQuiz].options.map((opt, idx) => {
                                                                 const isSelected = tempComplexSelections.includes(idx);
@@ -1933,19 +2042,22 @@
                                                 {/* FORMAT 3: BENAR / SALAH (TRUE_FALSE) */}
                                                 {quizQuestions[currentQuiz].type === 'true_false' && (
                                                     <div className="space-y-4">
-                                                        <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-xl text-xs text-emerald-805 font-bold mb-2">💡 Petunjuk: Tentukan apakah setiap pernyataan di bawah ini BENAR atau SALAH!</div>
+                                                        <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-xl text-xs text-emerald-805 font-bold mb-2 flex items-center gap-2">
+                                                            <Icons.Lightbulb className="w-4 h-4 text-emerald-500 shrink-0" />
+                                                            <span>Petunjuk: Tentukan status kebenaran tiap pernyataan di bawah ini!</span>
+                                                        </div>
                                                         <div className="space-y-3">
                                                             {quizQuestions[currentQuiz].statements.map((statement, idx) => {
                                                                 const curValue = tempTfSelections[idx];
                                                                 return (
-                                                                    <div key={idx} className="bg-white p-4 rounded-2xl border border-gray-200 space-y-3 md:space-y-0 md:flex md:items-center md:justify-between">
+                                                                    <div key={idx} className="bg-white p-4 rounded-2xl border border-gray-200 space-y-3 md:space-y-0 md:flex md:items-center md:justify-between shadow-sm">
                                                                         <div className="flex-1 pr-4">
-                                                                            <span className="text-[10px] bg-gray-100 text-gray-600 px-2.5 py-0.5 rounded-full font-bold uppercase mr-2">Pernyataan {idx + 1}</span>
+                                                                            <span className="text-[9px] bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full font-black uppercase mr-2">Pernyataan {idx + 1}</span>
                                                                             <p className="text-xs md:text-sm text-gray-800 font-bold mt-1 inline">{statement}</p>
                                                                         </div>
                                                                         <div className="flex gap-2 shrink-0 pt-2 md:pt-0">
-                                                                            <button onClick={() => handleTrueFalseToggle(idx, true)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === true ? 'bg-emerald-600 text-white border-emerald-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-emerald-50'}`}>🟢 BENAR</button>
-                                                                            <button onClick={() => handleTrueFalseToggle(idx, false)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === false ? 'bg-rose-600 text-white border-rose-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-rose-50'}`}>🔴 SALAH</button>
+                                                                            <button onClick={() => handleTrueFalseToggle(idx, true)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === true ? 'bg-emerald-600 text-white border-emerald-700 shadow-sm' : 'bg-white text-gray-750 border-gray-200 hover:bg-emerald-50'}`}>🟢 BENAR</button>
+                                                                            <button onClick={() => handleTrueFalseToggle(idx, false)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === false ? 'bg-rose-600 text-white border-rose-700 shadow-sm' : 'bg-white text-gray-750 border-gray-200 hover:bg-rose-50'}`}>🔴 SALAH</button>
                                                                         </div>
                                                                     </div>
                                                                 );
@@ -1957,12 +2069,12 @@
                                                 {/* FORMAT 4: MENJODOHKAN (MATCHING) */}
                                                 {quizQuestions[currentQuiz].type === 'matching' && (
                                                     <div className="space-y-6">
-                                                        <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-xl text-xs text-indigo-805 font-bold mb-2">
-                                                            💡 Petunjuk: Klik satu item di sebelah kiri, lalu klik pasangannya di sebelah kanan!
+                                                        <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-xl text-xs text-indigo-805 font-bold mb-2 flex items-center gap-2">
+                                                            <Icons.Lightbulb className="w-4 h-4 text-indigo-500 shrink-0" />
+                                                            <span>Petunjuk: Klik satu item di sebelah kiri, lalu klik pasangannya di sebelah kanan!</span>
                                                         </div>
 
                                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                            
                                                             {/* Kolom Kiri */}
                                                             <div className="space-y-2">
                                                                 <p className="text-center text-[11px] font-black uppercase text-gray-400">Pertanyaan (Kiri)</p>
@@ -1972,7 +2084,7 @@
                                                                     const matchedRightIdx = tempMatchingSelections[leftIdx];
                                                                     return (
                                                                         <button key={leftIdx} onClick={() => handleMatchingClickLeft(leftIdx)} className={`w-full p-3.5 rounded-xl text-left text-xs font-bold border transition ${isSelectedLeft ? 'bg-indigo-600 text-white border-indigo-700 ring-4 ring-indigo-200' : isMatched ? 'bg-emerald-50 text-emerald-800 border-emerald-300' : 'bg-white text-gray-800 border-gray-200 hover:bg-indigo-50'}`}>
-                                                                            <span className="inline-block bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded mr-2 uppercase font-black">Item {leftIdx + 1}</span>
+                                                                            <span className="inline-block bg-gray-100 text-gray-700 text-[9px] px-2 py-0.5 rounded mr-2 uppercase font-black">Item {leftIdx + 1}</span>
                                                                             <span>{leftVal}</span>
                                                                             {isMatched && (
                                                                                 <span className="block text-[10px] text-emerald-600 mt-1 font-extrabold">✓ Terhubung dengan Pilihan #{matchedRightIdx + 1}</span>
@@ -1989,7 +2101,7 @@
                                                                     const isBeingPairedTo = Object.values(tempMatchingSelections).includes(rightIdx);
                                                                     return (
                                                                         <button key={rightIdx} onClick={() => handleMatchingClickRight(rightIdx)} className={`w-full p-3.5 rounded-xl text-left text-xs font-bold border transition ${isBeingPairedTo ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'bg-white text-gray-800 border-gray-200 hover:bg-indigo-50'}`}>
-                                                                            <span className="inline-block bg-indigo-100 text-indigo-700 text-[10px] px-2 py-0.5 rounded mr-2 uppercase font-black">Pilihan {rightIdx + 1}</span>
+                                                                            <span className="inline-block bg-indigo-100 text-indigo-700 text-[9px] px-2 py-0.5 rounded mr-2 uppercase font-black">Pilihan {rightIdx + 1}</span>
                                                                             <span>{rightVal}</span>
                                                                         </button>
                                                                     );
@@ -2014,77 +2126,250 @@
                                                     </div>
                                                 )}
 
-                                                {/* Tombol Lanjut ke Pertanyaan Berikutnya */}
-                                                <div className="flex justify-end pt-3">
+                                                {/* Navigasi kuis bawah */}
+                                                <div className="flex justify-between pt-3 border-t">
                                                     <button
-                                                        disabled={
-                                                            quizAnswers[currentQuiz] === undefined ||
-                                                            (quizQuestions[currentQuiz].type === 'complex_mc' && tempComplexSelections.length !== 3) ||
-                                                            (quizQuestions[currentQuiz].type === 'true_false' && Object.keys(tempTfSelections).length !== 3) ||
-                                                            (quizQuestions[currentQuiz].type === 'matching' && Object.keys(tempMatchingSelections).length !== 4)
-                                                        }
+                                                        disabled={currentQuiz === 0}
+                                                        onClick={() => setCurrentQuiz(prev => prev - 1)}
+                                                        className="bg-white hover:bg-gray-50 text-gray-700 font-extrabold py-3 px-5 border rounded-2xl text-xs transition disabled:opacity-40"
+                                                    >
+                                                        Sebelumnya
+                                                    </button>
+                                                    <button
+                                                        disabled={!isCurrentQuestionAnswered()}
                                                         onClick={handleNextQuiz}
                                                         className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-extrabold py-3 px-6 rounded-2xl text-xs transition flex items-center gap-1 shadow-md"
                                                     >
-                                                        {currentQuiz + 1 === quizQuestions.length ? 'Selesai & Cetak Sertifikat' : 'Soal Berikutnya'} <Icons.ChevronRight className="w-4 h-4" />
+                                                        {currentQuiz + 1 === quizQuestions.length ? 'Selesai & Kirim Jawaban' : 'Soal Berikutnya'} <Icons.ChevronRight className="w-4 h-4" />
                                                     </button>
                                                 </div>
                                             </div>
                                         ) : (
+                                            /* HASIL PENILAIAN & SERTIFIKAT DIGITAL + TRANSPARANSI REVIEW SOAL */
                                             <div className="max-w-3xl mx-auto space-y-8 animate-fadeIn">
-                                                <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-8 border-double border-emerald-400 rounded-[36px] p-6 md:p-10 text-center space-y-6 shadow-md relative overflow-hidden">
-                                                    <div className="absolute top-0 right-0 w-24 h-24 bg-amber-400 text-amber-950 font-bold flex items-center justify-center rounded-bl-[36px] shadow-sm border-l border-b border-amber-300">
-                                                        <Icons.Trophy className="w-10 h-10 text-amber-955 animate-bounce" />
-                                                    </div>
-
-                                                    <div className="space-y-1">
-                                                        <span className="text-emerald-700 text-xs font-black tracking-widest uppercase">Piagam Kelulusan Kompetensi</span>
-                                                        <h3 className="text-2xl md:text-4xl font-extrabold text-emerald-955 font-serif tracking-wide">ALUMNI EXPLORER TEKNOLOGI AI</h3>
-                                                        <div className="w-40 h-1 bg-amber-400 mx-auto rounded-full my-3"></div>
-                                                    </div>
-
-                                                    <p className="text-xs text-emerald-800 italic">Piagam ini dianugerahkan dengan penuh hormat kepada:</p>
-
-                                                    <div className="py-2.5 border-b-2 border-dashed border-emerald-300 max-w-sm mx-auto">
-                                                        <span className="text-2xl md:text-4xl font-black text-indigo-955 font-mono tracking-wider">{studentName}</span>
-                                                    </div>
-
-                                                    <p className="text-xs text-emerald-900 leading-relaxed max-w-lg mx-auto">
-                                                        Atas keberhasilannya menuntaskan seluruh Misi Eksperimen, memahami perbedaan dasar penginderaan sensor komputer, menganalisis struktur mesin cerdas Kecerdasan Artifisial, serta membuktikan karakter empati terpuji dalam menggunakan teknologi digital.
-                                                    </p>
-
-                                                    <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto pt-4 text-xs font-bold text-emerald-900">
-                                                        <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
-                                                            <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider">Nilai Ujian Akhir</p>
-                                                            <p className="text-xl text-emerald-955 font-black">{quizScore} / 100</p>
-                                                        </div>
-                                                        <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
-                                                            <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider">Poin Petualang</p>
-                                                            <p className="text-xl text-amber-600 font-black">{points} Poin</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="pt-4 text-[10px] text-gray-550">
-                                                        Disertifikasi secara digital oleh <strong className="text-emerald-900 font-extrabold">Kurikulum Merdeka Koding Indonesia</strong> pada Tahun 2026.
-                                                    </div>
+                                                
+                                                {/* Switch Tab Hasil */}
+                                                <div className="flex bg-gray-100 p-1.5 rounded-2xl border border-gray-200 max-w-sm mx-auto">
+                                                    <button 
+                                                        onClick={() => setShowReviewMode(false)} 
+                                                        className={`flex-1 py-2 rounded-xl text-xs font-black transition ${!showReviewMode ? 'bg-indigo-600 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'}`}
+                                                    >
+                                                        🏆 Piagam Kelulusan
+                                                    </button>
+                                                    <button 
+                                                        onClick={() => setShowReviewMode(true)} 
+                                                        className={`flex-1 py-2 rounded-xl text-xs font-black transition ${showReviewMode ? 'bg-indigo-600 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'}`}
+                                                    >
+                                                        🔍 Review Lembar Jawaban
+                                                    </button>
                                                 </div>
+
+                                                {!showReviewMode ? (
+                                                    /* TAMPILAN PIAGAM KELULUSAN */
+                                                    <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-8 border-double border-emerald-400 rounded-[36px] p-6 md:p-10 text-center space-y-6 shadow-md relative overflow-hidden">
+                                                        <div className="absolute top-0 right-0 w-24 h-24 bg-amber-400 text-amber-955 font-bold flex items-center justify-center rounded-bl-[36px] shadow-sm border-l border-b border-amber-300">
+                                                            <Icons.Trophy className="w-10 h-10 text-amber-955 animate-bounce" />
+                                                        </div>
+
+                                                        <div className="space-y-1">
+                                                            <span className="text-emerald-700 text-xs font-black tracking-widest uppercase">Piagam Kelulusan Kompetensi</span>
+                                                            <h3 className="text-2xl md:text-4xl font-extrabold text-emerald-955 font-serif tracking-wide">ALUMNI EXPLORER TEKNOLOGI AI</h3>
+                                                            <div className="w-40 h-1 bg-amber-400 mx-auto rounded-full my-3"></div>
+                                                        </div>
+
+                                                        <p className="text-xs text-emerald-800 italic">Piagam ini dianugerahkan dengan penuh hormat kepada:</p>
+
+                                                        <div className="py-2.5 border-b-2 border-dashed border-emerald-300 max-w-sm mx-auto">
+                                                            <span className="text-2xl md:text-4xl font-black text-indigo-955 font-mono tracking-wider">{studentName}</span>
+                                                        </div>
+
+                                                        <p className="text-xs text-emerald-900 leading-relaxed max-w-lg mx-auto">
+                                                            Atas keberhasilannya menuntaskan seluruh Misi Eksperimen, memahami perbedaan dasar penginderaan sensor komputer, menganalisis struktur mesin cerdas Kecerdasan Artifisial, serta membuktikan karakter empati terpuji dalam menggunakan teknologi digital.
+                                                        </p>
+
+                                                        <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto pt-4 text-xs font-bold text-emerald-900">
+                                                            <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
+                                                                <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider">Nilai Ujian Akhir</p>
+                                                                <p className="text-xl text-emerald-955 font-black">{quizScore} / 100</p>
+                                                            </div>
+                                                            <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
+                                                                <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider font-mono">Nilai Rata-Rata</p>
+                                                                <p className="text-xl text-amber-600 font-black">{averageNilaiLive} / 100</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="pt-4 text-[10px] text-gray-550">
+                                                            Disertifikasi secara digital oleh <strong className="text-emerald-900 font-extrabold">Kurikulum Merdeka Koding Indonesia</strong> pada Tahun 2026.
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    /* REVIEW TRANSPARAN JAWABAN SISWA */
+                                                    <div className="space-y-6 animate-fadeIn">
+                                                        <div className="bg-indigo-50 border border-indigo-200 p-5 rounded-2xl flex justify-between items-center flex-wrap gap-4">
+                                                            <div>
+                                                                <h3 className="font-extrabold text-indigo-955 text-sm md:text-base flex items-center gap-2">
+                                                                    <Icons.BookOpen className="w-5 h-5 text-indigo-600" /> Analisis Transparansi Jawaban Ujian
+                                                                </h3>
+                                                                <p className="text-xs text-gray-600 mt-1">Tinjauan perolehan skor terperinci sesuai pedoman penskoran resmi.</p>
+                                                            </div>
+                                                            <div className="bg-white border-2 border-indigo-200 px-4 py-2.5 rounded-xl text-center shadow-sm">
+                                                                <span className="text-[9px] uppercase font-black text-gray-400 block">TOTAL AKUMULASI NILAI</span>
+                                                                <strong className="text-indigo-950 text-2xl font-black">{quizScore} <span className="text-xs text-gray-450 font-semibold">/ 100</span></strong>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="space-y-4 max-h-[650px] overflow-y-auto pr-1">
+                                                            {quizQuestions.map((q, idx) => {
+                                                                const studentAns = quizAnswers[idx];
+                                                                const evalRes = calculateQuestionScore(q, studentAns);
+                                                                const isFullyCorrect = evalRes.score === evalRes.max;
+                                                                const isPartiallyCorrect = evalRes.score > 0 && evalRes.score < evalRes.max;
+                                                                
+                                                                return (
+                                                                    <div 
+                                                                        key={idx} 
+                                                                        className={`p-5 rounded-2xl border-2 shadow-sm bg-white transition-all ${
+                                                                            isFullyCorrect 
+                                                                                ? 'border-emerald-200 hover:border-emerald-300' 
+                                                                                : isPartiallyCorrect 
+                                                                                    ? 'border-amber-200 hover:border-amber-300' 
+                                                                                    : 'border-rose-200 hover:border-rose-300'
+                                                                        }`}
+                                                                    >
+                                                                        <div className="flex items-start justify-between gap-3 flex-wrap">
+                                                                            <span className="text-[9px] font-black bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full uppercase">
+                                                                                SOAL {idx + 1} ({
+                                                                                    q.type === 'mc' ? 'PG Biasa (Maks 2)' : 
+                                                                                    q.type === 'complex_mc' ? 'PG Kompleks (Maks 6)' : 
+                                                                                    q.type === 'true_false' ? 'Benar / Salah (Maks 6)' : 
+                                                                                    'Menjodohkan (Maks 4)'
+                                                                                })
+                                                                            </span>
+                                                                            
+                                                                            <span className={`text-xs font-black px-3 py-1 rounded-full flex items-center gap-1 ${
+                                                                                isFullyCorrect 
+                                                                                    ? 'bg-emerald-50 text-emerald-700' 
+                                                                                    : isPartiallyCorrect 
+                                                                                        ? 'bg-amber-50 text-amber-700' 
+                                                                                        : 'bg-rose-50 text-rose-700'
+                                                                            }`}>
+                                                                                Skor: {evalRes.score} / {evalRes.max}
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <p className="text-xs md:text-sm font-extrabold text-gray-900 mt-3 leading-relaxed">{q.question}</p>
+
+                                                                        {/* Tampilan Jawaban Siswa & Kunci */}
+                                                                        <div className="mt-4 p-3.5 bg-gray-50 rounded-xl space-y-2 text-xs font-semibold">
+                                                                            
+                                                                            {/* 1. PG Biasa */}
+                                                                            {q.type === 'mc' && (
+                                                                                <div>
+                                                                                    <p className="text-gray-600">Jawaban Kamu: <span className={isFullyCorrect ? 'text-emerald-700' : 'text-rose-700'}>{studentAns !== undefined ? `${String.fromCharCode(65 + studentAns)}. ${q.options[studentAns]}` : 'Belum Dijawab'}</span></p>
+                                                                                    {!isFullyCorrect && (
+                                                                                        <p className="text-emerald-700 mt-1">Jawaban Benar: <span>{String.fromCharCode(65 + q.correctAnswer)}. {q.options[q.correctAnswer]}</span></p>
+                                                                                    )}
+                                                                                </div>
+                                                                            )}
+
+                                                                            {/* 2. PG Kompleks */}
+                                                                            {q.type === 'complex_mc' && (
+                                                                                <div className="space-y-1">
+                                                                                    <p className="text-gray-600">Pernyataan yang Kamu Pilih:</p>
+                                                                                    <ul className="list-disc pl-5 text-gray-700">
+                                                                                        {Array.isArray(studentAns) && studentAns.length > 0 ? studentAns.map(optI => {
+                                                                                            const isCorrectOption = q.correctAnswers.includes(optI);
+                                                                                            return (
+                                                                                                <li key={optI} className={isCorrectOption ? "text-emerald-700" : "text-rose-700"}>
+                                                                                                    {q.options[optI]} {isCorrectOption ? '✅' : '❌'}
+                                                                                                </li>
+                                                                                            );
+                                                                                        }) : <li className="text-rose-600">Belum ada pilihan</li>}
+                                                                                    </ul>
+                                                                                    <p className="text-emerald-700 mt-2 font-black">Sistem Penilaian (Salah {3 - (evalRes.correctCount || 0)}): Skor {evalRes.score} / 6</p>
+                                                                                </div>
+                                                                            )}
+
+                                                                            {/* 3. Benar Salah */}
+                                                                            {q.type === 'true_false' && (
+                                                                                <div className="space-y-2">
+                                                                                    <p className="text-gray-600">Evaluasi Pernyataan:</p>
+                                                                                    <ul className="space-y-1 pl-3 text-gray-750">
+                                                                                        {q.statements.map((stmt, sIdx) => {
+                                                                                            const userVal = studentAns ? studentAns[sIdx] : null;
+                                                                                            const correctVal = q.correctAnswers[sIdx];
+                                                                                            const isStmtCorrect = userVal === correctVal;
+                                                                                            return (
+                                                                                                <li key={sIdx} className="flex items-center gap-2">
+                                                                                                    <span className={isStmtCorrect ? 'text-emerald-700' : 'text-rose-700'}>
+                                                                                                        {isStmtCorrect ? '🟢' : '🔴'} Pernyataan {sIdx + 1}: {userVal === null ? 'Belum Diisi' : userVal ? 'BENAR' : 'SALAH'}
+                                                                                                    </span>
+                                                                                                    <span className="text-gray-400 font-normal">(Kunci: {correctVal ? 'BENAR' : 'SALAH'})</span>
+                                                                                                </li>
+                                                                                            );
+                                                                                        })}
+                                                                                    </ul>
+                                                                                    <p className="text-emerald-700 mt-2 font-black">Sistem Penilaian ({evalRes.correctCount || 0} Pernyataan Benar): Skor {evalRes.score} / 6</p>
+                                                                                </div>
+                                                                            )}
+
+                                                                            {/* 4. Menjodohkan */}
+                                                                            {q.type === 'matching' && (
+                                                                                <div className="space-y-2">
+                                                                                    <p className="text-gray-600">Pasangan yang Kamu Hubungkan:</p>
+                                                                                    <ul className="space-y-1 pl-3 text-gray-750">
+                                                                                        {q.leftItems.map((leftV, leftI) => {
+                                                                                            const userRightVal = studentAns ? studentAns[leftI] : null;
+                                                                                            const correctRightVal = q.correctPairs[leftI];
+                                                                                            const isMatchCorrect = userRightVal === correctRightVal;
+                                                                                            return (
+                                                                                                <li key={leftI} className="flex items-center gap-2 flex-wrap">
+                                                                                                    <span className={isMatchCorrect ? 'text-emerald-700' : 'text-rose-700'}>
+                                                                                                        {isMatchCorrect ? '🟢' : '🔴'} {leftV.split(' (')[0]} ➔ {userRightVal !== null && userRightVal !== undefined ? q.rightItems[userRightVal].split(' (')[0] : 'Kosong'}
+                                                                                                    </span>
+                                                                                                    {!isMatchCorrect && (
+                                                                                                        <span className="text-emerald-600 font-normal">(Seharusnya: {q.rightItems[correctRightVal].split(' (')[0]})</span>
+                                                                                                    )}
+                                                                                                </li>
+                                                                                            );
+                                                                                        })}
+                                                                                    </ul>
+                                                                                    <p className="text-emerald-700 mt-2 font-black font-sans">Sistem Penilaian ({evalRes.correctCount || 0} Pasangan Benar): Skor {evalRes.score} / 4</p>
+                                                                                </div>
+                                                                            )}
+
+                                                                        </div>
+
+                                                                        {/* Penjelasan Edukatif */}
+                                                                        <div className="mt-3 border-t pt-2.5 flex items-start gap-2 text-xs text-gray-600">
+                                                                            <Icons.Lightbulb className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                                                                            <p className="leading-relaxed italic">
+                                                                                <strong>Penjelasan Juri AI:</strong> {q.explanation}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    </div>
+                                                )}
 
                                                 <div className="bg-white rounded-3xl border p-6 space-y-4 shadow-sm">
                                                     <h4 className="font-extrabold text-gray-900 text-sm flex items-center gap-2">
-                                                        <Icons.BookOpen className="w-5 h-5 text-indigo-600" /> Lembar Jurnal Refleksi Kelas 5:
+                                                        <Icons.BookOpen className="w-5 h-5 text-indigo-600" /> Lembar Jurnal Refleksi Nilai Kelas 5:
                                                     </h4>
 
                                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                                                         <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-150">
-                                                            <h5 className="font-extrabold text-blue-900 mb-1 flex items-center gap-1">👁️ Padanan Sensor</h5>
-                                                            <p className="text-gray-650 leading-relaxed">Mata biologis sepadan dengan sensor **Kamera LDR**. Telinga sepadan dengan **Sensor Mikrofon**. Kulit sepadan dengan **Ultrasonik**.</p>
+                                                            <h5 className="font-extrabold text-blue-900 mb-1 flex items-center gap-1">👁️ Padanan Sensor (Misi 1)</h5>
+                                                            <p className="text-gray-655 leading-relaxed">Mata biologis sepadan dengan sensor **Kamera LDR**. Telinga sepadan dengan **Sensor Mikrofon**. Kulit sepadan dengan **Ultrasonik**.</p>
                                                         </div>
                                                         <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-155">
-                                                            <h5 className="font-extrabold text-emerald-955 mb-1 flex items-center gap-1">🧠 Hakikat Mesin AI</h5>
-                                                            <p className="text-emerald-900 leading-relaxed">Mesin biasa bekerja kaku mengikuti program terpusat, sedangkan mesin berbasis **AI (Kecerdasan Artifisial)** belajar mandiri dari pola data.</p>
+                                                            <h5 className="font-extrabold text-emerald-955 mb-1 flex items-center gap-1">🧠 Hakikat Mesin AI (Misi 2)</h5>
+                                                            <p className="text-emerald-900 leading-relaxed">Mesin biasa bekerja kaku mengikuti program kaku sirkuit, sedangkan mesin berbasis **AI (Kecerdasan Artifisial)** belajar mandiri dari pola data.</p>
                                                         </div>
                                                         <div className="bg-rose-50/50 p-4 rounded-xl border border-rose-150">
-                                                            <h5 className="font-extrabold text-rose-955 mb-1 flex items-center gap-1">❤️ Tanggung Jawab</h5>
+                                                            <h5 className="font-extrabold text-rose-955 mb-1 flex items-center gap-1">❤️ Tanggung Jawab (Misi 3)</h5>
                                                             <p className="text-rose-900 leading-relaxed">Komputer boleh memiliki sirkuit cerdas, namun manusia memegang kemudi hati nurani. Selalu gunakan AI dengan jujur dan berempati.</p>
                                                         </div>
                                                     </div>
@@ -2099,7 +2384,12 @@
                                                                 setMisi1Matches([]);
                                                                 setMisi1Completed(false);
                                                                 setMisi2Completed(false);
+                                                                setMisi1Nilai(0);
+                                                                setMisi2Nilai(0);
+                                                                setMisi3Nilai(0);
+                                                                setQuizScore(null);
                                                                 setSortedItems({ cerdas: [], biasa: [] });
+                                                                setShowReviewMode(false);
                                                             }}
                                                             className="bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold py-3 px-6 rounded-2xl text-xs transition flex items-center gap-1.5 mx-auto shadow-md"
                                                         >
@@ -2112,7 +2402,6 @@
                                     </div>
                                 )}
 
-                                {}
                                 {/* TAB CONTENT: REKAP KELAS */}
                                 {activeTab === 'rekap' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-indigo-100 space-y-8 animate-fadeIn">
@@ -2127,7 +2416,7 @@
                                             </p>
                                         </div>
 
-                                        {/* PENGATURAN DOMAIN SEKOLAH (SOLUSI LINK SANDBOX) */}
+                                        {/* PENGATURAN DOMAIN SEKOLAH */}
                                         <div className="bg-amber-50 border border-amber-200 p-5 rounded-3xl space-y-3">
                                             <h4 className="font-extrabold text-sm text-amber-955 flex items-center gap-1.5">
                                                 ⚠️ Tips: Mengatasi Link Siswa Tidak Bisa Dibuka
@@ -2234,11 +2523,11 @@
                                                         <tr className="bg-indigo-900 text-white font-extrabold uppercase tracking-wider text-[10px]">
                                                             <th className="p-4 border-b border-indigo-950">Nama Siswa</th>
                                                             <th className="p-4 border-b border-indigo-955">ID Unik (UID)</th>
-                                                            <th className="p-4 border-b border-indigo-955 text-center">Misi 1</th>
-                                                            <th className="p-4 border-b border-indigo-955 text-center">Misi 2</th>
-                                                            <th className="p-4 border-b border-indigo-955 text-center">Misi 3</th>
+                                                            <th className="p-4 border-b border-indigo-955 text-center">Nilai Misi 1</th>
+                                                            <th className="p-4 border-b border-indigo-955 text-center">Nilai Misi 2</th>
+                                                            <th className="p-4 border-b border-indigo-955 text-center">Nilai Misi 3</th>
                                                             <th className="p-4 border-b border-indigo-955 text-center">Nilai Ujian</th>
-                                                            <th className="p-4 border-b border-indigo-955 text-center">Total Skor</th>
+                                                            <th className="p-4 border-b border-indigo-955 text-center">Rata-Rata Nilai</th>
                                                             <th className="p-4 border-b border-indigo-955 text-right font-medium text-[9px] text-indigo-200">Waktu Update</th>
                                                         </tr>
                                                     </thead>
@@ -2248,32 +2537,35 @@
                                                                 <td colSpan="8" className="p-8 text-center text-gray-400 italic">Belum ada siswa yang mendaftar atau menyelesaikan misi di kelas ini.</td>
                                                             </tr>
                                                         ) : (
-                                                            filteredStudents.map((student) => (
-                                                                <tr key={student.uid} className="hover:bg-indigo-50/30 transition-colors">
-                                                                    <td className="p-4 font-bold text-indigo-955 text-sm">{student.name}</td>
-                                                                    <td className="p-4 font-mono text-[10px] text-gray-400 select-all">{student.uid}</td>
-                                                                    <td className="p-4 text-center">
-                                                                        {student.misi1Completed ? <span className="bg-green-100 text-green-800 text-[10px] px-2.5 py-1 rounded-full border border-green-300">Selesai 🟢</span> : <span className="bg-gray-100 text-gray-400 text-[10px] px-2.5 py-1 rounded-full">Belum ❌</span>}
-                                                                    </td>
-                                                                    <td className="p-4 text-center">
-                                                                        {student.misi2Completed ? <span className="bg-green-100 text-green-800 text-[10px] px-2.5 py-1 rounded-full border border-green-300">Selesai 🟢</span> : <span className="bg-gray-100 text-gray-400 text-[10px] px-2.5 py-1 rounded-full">Belum ❌</span>}
-                                                                    </td>
-                                                                    <td className="p-4 text-center">
-                                                                        {student.misi3Completed ? <span className="bg-green-100 text-green-800 text-[10px] px-2.5 py-1 rounded-full border border-green-300">Selesai 🟢</span> : <span className="bg-gray-100 text-gray-400 text-[10px] px-2.5 py-1 rounded-full">Belum ❌</span>}
-                                                                    </td>
-                                                                    <td className="p-4 text-center font-black text-indigo-900 text-sm">
-                                                                        {student.quizScore !== undefined && student.quizScore !== null ? (
-                                                                            <span className="bg-indigo-100 border border-indigo-200 text-indigo-800 px-2 py-1 rounded-lg">{student.quizScore}</span>
-                                                                        ) : (
-                                                                            <span className="text-gray-300">-</span>
-                                                                        )}
-                                                                    </td>
-                                                                    <td className="p-4 text-center">
-                                                                        <span className="bg-amber-100 text-amber-900 font-extrabold px-3 py-1 rounded-full border border-amber-300">{student.points || 0}</span>
-                                                                    </td>
-                                                                    <td className="p-4 text-right text-[10px] text-gray-400">{student.lastUpdated ? new Date(student.lastUpdated).toLocaleTimeString() : '-'}</td>
-                                                                </tr>
-                                                            ))
+                                                            filteredStudents.map((student) => {
+                                                                const avgVal = Math.round(((student.misi1Nilai || 0) + (student.misi2Nilai || 0) + (student.misi3Nilai || 0) + (student.quizScore || 0)) / 4);
+                                                                return (
+                                                                    <tr key={student.uid} className="hover:bg-indigo-50/30 transition-colors">
+                                                                        <td className="p-4 font-bold text-indigo-955 text-sm">{student.name}</td>
+                                                                        <td className="p-4 font-mono text-[10px] text-gray-400 select-all">{student.uid}</td>
+                                                                        <td className="p-4 text-center font-bold">
+                                                                            <span className={`px-2.5 py-1 rounded-full text-[10px] ${student.misi1Nilai >= 80 ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-amber-100 text-amber-850'}`}>{student.misi1Nilai !== undefined ? `${student.misi1Nilai}/100` : '0/100'}</span>
+                                                                        </td>
+                                                                        <td className="p-4 text-center font-bold">
+                                                                            <span className={`px-2.5 py-1 rounded-full text-[10px] ${student.misi2Nilai >= 80 ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-amber-100 text-amber-850'}`}>{student.misi2Nilai !== undefined ? `${student.misi2Nilai}/100` : '0/100'}</span>
+                                                                        </td>
+                                                                        <td className="p-4 text-center font-bold">
+                                                                            <span className={`px-2.5 py-1 rounded-full text-[10px] ${student.misi3Nilai >= 80 ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-amber-100 text-amber-850'}`}>{student.misi3Nilai !== undefined ? `${student.misi3Nilai}/100` : '0/100'}</span>
+                                                                        </td>
+                                                                        <td className="p-4 text-center font-black text-indigo-900 text-sm">
+                                                                            {student.quizScore !== undefined && student.quizScore !== null ? (
+                                                                                <span className="bg-indigo-100 border border-indigo-200 text-indigo-800 px-2 py-1 rounded-lg">{student.quizScore}</span>
+                                                                            ) : (
+                                                                                <span className="text-gray-300">-</span>
+                                                                            )}
+                                                                        </td>
+                                                                        <td className="p-4 text-center">
+                                                                            <span className="bg-amber-100 text-amber-900 font-extrabold px-3 py-1 rounded-full border border-amber-300">{avgVal || 0}</span>
+                                                                        </td>
+                                                                        <td className="p-4 text-right text-[10px] text-gray-400">{student.lastUpdated ? new Date(student.lastUpdated).toLocaleTimeString() : '-'}</td>
+                                                                    </tr>
+                                                                );
+                                                            })
                                                         )}
                                                     </tbody>
                                                 </table>
@@ -2283,7 +2575,7 @@
                                         {/* INSTRUCTIONS */}
                                         <div className="bg-indigo-50/50 p-5 rounded-3xl border border-indigo-100 space-y-3">
                                             <h4 className="font-extrabold text-sm text-indigo-955 flex items-center gap-1.5">💡 Panduan Pemanfaatan Terdistribusi 4 Kelas:</h4>
-                                            <ul className="list-disc pl-4 text-xs text-gray-650 space-y-1.5 leading-relaxed">
+                                            <ul className="list-disc pl-4 text-xs text-gray-655 space-y-1.5 leading-relaxed">
                                                 <li>Berikan link dengan akhiran <code className="bg-indigo-100 px-1 py-0.5 rounded font-mono">?kelas=kelas-isa</code> kepada murid Bu Devika, akhiran <code className="bg-indigo-100 px-1 py-0.5 rounded font-mono">?kelas=kelas-yahya</code> kepada murid Bu Nana, dan seterusnya.</li>
                                                 <li>Ketika murid membuka link tersebut, mereka otomatis masuk ke dalam kelas guru masing-masing secara rapi dan tidak akan bercampur di papan kendali guru lainnya.</li>
                                                 <li>Setiap guru dapat membuka halaman **Portal Guru** ini dari komputer pendidik untuk mengunduh rekap nilai siswa mereka dalam format CSV/Excel.</li>
@@ -2295,7 +2587,6 @@
                         )}
                     </main>
 
-                    {}
                     {/* Footer */}
                     <footer className="bg-indigo-950 text-white py-6 mt-20 border-t-4 border-indigo-900">
                         <div className="max-w-6xl mx-auto px-4 text-center space-y-2">
