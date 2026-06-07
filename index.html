@@ -107,7 +107,7 @@
             ),
             Cpu: (props) => (
                 <svg className={`w-5 h-5 ${props.className || ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
             ),
             Sparkles: (props) => (
@@ -203,75 +203,99 @@
         const standardMcQuestions = [
             {
                 type: "mc",
-                question: "Siswa kelas 5 sedang mengamati robot kepiting pembersih pantai. Robot itu memiliki kamera untuk membedakan sampah plastik dan pasir pantai. Dalam hal ini, kamera robot berfungsi menggantikan peran organ indra manusia berupa...",
-                options: [
-                    "Kulit, karena kamera mendeteksi tekstur plastik yang kasar.",
-                    "Mata, karena kamera menangkap pantulan cahaya dan bentuk benda di sekelilingnya.",
-                    "Hidung, karena kamera mengendus aroma bau sampah laut.",
-                    "Telinga, karena kamera mendengarkan gemuruh ombak pantai."
-                ],
-                correctAnswer: 1,
-                explanation: "Kamera bekerja mirip mata manusia yaitu menangkap cahaya untuk diterjemahkan menjadi gambar visual di dalam otak komputer."
-            },
-            {
-                type: "mc",
-                question: "Mengapa komputer memerlukan bantuan perangkat fisik bernama SENSOR untuk mendeteksi sekitarnya?",
-                options: [
-                    "Sebab komputer memiliki organ mata biologis yang rawan terkena debu.",
-                    "Karena komputer adalah benda mati buatan yang tidak terlahir dengan organ tubuh biologis alami.",
-                    "Agar komputer terlihat lebih keren saat dipajang di pameran sains sekolah.",
-                    "Karena sensor bisa membuat komputer langsung memiliki rasa kasihan dan empati."
-                ],
-                correctAnswer: 1,
-                explanation: "Sebagai benda non-hidup, komputer memerlukan perangkat sirkuit tambahan (sensor) untuk membaca besaran fisik lingkungan luar."
-            },
-            {
-                type: "mc",
                 question: "Perbedaan paling mencolok antara kulkas pintar berbasis AI (bisa mendeteksi buah busuk dan memesan buah baru) dengan kulkas biasa adalah...",
                 options: [
+                    "Kulkas biasa tidak dingin, sedangkan kulkas pintar sangat dingin.",
                     "Kulkas pintar memiliki ukuran pintu yang jauh lebih lebar dibanding kulkas biasa.",
                     "Kulkas biasa hanya menggunakan aliran listrik, sedangkan kulkas pintar menggunakan baterai remote.",
-                    "Kulkas pintar mampu belajar dari data gambar buah, beradaptasi, dan mengambil keputusan pemesanan mandiri.",
-                    "Kulkas biasa tidak dingin, sedangkan kulkas pintar sangat dingin."
+                    "Kulkas pintar mampu belajar dari data gambar buah, beradaptasi, dan mengambil keputusan pemesanan mandiri."
                 ],
-                correctAnswer: 2,
+                correctAnswer: 3,
                 explanation: "Kemampuan belajar dari data (mengenal buah busuk) dan membuat keputusan mandiri secara fleksibel adalah ciri utama Kecerdasan Artifisial."
-            },
-            {
-                type: "mc",
-                question: "Rian ingin membuat animasi menggunakan kecerdasan buatan. Apa etika dasar utama Rian sebagai murid yang berempati tinggi?",
-                options: [
-                    "Menggunakan suara kloning teman sekelas untuk membuat karakter animasi konyol tanpa izin mereka.",
-                    "Memastikan bahwa animasi buatannya tidak menyinggung, mengejek, atau merugikan kelompok teman mana pun di sekolah.",
-                    "Membuat animasi secepat mungkin menggunakan AI agar dia bisa langsung bermain gim HP.",
-                    "Menyembunyikan komputer sekolah agar temannya tidak bisa memakai AI yang sama."
-                ],
-                correctAnswer: 1,
-                explanation: "Prinsip etika dasar penggunaan KA adalah berempati, menghargai perasaan sesama, serta menjaga karya agar bebas dari unsur penghinaan."
-            },
-            {
-                type: "mc",
-                question: "Mengapa kita tidak boleh meniru 100% dan mengumpulkan tugas sekolah yang dibuat sepenuhnya oleh AI Writer?",
-                options: [
-                    "Ke guru sekolah pasti memiliki sensor pendeteksi kebohongan di matanya.",
-                    "Karena tindakan itu tidak melatih otak kita untuk mandiri berpikir kritis dan kreatif, sekaligus merupakan ketidakjujuran akademis.",
-                    "Because komputer AI akan menuntut kita membayar denda hak cipta penulisan.",
-                    "Karena AI akan merasa lelah jika harus mengerjakan seluruh PR anak sekolah terus-menerus."
-                ],
-                correctAnswer: 1,
-                explanation: "Tujuan sekolah adalah melatih saraf berpikir kritis kita sendiri. Menyerahkan seluruh tugas pada AI merampas kesempatan belajar kita."
             },
             {
                 type: "mc",
                 question: "Apa yang dimaksud dengan fenomena 'Halusinasi AI' (AI Hallucination)?",
                 options: [
-                    "Kondisi di mana laptop menjadi sangat panas karena menjalankan program AI terlalu berat.",
                     "Kondisi ketika AI mengarang informasi salah atau bohong secara sangat meyakinkan seolah-olah itu fakta nyata.",
                     "Robot AI yang tiba-tiba melamun dan tidak merespons tombol perintah user.",
+                    "Kondisi di mana laptop menjadi sangat panas karena menjalankan program AI terlalu berat.",
                     "Kondisi ketika layar monitor memancarkan cahaya warna-warni yang sangat indah."
                 ],
-                correctAnswer: 1,
+                correctAnswer: 0,
                 explanation: "Halusinasi AI terjadi ketika model bahasa menghasilkan teks yang terdengar ilmiah dan meyakinkan padahal isinya salah total."
+            },
+            {
+                type: "mc",
+                question: "Siswa kelas 5 sedang mengamati robot kepiting pembersih pantai. Robot itu memiliki kamera untuk membedakan sampah plastik dan pasir pantai. Dalam hal ini, kamera robot berfungsi menggantikan peran organ indra manusia berupa...",
+                options: [
+                    "Kulit, karena kamera mendeteksi tekstur plastik yang kasar.",
+                    "Telinga, karena kamera mendengarkan gemuruh ombak pantai.",
+                    "Mata, karena kamera menangkap pantulan cahaya dan bentuk benda di sekelilingnya.",
+                    "Hidung, karena kamera mengendus aroma bau sampah laut."
+                ],
+                correctAnswer: 2,
+                explanation: "Kamera bekerja mirip mata manusia yaitu menangkap cahaya untuk diterjemahkan menjadi gambar visual di dalam otak komputer."
+            },
+            {
+                type: "mc",
+                question: "Alur proses berpikir sistem Kecerdasan Artifisial (AI) yang benar adalah...",
+                options: [
+                    "Pembelian Alat -> Pembuangan Sampah -> Pengetikan Manual",
+                    "Input Data -> Latihan Pola (Model) -> Pengambilan Keputusan (Output)",
+                    "Output Hasil -> Pemasangan Kabel -> Penghapusan Data",
+                    "Pemberian Aliran Listrik -> Pembongkaran Mesin -> Pemasangan Baterai"
+                ],
+                correctAnswer: 1,
+                explanation: "Alur kerja dasar AI dimulai dengan mengumpulkan data input, melatih model untuk mengenali pola, lalu mengeluarkan keputusan/output."
+            },
+            {
+                type: "mc",
+                question: "Mengapa komputer memerlukan bantuan perangkat fisik bernama SENSOR untuk mendeteksi sekitarnya?",
+                options: [
+                    "Karena komputer adalah benda mati buatan yang tidak terlahir dengan organ tubuh biologis alami.",
+                    "Agar komputer terlihat lebih keren saat dipajang di pameran sains sekolah.",
+                    "Sebab komputer memiliki organ mata biologis yang rawan terkena debu.",
+                    "Karena sensor bisa membuat komputer langsung memiliki rasa kasihan dan empati."
+                ],
+                correctAnswer: 0,
+                explanation: "Sebagai benda non-hidup, komputer memerlukan perangkat sirkuit tambahan (sensor) untuk membaca besaran fisik lingkungan luar."
+            },
+            {
+                type: "mc",
+                question: "Asisten suara pintar seperti Google Assistant atau Siri mengenali ucapan lisan manusia menggunakan teknologi...",
+                options: [
+                    "Detektor asap karbonmonoksida",
+                    "Natural Language Processing (NLP)",
+                    "Mekanika termal pendingin ruangan",
+                    "Generator gambar piksel digital"
+                ],
+                correctAnswer: 1,
+                explanation: "NLP adalah cabang AI yang fokus melatih mesin untuk mengerti, menerjemahkan, dan merespons bahasa lisan atau tulisan manusia."
+            },
+            {
+                type: "mc",
+                question: "Mengapa kita tidak boleh meniru 100% dan mengumpulkan tugas sekolah yang dibuat sepenuhnya oleh AI Writer?",
+                options: [
+                    "Karena tindakan itu tidak melatih otak kita untuk mandiri berpikir kritis dan kreatif, sekaligus merupakan ketidakkejujuran akademis.",
+                    "Karena komputer AI akan menuntut kita membayar denda hak cipta penulisan.",
+                    "Karena guru sekolah pasti memiliki sensor pendeteksi kebohongan di matanya.",
+                    "Karena AI akan merasa lelah jika harus mengerjakan seluruh PR anak sekolah terus-menerus."
+                ],
+                correctAnswer: 0,
+                explanation: "Tujuan sekolah adalah melatih saraf berpikir kritis kita sendiri. Menyerahkan seluruh tugas pada AI merampas kesempatan belajar kita."
+            },
+            {
+                type: "mc",
+                question: "Bagaimana mobil otonom (self-driving) mendeteksi jarak aman dari mobil lain di sekelilingnya saat melaju?",
+                options: [
+                    "Menebak secara sembarangan berdasarkan berat muatan mobil.",
+                    "Menggunakan lampu klakson berbunyi keras secara terus-menerus.",
+                    "Menggunakan sensor ultrasonik dan kamera pemantau marka jalan secara dinamis.",
+                    "Menunggu supir mengetik perintah jarak aman di layar dasbor."
+                ],
+                correctAnswer: 2,
+                explanation: "Mobil otonom menggabungkan sensor jarak (seperti LiDAR/Ultrasonik) dan kamera visual untuk melacak lingkungan sekitar secara dinamis."
             },
             {
                 type: "mc",
@@ -287,208 +311,209 @@
             },
             {
                 type: "mc",
-                question: "Asisten suara pintar seperti Google Assistant atau Siri mengenali ucapan lisan manusia menggunakan teknologi...",
+                question: "Rian ingin membuat animasi menggunakan kecerdasan buatan. Apa etika dasar utama Rian sebagai murid yang berempati tinggi?",
                 options: [
-                    "Mekanika termal pendingin ruangan",
-                    "Natural Language Processing (NLP)",
-                    "Generator gambar piksel digital",
-                    "Detektor asap karbonmonoksida"
+                    "Menggunakan suara kloning teman sekelas untuk membuat karakter animasi konyol tanpa izin mereka.",
+                    "Memastikan bahwa animasi buatannya tidak menyinggung, mengejek, atau merugikan kelompok teman mana pun di sekolah.",
+                    "Menyembunyikan komputer sekolah agar temannya tidak bisa memakai AI yang sama.",
+                    "Membuat animasi secepat mungkin menggunakan AI agar dia bisa langsung bermain gim HP."
                 ],
                 correctAnswer: 1,
-                explanation: "NLP adalah cabang AI yang fokus melatih mesin untuk mengerti, menerjemahkan, dan merespons bahasa lisan atau tulisan manusia."
-            },
-            {
-                type: "mc",
-                question: "Alur proses berpikir sistem Kecerdasan Artifisial (AI) yang benar adalah...",
-                options: [
-                    "Input Data -> Latihan Pola (Model) -> Pengambilan Keputusan (Output)",
-                    "Output Hasil -> Pemasangan Kabel -> Penghapusan Data",
-                    "Pembelian Alat -> Pembuangan Sampah -> Pengetikan Manual",
-                    "Pemberian Aliran Listrik -> Pembongkaran Mesin -> Pemasangan Baterai"
-                ],
-                correctAnswer: 0,
-                explanation: "Alur kerja dasar AI dimulai dengan mengumpulkan data input, melatih model untuk mengenali pola, lalu mengeluarkan keputusan/output."
-            },
-            {
-                type: "mc",
-                question: "Bagaimana mobil otonom (self-driving) mendeteksi jarak aman dari mobil lain di sekelilingnya saat melaju?",
-                options: [
-                    "Menggunakan lampu klakson berbunyi keras secara terus-menerus.",
-                    "Menggunakan sensor ultrasonik dan kamera pemantau marka jalan secara dinamis.",
-                    "Menunggu supir mengetik perintah jarak aman di layar dasbor.",
-                    "Menebak secara sembarangan berdasarkan berat muatan mobil."
-                ],
-                correctAnswer: 1,
-                explanation: "Mobil otonom menggabungkan sensor jarak (seperti LiDAR/Ultrasonik) dan kamera visual untuk melacak lingkungan sekitar secara dinamis."
+                explanation: "Prinsip etika dasar penggunaan KA adalah berempati, menghargai perasaan sesama, serta menjaga karya agar bebas dari unsur penghinaan."
             }
         ];
 
         const complexMcQuestions = [
             {
                 type: "complex_mc",
+                question: "Pilih 3 kriteria utama yang wajib dimiliki suatu sistem agar bisa digolongkan memiliki teknologi Kecerdasan Artifisial (AI)!",
+                options: [
+                    "Murni digerakkan oleh kawat pegas mekanik manual yang ditarik tangan.",
+                    "Menggunakan sensor elektronik untuk mengumpulkan data mentah dunia nyata secara dinamis.",
+                    "Bekerja sangat kaku mengikuti satu instruksi kabel sakelar yang permanen.",
+                    "Mampu belajar dari tumpukan data contoh (Machine Learning).",
+                    "Mampu beradaptasi secara fleksibel terhadap perubahan lingkungan luar."
+                ],
+                correctAnswers: [1, 3, 4],
+                explanation: "Kemampuan belajar, beradaptasi fleksibel, dan memproses data input sensor adalah ciri khas dari Kecerdasan Buatan."
+            },
+            {
+                type: "complex_mc",
                 question: "Manakah 3 perangkat di bawah ini yang terbukti menggunakan sistem Kecerdasan Artifisial (AI) secara aktif?",
                 options: [
                     "Smart Vacuum Cleaner yang memetakan lantai rumah secara mandiri.",
-                    "Mobil Tesla Autopilot yang menyetir sendiri di jalan raya.",
-                    "ChatGPT yang mampu menulis esai kreatif berdasarkan perintah teks.",
+                    "Kipas angin dinding tradisional yang menyala saat ditarik talinya.",
                     "Sakelar lampu dinding kamar tidur yang berbunyi klik saat ditekan manual.",
-                    "Kipas angin dinding tradisional yang menyala saat ditarik talinya."
+                    "Mobil Tesla Autopilot yang menyetir sendiri di jalan raya.",
+                    "ChatGPT yang mampu menulis esai kreatif berdasarkan perintah teks."
                 ],
-                correctAnswers: [0, 1, 2],
-                explanation: "Smart vacuum, autopilot, dan ChatGPT memproses data lingkungan secara adaptif untuk mengambil keputusan cerdas."
+                correctAnswers: [0, 3, 4],
+                explanation: "Smart vacuum, autopilot, and ChatGPT memproses data lingkungan secara adaptif untuk mengambil keputusan cerdas."
+            },
+            {
+                type: "complex_mc",
+                question: "Pilih 3 akibat buruk yang dapat timbul jika kita menyebarkan gambar manipulasi deepfake editan AI wajah teman tanpa izin di grup WA kelas!",
+                options: [
+                    "Menimbulkan fitnah dan kesalahpahaman informasi di antara guru dan wali murid.",
+                    "Meningkatkan kecepatan kuota internet HP seluruh anggota grup WA kelas.",
+                    "Mengikis rasa percaya dan keharmonisan hubungan pertemanan sekelas.",
+                    "Korban merasa sangat malu, sedih, dan tidak mau masuk sekolah lagi karena dirundung.",
+                    "Membantu teman tersebut memahami materi pelajaran matematika lebih cepat."
+                ],
+                correctAnswers: [0, 2, 3],
+                explanation: "Penyalahgunaan editan AI tanpa izin dapat merusak mental korban, merusak pertemanan, dan memicu hoax besar."
             },
             {
                 type: "complex_mc",
                 question: "Pilih 3 tindakan di bawah ini yang mencerminkan sikap Empati Digital dan Kejujuran Akademis saat memanfaatkan AI!",
                 options: [
+                    "Menyalin 100% teks buatan AI and mengumpulkannya sebagai PR karangan pribadi.",
                     "Meminta izin teman sebelum mengedit atau membagikan foto wajahnya memakai generator AI.",
                     "Melakukan pemeriksaan ulang (double-check) data sejarah dari AI ke buku perpustakaan sekolah.",
-                    "Menggunakan AI sebagai teman bertukar idema awal, namun karangan akhirnya ditulis dengan rangkaian kata sendiri.",
-                    "Menyalin 100% teks buatan AI dan mengumpulkannya sebagai PR karangan pribadi.",
-                    "Mengklaim gambar buatan AI generator sebagai hasil lukisan tangan sendiri untuk memenangkan lomba."
+                    "Mengklaim gambar buatan AI generator sebagai hasil lukisan tangan sendiri untuk memenangkan lomba gambar manual.",
+                    "Menggunakan AI sebagai teman bertukar ide/tema awal, namun karangan akhirnya ditulis dengan rangkaian kata sendiri."
                 ],
-                correctAnswers: [0, 1, 2],
+                correctAnswers: [1, 2, 4],
                 explanation: "Menghargai privasi teman, rajin melakukan double-check, dan jujur menggunakan AI sebagai partner diskusi adalah etika utama."
             },
             {
                 type: "complex_mc",
                 question: "Manakah 3 sensor elektronik di bawah ini yang sangat penting dipasang pada robot evakuasi bencana di reruntuhan gedung?",
                 options: [
-                    "Sensor Ultrasonik untuk mencegah robot menabrak dinding batu.",
-                    "Sensor Gas MQ-2 untuk mendeteksi kebocoran gas beracun di lokasi bencana.",
-                    "Sensor Termal untuk mendeteksi sisa panas tubuh korban yang terjebak.",
+                    "Sensor Termal untuk mendeteksi sisa panas tubuh korban yang terjebak di dalam reruntuhan.",
                     "Dinamo putar motor penggerak roda robot tanpa pelindung air.",
-                    "Tombol sakelar ON-OFF manual berukuran besar di bagian bawah robot."
+                    "Sensor Gas MQ-2 untuk mendeteksi kebocoran gas beracun di lokasi bencana.",
+                    "Sensor Ultrasonik untuk mencegah robot menabrak dinding batu reruntuhan.",
+                    "Tombol sakelar ON-OFF manual berukuran besar di bagian bawah badan robot."
                 ],
-                correctAnswers: [0, 1, 2],
+                correctAnswers: [0, 2, 3],
                 explanation: "Sensor ultrasonik, gas MQ-2, dan termal bekerja mendeteksi kondisi fisik lingkungan reruntuhan untuk membantu operasi penyelamatan."
-            },
-            {
-                type: "complex_mc",
-                question: "Pilih 3 kriteria utama yang wajib dimiliki suatu sistem agar bisa digolongkan memiliki teknologi Kecerdasan Artifisial (AI)!",
-                options: [
-                    "Mampu belajar dari tumpukan data contoh (Machine Learning).",
-                    "Mampu beradaptasi secara fleksibel terhadap perubahan lingkungan luar.",
-                    "Menggunakan sensor elektronik untuk mengumpulkan data mentah dunia nyata.",
-                    "Murni digerakkan oleh kawat pegas mekanik manual yang ditarik tangan.",
-                    "Bekerja sangat kaku mengikuti satu instruksi kabel sakelar yang permanen."
-                ],
-                correctAnswers: [0, 1, 2],
-                explanation: "Kemampuan belajar, beradaptasi fleksibel, dan memproses data input sensor adalah ciri khas dari Kecerdasan Buatan."
-            },
-            {
-                type: "complex_mc",
-                question: "Pilih 3 akibat buruk yang dapat timbul jika kita menyebarkan gambar manipulasi deepfake editan AI wajah teman tanpa izin di grup kelas!",
-                options: [
-                    "Korban merasa sangat malu, sedih, dan tidak mau masuk sekolah lagi.",
-                    "Menimbulkan fitnah dan kesalahpahaman informasi di antara guru dan wali murid.",
-                    "Mengikis rasa percaya dan keharmonisan hubungan pertemanan sekelas.",
-                    "Meningkatkan kecepatan kuota internet HP seluruh anggota grup WA kelas.",
-                    "Membantu teman tersebut memahami materi pelajaran matematika lebih cepat."
-                ],
-                correctAnswers: [0, 1, 2],
-                explanation: "Penyalahgunaan editan AI tanpa izin dapat merusak mental korban, merusak pertemanan, dan memicu hoax besar."
             }
         ];
 
         const trueFalseQuestions = [
             {
                 type: "true_false",
-                question: "Tentukan pernyataan BENAR atau SALAH terkait cara kerja dan etika Kecerdasan Artifisial (AI) berikut!",
+                question: "Tentukan Benar atau Salah pada setiap pernyataan di bawah ini berkaitan dengan Pengiriman data dan sifat sensor!",
                 statements: [
-                    "Mengedit wajah teman sekelas menjadi badut konyol tanpa izinnya adalah bentuk pelanggaran privasi digital.",
-                    "Mesin Kecerdasan Artifisial (AI) memiliki rasa empati, belas kasihan, dan kesedihan alami seperti manusia.",
-                    "Sensor MQ-2 berfungsi mendeteksi kebocoran gas berbahaya di dalam ruangan secara otomatis."
-                ],
-                correctAnswers: [true, false, true],
-                explanation: "Mengedit wajah tanpa izin melanggar privasi. Mesin tidak punya perasaan biologis. Sensor MQ-2 memang melacak gas bocor."
-            },
-            {
-                type: "true_false",
-                question: "Tentukan BENAR atau SALAH terkait perbedaan mesin biasa dengan mesin cerdas AI!",
-                statements: [
-                    "Kipas angin dinding yang kecepatannya berubah murni karena ditarik talinya merupakan contoh sistem AI.",
-                    "Smart Vacuum Cleaner mempelajari peta letak furnitur rumah agar rute pembersihannya tidak menabrak.",
-                    "Mesin elektrik konvensional bekerja sangat kaku mengikuti instruksi sekuensial sirkuit langsung."
-                ],
-                correctAnswers: [false, true, true],
-                explanation: "Kipas angin tali bekerja murni mekanis. Smart vacuum menggunakan memori map rute. Mesin konvensional bekerja kaku."
-            },
-            {
-                type: "true_false",
-                question: "Tentukan BENAR atau SALAH terkait latihan data dan akurasi sistem kecerdasan buatan!",
-                statements: [
-                    "Teknologi Machine Learning memerlukan latihan ribuan data contoh agar bisa membedakan gambar anjing dan kucing.",
-                    "AI generator gambar sanggup melukis pemandangan indah tanpa perlu dilatih menggunakan data gambar yang pernah ada.",
-                    "Sikap kritis diperlukan saat membaca jawaban AI karena AI bisa mengalami fenomena kesalahan data (Halusinasi)."
-                ],
-                correctAnswers: [true, false, true],
-                explanation: "Machine learning butuh latihan ribuan data gambar. Generator gambar pun butuh dataset latihan. Sikap kritis krusial mencegah hoax dari AI."
-            },
-            {
-                type: "true_false",
-                question: "Tentukan BENAR atau SALAH mengenai etika berkomunikasi digital dan sensor fisik komputer!",
-                statements: [
-                    "Mengetik kata-kata makian kasar saat mengobrol dengan chatbot AI tidak masalah karena mesin tidak punya hati.",
-                    "Menghargai batasan privasi data teman saat berkreasi dengan program AI adalah bukti kita memiliki Empati Digital.",
-                    "Komputer cerdas dapat membaca kondisi cuaca di luar ruangan tanpa memerlukan komponen sensor fisik sama sekali."
+                    "Seluruh data fisik yang ditangkap oleh indra biologis manusia akan dikirim lewat sel saraf menuju ke Jantung untuk mengambil tindakan refleksi.",
+                    "Sensor pada komputer berfungsi mengubah informasi fisik dunia nyata menjadi sinyal aliran listrik berbentuk angka 1 dan 0.",
+                    "Robot adalah benda buatan manusia yang secara alami terlahir dengan jaringan kulit asli yang tipis namun peka."
                 ],
                 correctAnswers: [false, true, false],
-                explanation: "Membiasakan makian melatih perilaku buruk diri sendiri. Menghormati privasi adalah empati digital. Komputer butuh sensor fisik luar untuk membaca cuaca nyata."
+                explanation: "Sinyal indra biologis manusia dikirim ke otak/sumsum tulang belakang, bukan jantung. Sensor mengubah data fisik menjadi biner 1 dan 0. Robot tidak memiliki kulit biologis alami."
             },
             {
                 type: "true_false",
-                question: "Tentukan BENAR atau SALAH mengenai kejujuran akademis di lingkungan sekolah masa kini!",
+                question: "Tentukan Benar atau Salah pada setiap pernyataan di bawah ini berkaitan dengan karakteristik mesin biasa dengan mesin cerdas!",
                 statements: [
-                    "Menyerahkan 100% penulisan PR cerpen kepada AI dan mengakuinya sebagai tulisan kita sendiri adalah plagiarism.",
-                    "AI asisten suara melatih model NLP (Natural Language Processing) untuk merespons suara lisan kita.",
-                    "Mata manusia secara biologis dapat digantikan fungsinya secara tepat oleh sensor mikrofon pada robot penyelam."
+                    "Mesin Cuci Timer Putar bekerja secara kaku mengikuti putaran pegas knop manual tanpa menganalisis tingkat kebersihan baju di dalamnya.",
+                    "Mesin Biasa (Non-AI) mampu menyesuaikan diri dengan sangat cepat dan fleksibel apabila terjadi perubahan mendadak di lingkungannya.",
+                    "Alur berpikir kecerdasan buatan bekerja melalui tiga tahapan utama dengan urutan: Latihan Pola (Model) -> Pemberian Data (Input) -> Pengambilan Keputusan (Output)."
                 ],
-                correctAnswers: [true, true, false],
-                explanation: "Mengaku karya AI sebagai tulisan sendiri adalah plagiarisme. NLP melatih pemrosesan bahasa suara. Sensor mikrofon sepadan dengan telinga, bukan mata."
+                correctAnswers: [true, false, false],
+                explanation: "Mesin cuci timer konvensional bekerja statis sesuai waktu putar mekanis. Mesin biasa tidak adaptif. Alur berpikir AI yang benar adalah Input -> Model -> Output."
+            },
+            {
+                type: "true_false",
+                question: "Tentukan Benar atau Salah pada setiap pernyataan di bawah ini berkaitan dengan sikap halusinasi AI!",
+                statements: [
+                    "Fenomena Halusinasi AI terjadi karena mesin AI memprediksi susunan kata berikutnya berdasarkan rumus statistik, bukan karena mengetahui kebenaran mutlak.",
+                    "Sikap kritis yang benar saat menerima jawaban dari AI adalah langsung memercayainya 100% karena program komputer tidak pernah salah.",
+                    "Melakukan pemeriksaan ulang (double-check) kebenaran sejarah dari AI dapat dilakukan dengan membaca buku perpustakaan resmi atau mengunjungi situs web Kemendikbud."
+                ],
+                correctAnswers: [true, false, true],
+                explanation: "Halusinasi AI terjadi akibat prediksi probabilistik kata tanpa pemahaman fakta nyata. Jangan pernah percaya 100% pada AI tanpa double-check di sumber resmi."
+            },
+            {
+                type: "true_false",
+                question: "Tentukan Benar atau Salah pada setiap pernyataan di bawah ini berkaitan dengan kejujuran akademis sekolah dan plagiarisme dalam hal pemanfaatan KA!",
+                statements: [
+                    "Menggunakan AI seperti ChatGPT untuk sekadar membantu mencari ide awal cerita atau memahami rumus matematika yang sulit dinilai melanggar kejujuran akademis.",
+                    "Menyalin 100% hasil karangan teks dari AI secara langsung tanpa berpikir dan mengumpulkannya ke guru sebagai tugas pribadi disebut plagiarisme.",
+                    "Tindakan plagiarisme memberikan banyak manfaat karena melatih saraf kreativitas dan mengasah logika berpikir kritis kita sendiri."
+                ],
+                correctAnswers: [false, true, false],
+                explanation: "Menggunakan AI untuk mencari inspirasi atau bantuan pemahaman diperbolehkan. Menyalin mentah-mentah adalah plagiarisme yang menghambat proses belajar mandiri."
+            },
+            {
+                type: "true_false",
+                question: "Tentukan Benar atau Salah pada setiap pernyataan di bawah ini berkaitan dengan Asisten suara dan manipulasi wajah!",
+                statements: [
+                    "Siri dan Google Assistant merupakan contoh asisten suara pintar yang memanfaatkan teknologi Natural Language Processing (NLP).",
+                    "Mengedit foto wajah teman tanpa izinnya menggunakan generator AI untuk lucu-lucuan tidak melanggar etika privasi digital selama dibagikan di grup WA kelas sendiri.",
+                    "Deepfake adalah teknik manipulasi gambar, video, atau suara palsu berbasis AI yang terlihat sangat nyata sehingga berpotensi menipu orang banyak."
+                ],
+                correctAnswers: [true, false, true],
+                explanation: "Siri/Google Assistant menggunakan NLP untuk memahami suara. Mengedit foto wajah teman tanpa izin jelas melanggar privasi. Deepfake berpotensi menyebarkan hoax."
             }
         ];
 
         const matchingQuestions = [
             {
                 type: "matching",
-                question: "Jodohkan organ indra biologis manusia di sebelah kiri dengan sensor elektronik robot padanannya di sebelah kanan!",
-                leftItems: ["Mata (Melihat)", "Telinga (Mendengar)", "Kulit (Meraba Jarak)", "Hidung (Membau Asap)"],
-                rightItems: ["Sensor Gas MQ-2", "Sensor Jarak Ultrasonik", "Kamera LDR / Sensor Cahaya", "Sensor Mikrofon Suara"],
-                correctPairs: { 0: 2, 1: 3, 2: 1, 3: 0 },
-                explanation: "Mata = Kamera/LDR, Telinga = Mikrofon, Kulit = Ultrasonik, Hidung = Gas MQ-2."
-            },
-            {
-                type: "matching",
-                question: "Jodohkan nama benda berikut dengan kategori klasifikasi kecerdasan teknologi yang tepat!",
-                leftItems: ["Sapu Ijuk Tradisional", "Kipas Angin Dinding Manual", "Smart Vacuum Cleaner", "Asisten Voice Assistant (Siri)"],
-                rightItems: ["Mesin Cerdas (Software AI)", "Mesin Cerdas (Hardware AI)", "Mesin Elektrik Biasa (Non-AI)", "Alat Fisik Manual"],
+                question: "Pasangkan antara Kolom A dengan Kolom B berkaitan dengan Padanan Indra Biologis dan Sensor Elektronik!",
+                leftItems: ["Telinga", "Kulit", "Hidung", "Mata"],
+                rightItems: [
+                    "Kamera / Sensor Cahaya (LDR)",
+                    "Sensor Gas MQ-2",
+                    "Sensor Jarak Ultrasonik / Termal",
+                    "Sensor Mikrofon Suara"
+                ],
                 correctPairs: { 0: 3, 1: 2, 2: 1, 3: 0 },
-                explanation: "Sapu Ijuk = Alat Fisik Manual. Kipas angin ditarik tali = Mesin Elektrik Biasa. Smart Vacuum = Hardware AI. Siri = Software AI."
+                explanation: "Telinga berpasangan dengan Mikrofon. Kulit dengan Jarak/Termal. Hidung dengan MQ-2 (gas). Mata dengan Kamera/LDR."
             },
             {
                 type: "matching",
-                question: "Jodohkan penyalahgunaan atau keterbatasan AI berikut dengan istilah definisinya yang tepat!",
-                leftItems: ["Deepfake", "Halusinasi AI", "Plagiarisme AI", "Cyberbullying"],
-                rightItems: ["AI mengarang info bohong yang terlihat sangat meyakinkan", "Mengaku karya AI 100% sebagai milik pribadi untuk tugas", "Menggunakan hasil manipulasi foto AI untuk menghina teman", "Manipulasi gambar wajah/suara palsu yang terlihat sangat nyata"],
-                correctPairs: { 0: 3, 1: 0, 2: 1, 3: 2 },
-                explanation: "Deepfake = manipulasi palsu nyata. Halusinasi = mengarang info bohong meyakinkan. Plagiarisme = mengaku karya AI sebagai milik sendiri. Cyberbullying = menghina teman lewat media digital."
+                question: "Pasangkan antara Kolom A dengan Kolom B berkaitan dengan Studi Kasus Penerapan Alat di Dunia Nyata!",
+                leftItems: ["Robot pembersih Pantai", "Robot Evakuasi bencana", "Smart Vacuum Cleaner", "Mobil Tesla Autopilot"],
+                rightItems: [
+                    "Menggunakan penggabungan kamera dan sensor jarak untuk mengemudi sendiri serta mendeteksi garis marka jalan secara otomatis.",
+                    "Menggunakan sensor Kamera untuk melihat dan membedakan mana sampah plastik dan pasir pantai.",
+                    "Menggunakan sensor LiDAR untuk memetakan tata letak meja di rumah dan otomatis kembali ke tempat pengisian daya (charging dock).",
+                    "Menggunakan sensor Ultrasonik dan Termal untuk mendeteksi reruntuhan dan mencari sisa panas tubuh korban yang terjebak."
+                ],
+                correctPairs: { 0: 1, 1: 3, 2: 2, 3: 0 },
+                explanation: "Pembersih pantai memakai kamera pemilah sampah. Evakuasi bencana memakai ultrasonik/termal. Smart vacuum memakai LiDAR untuk navigasi. Tesla Autopilot mengemudi otonom dengan kamera & jarak."
             },
             {
                 type: "matching",
-                question: "Jodohkan langkah proses berpikir sirkuit AI dengan contoh aktivitas kegiatannya sehari-hari!",
-                leftItems: ["Pemberian Input Data", "Latihan Pola (Model)", "Pengambilan Keputusan", "Output Hasil Akhir"],
-                rightItems: ["Menyimpulkan gambar baru di depannya adalah Kucing", "Mengaktifkan lampu sirine merah tanda ada bahaya gas", "Merekam 1000 foto rambu lalu lintas ke memori", "Mempelajari kesamaan letak mata dan kuping kucing"],
-                correctPairs: { 0: 2, 1: 3, 2: 0, 3: 1 },
-                explanation: "Input = Merekam data. Latihan = Mempelajari kesamaan ciri. Keputusan = Menyimpulkan tebakan baru. Output = Aksi nyata (misalnya lampu sirine)."
+                question: "Pasangkan antara antara Kolom A dengan Kolom B berkaitan dengan konsep kunci kecerdasan artifisial!",
+                leftItems: ["Machine Learning", "Keputusan Fleksibel", "Input Sensor Aktif", "Mesin Biasa (Non-AI)"],
+                rightItems: [
+                    "Kemampuan komputer untuk mempelajari pola tertentu secara mandiri setelah diberikan tumpukan ribuan data contoh.",
+                    "Sistem yang terus membaca dunia luar secara langsung (real-time) untuk memperbarui peta tindakan keselamatannya.",
+                    "Bekerja secara kaku, berulang-ulang, dan murni mengikuti instruksi sirkuit kabel fisik langsung sejak awal.",
+                    "Keputusan tindakan mesin berubah secara dinamis berdasarkan data baru yang masuk dari sensor, bukan mengulang gerakan kaku."
+                ],
+                correctPairs: { 0: 0, 1: 3, 2: 1, 3: 2 },
+                explanation: "Machine learning melatih komputer mandiri. Keputusan fleksibel mengubah aksi secara dinamis. Input sensor aktif membaca real-time. Mesin biasa bekerja kaku mengikuti sirkuit kabel."
             },
             {
                 type: "matching",
-                question: "Jodohkan jenis sensor berikut dengan fungsi penyelamatan utamanya pada robot evakuasi bencana!",
-                leftItems: ["Sensor LDR", "Sensor MQ-2", "Sensor Ultrasonik", "Sensor Termal"],
-                rightItems: ["Mendeteksi sisa panas tubuh korban di dalam reruntuhan", "Mengetahui letak gas beracun sisa kebakaran gedung", "Mengukur jarak lubang dalam agar robot tidak terperosok", "Membaca tingkat kegelapan lorong bawah tanah"],
-                correctPairs: { 0: 3, 1: 1, 2: 2, 3: 0 },
-                explanation: "LDR = kegelapan lorong. MQ-2 = gas beracun. Ultrasonik = ukur jarak lubang runtuhan. Termal = panas tubuh korban."
+                question: "Pasangkan antara Kolom A dengan Kolom B berkaitan dengan Alur Berpikir Sistem Kerja AI & Indra !",
+                leftItems: ["Pemberian Data (Input)", "Latihan Pengenalan Pola (Model)", "Pengambilan Keputusan (Output)", "Otak Manusia"],
+                rightItems: [
+                    "Algoritma komputer mempelajari perbedaan intonasi dan dialek suara yang masuk secara statistik.",
+                    "Memasukkan data mentah ke memori komputer, seperti merekam 1000 jenis suara manusia.",
+                    "Pusat penerima data biologis dari sel saraf sehingga manusia langsung memahami lingkungannya.",
+                    "Saat didengarkan suara baru, mesin mampu menerjemahkannya ke dalam tulisan digital dengan tepat."
+                ],
+                correctPairs: { 0: 1, 1: 0, 2: 3, 3: 2 },
+                explanation: "Input = perekaman data. Model = mempelajari perbedaan intonasi. Output = penerjemahan suara baru. Otak Manusia = pusat penerimaan data biologis."
+            },
+            {
+                type: "matching",
+                question: "Pasangkan antara Kolom A dengan Kolom B berkaitan dengan Kamus Istilah Penting (Glosarium)!",
+                leftItems: ["Plagiarisme", "AI Hallucination", "Deepfake", "Natural Language Processing (NLP)"],
+                rightItems: [
+                    "Teknik manipulasi gambar, video, atau suara palsu berbasis AI yang terlihat sangat nyata sehingga berpotensi menipu.",
+                    "Tindakan menjiplak atau mengambil karya orang lain (termasuk buatan AI) dan mengakuinya sebagai hasil karya pribadi tanpa mencantumkan sumber asli.",
+                    "Teknologi AI yang melatih komputer agar bisa memahami, merespons, dan mengolah bahasa alami lisan maupun tulisan manusia.",
+                    "Kesalahan sistem pada AI bahasa yang menghasilkan informasi palsu, salah fakta, atau fiksi murni namun ditulis dengan gaya bahasa sangat meyakinkan."
+                ],
+                correctPairs: { 0: 1, 1: 3, 2: 0, 3: 2 },
+                explanation: "Plagiarisme adalah tindakan menjiplak. AI Hallucination adalah info fiksi meyakinkan. Deepfake adalah manipulasi gambar/suara palsu. NLP melatih komputer memahami bahasa alami."
             }
         ];
 
@@ -505,11 +530,10 @@
 
             const [activeTab, setActiveTab] = useState('home');
             
-            // Mengubah system Poin acak menjadi Nilai langsung per Misi (Skala 0 - 100)
             const [misi1Nilai, setMisi1Nilai] = useState(0);
             const [misi2Nilai, setMisi2Nilai] = useState(0);
             const [misi3Nilai, setMisi3Nilai] = useState(0);
-            const [quizScore, setQuizScore] = useState(null); // Nilai Ujian (Skala 0 - 100)
+            const [quizScore, setQuizScore] = useState(null); 
 
             const [studentName, setStudentName] = useState('');
             const [isRegistered, setIsRegistered] = useState(false);
@@ -537,14 +561,12 @@
                 kebocoran: false  
             });
 
-            // Misi 1: Ditambah menjadi tepat 5 Soal/Pasangan
             const [selectedHuman, setSelectedHuman] = useState(null);
             const [selectedRobot, setSelectedRobot] = useState(null);
             const [misi1Feedback, setMisi1Feedback] = useState('');
             const [misi1Completed, setMisi1Completed] = useState(false);
             const [misi1Matches, setMisi1Matches] = useState([]);
 
-            // Misi 2: Tepat 5 Objek Sortir
             const [analyzedMachine, setAnalyzedMachine] = useState(null);
             const [analysisChecklist, setAnalysisChecklist] = useState({
                 bisaBelajar: false,
@@ -556,13 +578,11 @@
             const [misi2Feedback, setMisi2Feedback] = useState('');
             const [misi2Completed, setMisi2Completed] = useState(false);
 
-            // Misi 3: Tepat 5 Kasus Skenario
             const [currentScenario, setCurrentScenario] = useState(0);
             const [scenarioAnswers, setScenarioAnswers] = useState({});
             const [misi3Feedback, setMisi3Feedback] = useState('');
             const [misi3Completed, setMisi3Completed] = useState(false);
 
-            // Misi 4: State Ujian
             const [currentQuiz, setCurrentQuiz] = useState(0);
             const [quizAnswers, setQuizAnswers] = useState({});
             const [quizSubmitted, setQuizSubmitted] = useState(false);
@@ -592,7 +612,6 @@
                 setTimeout(() => setToastMessage(''), 3000);
             };
 
-            // Firebase Auth Setup
             useEffect(() => {
                 const initAuth = async () => {
                     try {
@@ -623,7 +642,6 @@
                 return () => unsubscribe();
             }, [classCode]);
 
-            // Database Live Sync
             useEffect(() => {
                 if (!user || firebaseConfig.apiKey === "preview-api-key") return;
                 
@@ -680,7 +698,6 @@
                 }
             };
 
-            // DATA MISI 1: Ditambah menjadi 5 Soal/Pasangan
             const sensingData = {
                 human: [
                     { id: 'h1', name: 'Mata (Melihat)', desc: 'Menerima rangsangan gelombang cahaya biologis.', icon: Icons.Eye, color: 'bg-blue-100 text-blue-600 border-blue-300' },
@@ -698,7 +715,6 @@
                 ]
             };
 
-            // DATA MISI 2: Disesuaikan Menjadi Tepat 5 Objek
             const itemsToSort = [
                 { id: 'm1', name: 'Robot Pembersih (Smart Vacuum)', desc: 'Dapat memetakan rute rumahmu, mendeteksi debu tebal secara pintar, dan langsung putar arah saat berjarak dekat dengan kaki lemari.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Smart Vacuum menggunakan sensor jarak ultrasonik dan pemetaan laser LIDAR untuk belajar kondisi rumah dan mengambil keputusan arah secara dinamis.' },
                 { id: 'm2', name: 'Sapu Ijuk Tradisional', desc: 'Hanya akan membersihkan lantai jika didorong maju mundur secara bertenaga oleh tanganmu.', isCerdas: false, features: { bisaBelajar: false, bisaMemilih: false, bekerjaKaku: true }, explanation: 'Sapu ijuk biasa adalah alat mekanis manual tanpa sirkuit, daya baterai, ataupun logika sirkuit komputer apa pun.' },
@@ -707,7 +723,6 @@
                 { id: 'm5', name: 'Asisten Suara Pintar (Google Assistant)', desc: 'Mampu menerjemahkan suara lisan bahasamu ke dalam teks digital, memahami konteks pertanyaan, dan menjawabnya dengan intonasi ramah.', isCerdas: true, features: { bisaBelajar: true, bisaMemilih: true, bekerjaKaku: false }, explanation: 'Asisten pintar menggunakan Natural Language Processing (NLP) yang terus dilatih mempelajari dialek bahasa manusia baru.' }
             ];
 
-            // DATA MISI 3: Ditambah Menjadi Tepat 5 Skenario Kasus
             const scenarios = [
                 {
                     id: 1,
@@ -723,7 +738,7 @@
                     title: '📝 Kasus 2: PR Menulis Cerita Pendek (Plagiarisme & Kejujuran)',
                     situation: 'Ibu Guru memberi tugas membuat karangan bebas sepanjang 3 paragraf. Temanmu memberi tahu bahwa kamu tinggal mengetik perintah di AI pembuat teks, lalu menyalin hasilnya dalam waktu 5 detik. Bagaimana sikap jujurmu?',
                     options: [
-                        { id: 'a', text: 'Menyalin seluruh tulisan buatan AI dan mengumpulkannya seolah-olah itu murni hasil tulisan tangan dan ide kepalamu sendiri.', isCorrect: false, feedback: 'Kurang tepat. Mengaku karya AI sepenuhnya sebagai milikmu adalah tindakan tidak jujur (plagiarisme). Otakmu kehilangan kesempatan belajar berpikir kreatif!' },
+                        { id: 'a', text: 'Menyalin seluruh tulisan buatan AI and mengumpulkannya seolah-olah itu murni hasil tulisan tangan dan ide kepalamu sendiri.', isCorrect: false, feedback: 'Kurang tepat. Mengaku karya AI sepenuhnya sebagai milikmu adalah tindakan tidak jujur (plagiarisme). Otakmu kehilangan kesempatan belajar berpikir kreatif!' },
                         { id: 'b', text: 'Menggunakan AI hanya untuk bertukar ide tema cerita, lalu merangkai kata demi kata menggunakan imajinasi dan ketikan tanganmu sendiri.', isCorrect: true, feedback: 'Luar biasa jujur! Menggunakan AI sebagai rekan diskusi sangat dianjurkan, namun hasil akhir wajib merupakan keringat kreatifmu sendiri.' }
                     ]
                 },
@@ -821,7 +836,6 @@
                     ];
                 });
                 
-                // Menambahkan deklarasi sep=, agar Excel langsung membagi data ke kolom yang benar secara otomatis
                 let csvContent = "\uFEFFsep=,\r\n"; 
                 csvContent += [headers.join(','), ...rows.map(e => e.map(val => `"${val}"`).join(','))].join('\r\n');
                 
@@ -835,7 +849,6 @@
                 document.body.removeChild(link);
             };
 
-            // Fungsi untuk menghitung nilai per soal berdasarkan kriteria penilaian baru
             const calculateQuestionScore = (q, ans) => {
                 if (ans === undefined || ans === null) {
                     return { score: 0, max: q.type === 'mc' ? 2 : q.type === 'complex_mc' ? 6 : q.type === 'true_false' ? 6 : 4 };
@@ -848,10 +861,8 @@
                 
                 if (q.type === 'complex_mc') {
                     if (!Array.isArray(ans)) return { score: 0, max: 6 };
-                    // Menghitung berapa pilihan siswa yang masuk dalam daftar kunci jawaban
                     const correctCount = ans.filter(opt => q.correctAnswers.includes(opt)).length;
                     
-                    // Pedoman 2: jika salah 1 (benar 2) skor 4, jika salah 2 (benar 1) skor 2, jika salah semua skor 0
                     let score = 0;
                     if (correctCount === 3) score = 6;
                     else if (correctCount === 2) score = 4;
@@ -869,7 +880,6 @@
                         }
                     }
                     
-                    // Pedoman 3: jika 3 benar skor 6, jika 2 benar skor 4, jika 1 benar skor 2, jika salah semua skor 0
                     let score = 0;
                     if (correctCount === 3) score = 6;
                     else if (correctCount === 2) score = 4;
@@ -887,8 +897,6 @@
                         }
                     }
                     
-                    // Pedoman 4: Pasangan benar dapat skor maksimal 4, jika ada salah tinggal dikurangi 1 per kesalahan
-                    // 4 Benar = 4, 3 Benar = 3, 2 Benar = 2, 1 Benar = 1, 0 Benar = 0
                     const score = correctCount;
                     return { score, max: 4, correctCount };
                 }
@@ -902,7 +910,6 @@
                     const res = calculateQuestionScore(q, ans);
                     totalRawScore += res.score;
                 });
-                // Skala maksimal total skor mentah adalah tepat 100
                 return totalRawScore;
             };
 
@@ -914,7 +921,6 @@
                     setMisi1Matches(newMatches);
                     setMisi1Feedback('Benar! Pasangan serasi! 🎉');
                     
-                    // Skala 5 pasang: Setiap pasangan benar bernilai 20 Nilai
                     const currentNilai = newMatches.length * 20;
                     setMisi1Nilai(currentNilai);
                     syncProgressToDb({ misi1Nilai: currentNilai });
@@ -964,7 +970,7 @@
                     }
                     
                     const totalSorted = nextCerdas.length + nextBiasa.length;
-                    const calculatedNilai = totalSorted * 20; // Tepat 5 Soal, @20 nilai
+                    const calculatedNilai = totalSorted * 20; 
                     setMisi2Nilai(calculatedNilai);
 
                     let isComplete = false;
@@ -992,7 +998,7 @@
                     setSortedItems({ cerdas: nextCerdas, biasa: nextBiasa });
                     
                     const totalSorted = nextCerdas.length + nextBiasa.length;
-                    const calculatedNilai = totalSorted * 20; // Tepat 5 Soal, @20 nilai
+                    const calculatedNilai = totalSorted * 20; 
                     setMisi2Nilai(calculatedNilai);
 
                     let isComplete = false;
@@ -1030,7 +1036,6 @@
                     setMisi3Feedback(`Bahan Evaluasi: ${option.feedback}`);
                 }
 
-                // Hitung nilai dinamis berdasarkan jumlah jawaban yang BENAR dari 5 Kasus
                 const answeredCount = Object.keys({ ...scenarioAnswers, [currentScenario]: option.id }).length;
                 let correctCount = 0;
                 
@@ -1044,7 +1049,7 @@
                     }
                 });
 
-                const currentNilai = correctCount * 20; // 5 Soal, @20 nilai
+                const currentNilai = correctCount * 20; 
                 setMisi3Nilai(currentNilai);
 
                 let isComplete = false;
@@ -1109,7 +1114,6 @@
                 student.name?.toLowerCase().includes(searchFilter.toLowerCase())
             );
 
-            // Handler Interaksi Ujian Multi-Format
             const handleComplexMCToggle = (optionIdx) => {
                 let nextSelections;
                 if (tempComplexSelections.includes(optionIdx)) {
@@ -1159,13 +1163,11 @@
                 handleQuizAnswer(nextMatching);
             };
 
-            // Hitung rata-rata nilai siswa aktif
             const averageNilaiLive = Math.round(((misi1Nilai || 0) + (misi2Nilai || 0) + (misi3Nilai || 0) + (quizScore || 0)) / 4);
 
             return (
                 <div className="min-h-screen bg-indigo-50/50 font-sans text-gray-800 flex flex-col justify-between">
                     
-                    {/* Header bar */}
                     <header className="bg-white border-b-2 border-indigo-100 sticky top-0 z-50 shadow-sm">
                         <div className="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center flex-wrap gap-3">
                             <div className="flex items-center space-x-3">
@@ -1173,7 +1175,7 @@
                                     <Icons.Brain className="w-6 h-6 animate-pulse" />
                                 </div>
                                 <div>
-                                    <h1 className="font-black text-indigo-955 text-sm md:text-xl tracking-wide flex items-center gap-1">
+                                    <h1 className="font-black text-indigo-950 text-sm md:text-xl tracking-wide flex items-center gap-1">
                                         AI EXPLORER QUEST <span className="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">V3.0-NILAI</span>
                                     </h1>
                                     <p className="text-xs text-indigo-500 font-semibold">
@@ -1204,9 +1206,8 @@
                         </div>
                     </header>
 
-                    {/* Toast Notification */}
                     {toastMessage && (
-                        <div className="fixed bottom-5 right-5 z-50 bg-indigo-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-indigo-750 flex items-center gap-2 animate-bounce">
+                        <div className="fixed bottom-5 right-5 z-50 bg-indigo-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-indigo-700 flex items-center gap-2 animate-bounce">
                             <Icons.Check className="w-5 h-5 text-emerald-400" />
                             <span className="text-xs font-bold">{toastMessage}</span>
                         </div>
@@ -1214,7 +1215,6 @@
 
                     <main className="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
                         
-                        {/* LANDING / REGISTRASI */}
                         {!isRegistered && !isTeacherMode ? (
                             <div className="max-w-xl mx-auto bg-white rounded-[32px] shadow-xl border-4 border-indigo-100 overflow-hidden mt-6">
                                 <div className="p-8 bg-gradient-to-r from-indigo-600 to-indigo-800 text-center text-white relative">
@@ -1229,8 +1229,7 @@
                                 </div>
                                 
                                 <div className="p-8 space-y-6">
-                                    {/* Pemilih Kelas Manual Jika Butuh Ganti */}
-                                    <div className="bg-indigo-50 border border-indigo-150 p-4 rounded-2xl">
+                                    <div className="bg-indigo-50 border border-indigo-100 p-4 rounded-2xl">
                                         <label className="block text-[10px] font-black text-indigo-900 uppercase tracking-wider mb-1">Pilih Gurumu:</label>
                                         <select 
                                             value={classCode} 
@@ -1260,7 +1259,7 @@
                                             value={studentName}
                                             onChange={(e) => setStudentName(e.target.value)}
                                             placeholder="Masukkan namamu (contoh: Keysha)" 
-                                            className="w-full px-4 py-3.5 border-2 border-indigo-150 rounded-2xl focus:outline-none focus:border-indigo-600 text-gray-700 font-bold transition text-base shadow-sm"
+                                            className="w-full px-4 py-3.5 border-2 border-indigo-100 rounded-2xl focus:outline-none focus:border-indigo-600 text-gray-700 font-bold transition text-base shadow-sm"
                                         />
                                     </div>
                                     
@@ -1276,7 +1275,6 @@
                         ) : (
                             <div className="space-y-8">
                                 
-                                {/* Navigasi Utama */}
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {[
                                         { id: 'home', label: 'Peta Misi', icon: Icons.Compass, color: 'indigo' },
@@ -1313,7 +1311,6 @@
                                     })}
                                 </div>
 
-                                {/* TAB CONTENT: HOME */}
                                 {activeTab === 'home' && (
                                     <div className="space-y-8 animate-fadeIn">
                                         <div className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-800 rounded-[32px] p-6 md:p-10 text-white shadow-xl relative overflow-hidden">
@@ -1341,9 +1338,8 @@
                                             </div>
                                         </div>
 
-                                        {}
                                         <div>
-                                            <h3 className="text-xl font-black text-indigo-955 flex items-center gap-2 mb-6">
+                                            <h3 className="text-xl font-black text-indigo-950 flex items-center gap-2 mb-6">
                                                 <Icons.Compass className="w-6 h-6 text-indigo-600" /> Jalur Peta Pembelajaranmu (Target Nilai: 100 per Misi):
                                             </h3>
                                             
@@ -1373,7 +1369,7 @@
                                                             <span className="bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-emerald-200">Misi 2</span>
                                                             <span className="text-xs font-black text-amber-600">Nilai: {misi2Nilai}/100</span>
                                                         </div>
-                                                        <h4 className="text-lg font-bold text-emerald-955 mb-2">Detektif AI Cerdas vs Biasa</h4>
+                                                        <h4 className="text-lg font-bold text-emerald-950 mb-2">Detektif AI Cerdas vs Biasa</h4>
                                                         <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                                             Pecahkan misteri pemikiran robot! Uji analisismu pada **5 Objek Mesin** sebelum disortir ke wadah yang tepat.
                                                         </p>
@@ -1392,7 +1388,7 @@
                                                             <span className="bg-rose-50 text-rose-700 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-rose-200">Misi 3</span>
                                                             <span className="text-xs font-black text-amber-600">Nilai: {misi3Nilai}/100</span>
                                                         </div>
-                                                        <h4 className="text-lg font-bold text-rose-955 mb-2">Etika, Empati & Privasi</h4>
+                                                        <h4 className="text-lg font-bold text-rose-950 mb-2">Etika, Empati & Privasi</h4>
                                                         <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                                             Kekuatan teknologi raksasa menuntut tanggung jawab moral. Latih caramu mengambil keputusan dalam **5 Kasus Simulasi Sosial**.
                                                         </p>
@@ -1409,14 +1405,13 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 1 (5 SOAL / PASANGAN) */}
                                 {activeTab === 'misi1' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-blue-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
                                             <div className="space-y-1">
                                                 <span className="text-xs font-extrabold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 uppercase tracking-widest">Tujuan Pembelajaran 1</span>
                                                 <div className="flex items-center gap-3">
-                                                    <h2 className="text-2xl md:text-3xl font-black text-blue-955">Misi 1: Sensor & Indra (5 Soal)</h2>
+                                                    <h2 className="text-2xl md:text-3xl font-black text-blue-950">Misi 1: Sensor & Indra (5 Soal)</h2>
                                                     <span className="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold px-3 py-1 rounded-xl text-xs">Nilai Misi: {misi1Nilai}/100</span>
                                                 </div>
                                             </div>
@@ -1428,7 +1423,6 @@
                                             </div>
                                         </div>
 
-                                        {/* LANGKAH 1: MATERI */}
                                         {misi1Step === 'materi' && (
                                             <div className="space-y-6">
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -1436,7 +1430,7 @@
                                                         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-2xl">
                                                             <h4 className="font-bold text-blue-900 text-sm">Bagaimana Caranya Komputer Mengenal Sekitarnya?</h4>
                                                             <p className="text-xs text-gray-700 leading-relaxed mt-1.5">
-                                                                Manusia diciptakan luar biasa dengan **organ tubuh alami biologis** yang disebut Panca Indra. Ketika lidah mengecap larutan asam, otak kita langsung paham "itu kecut". 
+                                                                Manusia diciptakan luar biasa dengan **organ tubuh alami biologis** yang disebut Panca Indra. Ketika lidah mengecap larutan asam, otak kita langsung paham \"itu kecut\". 
                                                                 Sedangkan komputer hanyalah mesin logam dan sirkuit mati. Komputer tidak punya sel mata atau kulit biologis. Agar bisa mengumpulkan data dunia luar, komputer dipasangkan perangkat sirkuit kecil elektronik khusus bernama **SENSOR**.
                                                             </p>
                                                         </div>
@@ -1446,7 +1440,7 @@
                                                     </div>
 
                                                     <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3 shadow-inner">
-                                                        <h4 className="font-extrabold text-xs text-indigo-955 uppercase tracking-wider text-center">Tabel Padanan Indra & Sensor</h4>
+                                                        <h4 className="font-extrabold text-xs text-indigo-950 uppercase tracking-wider text-center">Tabel Padanan Indra & Sensor</h4>
                                                         <div className="space-y-2">
                                                             <div className="grid grid-cols-2 gap-2 text-xs font-bold bg-indigo-600 text-white p-2 rounded-lg text-center">
                                                                 <span>🖐️ Indra Manusia (Biologis)</span>
@@ -1473,16 +1467,15 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 2: LAB SIMULATOR */}
                                         {misi1Step === 'simulator' && (
                                             <div className="space-y-6">
                                                 <div className="bg-amber-50 border border-amber-200 p-4 rounded-2xl text-xs text-amber-900 leading-relaxed">
-                                                    <strong>🧪 Petunjuk Laboratorium:</strong> Di bawah ini adalah panel sirkuit simulator robot pelindung rumah. Cobalah ubah kondisi cuaca dan bahaya lingkungan menggunakan tombol sakelar kontrol, lalu amati bagaimana organ indra manusia dan sirkuit sensor robot bereaksi menangkap perubahan secara bersamaan!
+                                                    <strong>🧪 Petunjuk Laboratorium:</strong> Di bawah ini adalah panel sirkuit simulator robot pelindung rumah. Cobalah ubah kondisi cuaca dan bahaya lingkungan menggunakan tombol sakelar kontrol, lalu amati bagaimana organ indra manusia and sirkuit sensor robot bereaksi menangkap perubahan secara bersamaan!
                                                 </div>
 
                                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                                     <div className="bg-white border-2 border-indigo-100 p-5 rounded-2xl shadow-sm space-y-4">
-                                                        <h4 className="font-black text-sm text-indigo-955 border-b pb-2 flex items-center gap-1.5"><Icons.Settings className="w-4 h-4 text-indigo-600" /> Sakelar Kondisi Lingkungan:</h4>
+                                                        <h4 className="font-black text-sm text-indigo-950 border-b pb-2 flex items-center gap-1.5"><Icons.Settings className="w-4 h-4 text-indigo-600" /> Sakelar Kondisi Lingkungan:</h4>
                                                         <div className="space-y-1.5">
                                                             <label className="text-[11px] font-extrabold text-gray-500 uppercase">Kondisi Ruangan:</label>
                                                             <div className="flex gap-2">
@@ -1522,7 +1515,7 @@
                                                     </div>
 
                                                     <div className="bg-emerald-50/50 border-2 border-dashed border-emerald-200 p-5 rounded-2xl space-y-4">
-                                                        <h4 className="font-bold text-sm text-emerald-955 border-b pb-2 flex items-center gap-1.5">🤖 Respons Elektronik Sensor Robot:</h4>
+                                                        <h4 className="font-bold text-sm text-emerald-950 border-b pb-2 flex items-center gap-1.5">🤖 Respons Elektronik Sensor Robot:</h4>
                                                         <div className="space-y-3">
                                                             <div className={`p-2.5 rounded-xl border text-xs transition ${simEnv.cahaya === 'gelap' ? 'bg-slate-900 border-slate-950 text-white' : 'bg-white border-gray-150'}`}>
                                                                 <strong>📷 Sensor LDR Cahaya:</strong> {simEnv.cahaya === 'gelap' ? 'Nilai LDR turun mendekati 0. Mengaktifkan lampu LED darurat secara instan.' : 'Nilai LDR mendeteksi cahaya matahari stabil di angka 800.'}
@@ -1543,7 +1536,6 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 3: GIM PENCOCOKAN (KINI 5 PASANG) */}
                                         {misi1Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1.5 max-w-xl mx-auto">
@@ -1604,7 +1596,7 @@
                                                     </div>
                                                 )}
 
-                                                {misi1Feedback && (<div className={`p-4 rounded-xl text-center font-bold text-sm border transition-all ${misi1Feedback.includes('Benar') ? 'bg-green-100 text-green-850 border-green-200' : 'bg-rose-100 text-rose-850 border-rose-200'}`}>{misi1Feedback}</div>)}
+                                                {misi1Feedback && (<div className={`p-4 rounded-xl text-center font-bold text-sm border transition-all ${misi1Feedback.includes('Benar') ? 'bg-green-100 text-green-800 border-green-200' : 'bg-rose-100 text-rose-800 border-rose-200'}`}>{misi1Feedback}</div>)}
 
                                                 <div className="p-4 bg-gray-50 rounded-2xl border">
                                                     <div className="flex justify-between text-xs font-bold text-gray-600 mb-2">
@@ -1619,7 +1611,7 @@
                                                 {misi1Completed && (
                                                     <div className="bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300 rounded-3xl p-6 text-center space-y-3">
                                                         <Icons.Trophy className="w-12 h-12 text-amber-500 mx-auto animate-bounce" />
-                                                        <h4 className="text-xl font-black text-emerald-955">Luar Biasa! Misi 1 Selesai! 🎉 Nilai: 100/100</h4>
+                                                        <h4 className="text-xl font-black text-emerald-950">Luar Biasa! Misi 1 Selesai! 🎉 Nilai: 100/100</h4>
                                                         <p className="text-xs text-emerald-800 max-w-md mx-auto leading-relaxed">Kamu hebat! Sekarang kamu tahu bahwa di dunia koding, sensor bekerja sebagai indera mekanis bagi mesin cerdas. Data belajarmu telah terkirim secara instan ke database!</p>
                                                         <button onClick={() => { setActiveTab('misi2'); setMisi2Step('materi'); }} className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 px-6 rounded-2xl transition text-xs shadow-md">Lanjut Ke Misi 2 (Detektif AI) <Icons.ChevronRight className="w-4 h-4" /></button>
                                                     </div>
@@ -1633,14 +1625,13 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 2 (KINI TEPAT 5 SOAL ALAT) */}
                                 {activeTab === 'misi2' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-emerald-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
                                             <div className="space-y-1">
                                                 <span className="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase tracking-widest">Tujuan Pembelajaran 2</span>
                                                 <div className="flex items-center gap-3">
-                                                    <h2 className="text-2xl md:text-3xl font-black text-emerald-955">Misi 2: Detektif Mesin Pintar vs Mesin Biasa (5 Soal)</h2>
+                                                    <h2 className="text-2xl md:text-3xl font-black text-emerald-950">Misi 2: Detektif Mesin Pintar vs Mesin Biasa (5 Soal)</h2>
                                                     <span className="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold px-3 py-1 rounded-xl text-xs">Nilai Misi: {misi2Nilai}/100</span>
                                                 </div>
                                             </div>
@@ -1652,13 +1643,12 @@
                                             </div>
                                         </div>
 
-                                        {/* LANGKAH 1: TEORI PEMBEDA */}
                                         {misi2Step === 'materi' && (
                                             <div className="space-y-6">
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                                                     <div className="space-y-4">
                                                         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-r-2xl">
-                                                            <h4 className="font-bold text-emerald-900 text-sm">Apa Sih yang Membuat Mesin Disebut "Cerdas"?</h4>
+                                                            <h4 className="font-bold text-emerald-900 text-sm">Apa Sih yang Membuat Mesin Disebut \"Cerdas\"?</h4>
                                                             <p className="text-xs text-gray-700 leading-relaxed mt-1.5">Apakah kipas angin otomatis berputar karena tombol dicolokkan ke listrik itu cerdas? **Tentu tidak!** Itu hanya kerja mekanis sakelar listrik yang kaku.</p>
                                                             <p className="text-xs text-gray-750 leading-relaxed mt-2 font-semibold">Tiga Kunci Utama Mesin Cerdas (Kecerdasan Artifisial / AI):</p>
                                                             <ul className="list-disc pl-4 text-xs text-gray-700 mt-1.5 space-y-1">
@@ -1693,10 +1683,9 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 2: MEJA ANALISIS */}
                                         {misi2Step === 'analisis' && (
                                             <div className="space-y-6">
-                                                <div className="bg-emerald-50 border border-emerald-150 p-4 rounded-2xl text-xs text-emerald-905">
+                                                <div className="bg-emerald-50 border border-emerald-155 p-4 rounded-2xl text-xs text-emerald-900">
                                                     <strong>🔬 Meja Uji Laboratorium AI:</strong> Pilih salah satu alat di bawah ini untuk dibawa ke meja uji. Centang kriteria perilakunya dengan benar untuk membuktikan apakah ia tergolong **Mesin Cerdas (AI)** atau hanya **Mesin Biasa (Non-AI)**! Setiap analisis yang tepat berkontribusi pada penambahan Nilai.
                                                 </div>
 
@@ -1710,7 +1699,7 @@
                                                     <div className="bg-gray-50 border-2 border-indigo-100 rounded-3xl p-6 space-y-5">
                                                         <div className="border-b pb-3">
                                                             <span className="bg-indigo-100 text-indigo-800 text-[10px] font-black px-2.5 py-1 rounded-full border border-indigo-200 uppercase">Objek Analisis</span>
-                                                            <h4 className="text-lg font-black text-indigo-955 mt-1">{analyzedMachine.name}</h4>
+                                                            <h4 className="text-lg font-black text-indigo-950 mt-1">{analyzedMachine.name}</h4>
                                                             <p className="text-xs text-gray-600 leading-relaxed mt-1">{analyzedMachine.desc}</p>
                                                         </div>
 
@@ -1735,9 +1724,9 @@
                                                         </div>
 
                                                         {analysisFeedback && (
-                                                            <div className={`p-4 rounded-xl text-xs font-bold border ${analysisFeedback.includes('Akurat') ? 'bg-green-100 text-green-900 border-green-255' : 'bg-rose-100 text-rose-900 border-rose-200'}`}>
+                                                            <div className={`p-4 rounded-xl text-xs font-bold border ${analysisFeedback.includes('Akurat') ? 'bg-green-100 text-green-900 border-green-200' : 'bg-rose-100 text-rose-900 border-rose-200'}`}>
                                                                 <p>{analysisFeedback}</p>
-                                                                {analysisFeedback.includes('Akurat') && (<p className="mt-2 text-indigo-955 font-medium italic border-t pt-2">💡 Penjelasan Ilmiah: {analyzedMachine.explanation}</p>)}
+                                                                {analysisFeedback.includes('Akurat') && (<p className="mt-2 text-indigo-950 font-medium italic border-t pt-2">💡 Penjelasan Ilmiah: {analyzedMachine.explanation}</p>)}
                                                             </div>
                                                         )}
                                                     </div>
@@ -1752,23 +1741,22 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 3: GIM SORTIR (TEPAT 5 ALAT) */}
                                         {misi2Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1 max-w-md mx-auto">
-                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">🕵️ Detektif Lapangan: Sortir 5 Objek!</h3>
+                                                    <h3 className="font-extrabold text-gray-900 text-base md:text-lg">⚙️ Detektif Lapangan: Sortir 5 Objek!</h3>
                                                     <p className="text-xs text-gray-500">Setiap objek yang disortir dengan benar ke wadahnya akan menambah **20 Nilai** (Maksimal 100 Nilai).</p>
                                                 </div>
 
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                     <div className="bg-emerald-50/50 border-2 border-emerald-200 rounded-3xl p-5 space-y-3 shadow-inner">
-                                                        <h4 className="font-black text-center text-sm text-emerald-955 flex items-center justify-center gap-1.5">🧠 Mesin Cerdas (Kecerdasan Artifisial)</h4>
+                                                        <h4 className="font-black text-center text-sm text-emerald-950 flex items-center justify-center gap-1.5">🧠 Mesin Cerdas (Kecerdasan Artifisial)</h4>
                                                         <div className="min-h-24 space-y-2">
                                                             {sortedItems.cerdas.length === 0 ? (
                                                                 <p className="text-center text-xs text-gray-400 pt-8 italic">Wadah kosong. Klasifikasikan di bawah!</p>
                                                             ) : (
                                                                 sortedItems.cerdas.map((i, idx) => (
-                                                                    <div key={idx} className="bg-white border border-emerald-300 p-2.5 rounded-xl text-xs font-bold text-emerald-955 flex justify-between items-center">
+                                                                    <div key={idx} className="bg-white border border-emerald-300 p-2.5 rounded-xl text-xs font-bold text-emerald-950 flex justify-between items-center">
                                                                         <span>🚀 {i.name}</span>
                                                                         <Icons.Check className="w-4 h-4 text-emerald-600" />
                                                                     </div>
@@ -1784,7 +1772,7 @@
                                                                 <p className="text-center text-xs text-gray-400 pt-8 italic">Wadah kosong. Klasifikasikan di bawah!</p>
                                                             ) : (
                                                                 sortedItems.biasa.map((i, idx) => (
-                                                                    <div key={idx} className="bg-white border border-amber-300 p-2.5 rounded-xl text-xs font-bold text-emerald-955 flex justify-between items-center">
+                                                                    <div key={idx} className="bg-white border border-amber-300 p-2.5 rounded-xl text-xs font-bold text-emerald-950 flex justify-between items-center">
                                                                         <span>⚡ {i.name}</span>
                                                                         <Icons.Check className="w-4 h-4 text-emerald-600" />
                                                                     </div>
@@ -1802,8 +1790,8 @@
                                                             return (
                                                                 <div key={item.id} className={`p-4 bg-white border rounded-2xl flex flex-col justify-between ${isAlreadySorted ? 'opacity-40 border-gray-100' : 'border-gray-200'}`}>
                                                                     <div>
-                                                                        <h5 className="font-bold text-xs text-indigo-955">{item.name}</h5>
-                                                                        <p className="text-[10px] text-gray-505 mt-1 line-clamp-2">{item.desc}</p>
+                                                                        <h5 className="font-bold text-xs text-indigo-950">{item.name}</h5>
+                                                                        <p className="text-[10px] text-gray-500 mt-1 line-clamp-2">{item.desc}</p>
                                                                     </div>
                                                                     <div className="flex gap-1.5 mt-3">
                                                                         <button disabled={isAlreadySorted} onClick={() => handleSortDirect(item, 'cerdas')} className="flex-1 py-1.5 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-100 disabled:text-gray-400 text-[10px] font-extrabold text-white rounded-lg transition">🧠 Cerdas</button>
@@ -1820,7 +1808,7 @@
                                                 {misi2Completed && (
                                                     <div className="bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300 rounded-3xl p-6 text-center space-y-3">
                                                         <Icons.Trophy className="w-12 h-12 text-amber-500 mx-auto animate-bounce" />
-                                                        <h4 className="text-xl font-black text-emerald-950">Hebat! Misi 2 Berhasil Diselesaikan! 🏆 Nilai: 100/100</h4>
+                                                        <h4 className="text-xl font-black text-emerald-955">Hebat! Misi 2 Berhasil Diselesaikan! 🏆 Nilai: 100/100</h4>
                                                         <p className="text-xs text-emerald-800 max-w-md mx-auto leading-relaxed">Kamu sangat jeli layaknya juri sains andal! Hasil pengelompokanmu berhasil disimpan online.</p>
                                                         <div className="flex justify-center gap-3">
                                                             <button onClick={resetMisi2} className="bg-white border border-gray-300 text-emerald-800 font-bold py-2 px-4 rounded-xl text-xs transition">Bermain Ulang Misi</button>
@@ -1830,14 +1818,13 @@
                                                 )}
 
                                                 <div className="flex justify-start">
-                                                    <button onClick={() => setMisi2Step('analisis')} className="bg-white border border-gray-355 text-gray-700 font-bold py-2 px-4 rounded-xl text-xs transition">Kembali Ke Meja Uji</button>
+                                                    <button onClick={() => setMisi2Step('analisis')} className="bg-white border border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-xl text-xs transition">Kembali Ke Meja Uji</button>
                                                 </div>
                                             </div>
                                         )}
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: MISI 3 (KINI TEPAT 5 KASUS) */}
                                 {activeTab === 'misi3' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-rose-100 space-y-8 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
@@ -1854,7 +1841,6 @@
                                             </div>
                                         </div>
 
-                                        {/* LANGKAH 1: MATERI */}
                                         {misi3Step === 'materi' && (
                                             <div className="space-y-6">
                                                 <div className="bg-rose-50 border-l-4 border-rose-500 p-5 rounded-r-2xl space-y-2">
@@ -1868,7 +1854,7 @@
                                                     <div className="bg-white border rounded-2xl p-4 space-y-2 shadow-sm">
                                                         <div className="bg-rose-100 text-rose-700 w-10 h-10 rounded-xl flex items-center justify-center font-bold">1</div>
                                                         <h5 className="font-bold text-xs text-gray-900">Empati & Menjaga Privasi</h5>
-                                                        <p className="text-[11px] text-gray-550 leading-relaxed">Selalu tanyakan diri sendiri: "Apakah tindakanku mengedit foto/video AI ini akan melukai perasaan orang lain?" Jangan bagikan apa pun tanpa izin temanmu.</p>
+                                                        <p className="text-[11px] text-gray-500 leading-relaxed">Selalu tanyakan diri sendiri: \"Apakah tindakanku mengedit foto/video AI ini akan melukai perasaan orang lain?\" Jangan bagikan apa pun tanpa izin temanmu.</p>
                                                     </div>
                                                     <div className="bg-white border rounded-2xl p-4 space-y-2 shadow-sm">
                                                         <div className="bg-rose-100 text-rose-700 w-10 h-10 rounded-xl flex items-center justify-center font-bold">2</div>
@@ -1887,12 +1873,11 @@
                                             </div>
                                         )}
 
-                                        {/* LANGKAH 2: GIM SKENARIO (KINI 5 KASUS) */}
                                         {misi3Step === 'game' && (
                                             <div className="space-y-6">
                                                 <div className="text-center space-y-1 max-w-md mx-auto">
                                                     <h3 className="font-extrabold text-gray-900 text-base md:text-lg">📖 Skenario Kasus: Pengambilan Keputusan</h3>
-                                                    <p className="text-xs text-gray-555">Bacalah tantangan situasi moral berikut, lalu pilih keputusan yang paling terpuji! Setiap keputusan benar bernilai **20 Nilai**.</p>
+                                                    <p className="text-xs text-gray-500">Bacalah tantangan situasi moral berikut, lalu pilih keputusan yang paling terpuji! Setiap keputusan benar bernilai **20 Nilai**.</p>
                                                 </div>
 
                                                 <div className="max-w-2xl mx-auto bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200 p-6 relative">
@@ -1913,7 +1898,7 @@
                                                     </div>
                                                 </div>
 
-                                                {misi3Feedback && (<div className={`p-4 max-w-2xl mx-auto rounded-xl text-center text-xs font-bold border leading-relaxed ${misi3Feedback.includes('Terpuji') ? 'bg-green-100 text-green-950 border-green-200' : 'bg-rose-100 text-rose-955 border-rose-200'}`}>{misi3Feedback}</div>)}
+                                                {misi3Feedback && (<div className={`p-4 max-w-2xl mx-auto rounded-xl text-center text-xs font-bold border leading-relaxed ${misi3Feedback.includes('Terpuji') ? 'bg-green-100 text-green-955 border-green-200' : 'bg-rose-100 text-rose-955 border-rose-200'}`}>{misi3Feedback}</div>)}
 
                                                 <div className="flex justify-center">
                                                     {scenarioAnswers[currentScenario] !== undefined && currentScenario + 1 < scenarios.length && (
@@ -1931,15 +1916,13 @@
                                                 )}
 
                                                 <div className="flex justify-start">
-                                                    <button onClick={() => setMisi3Step('materi')} className="bg-white border border-gray-355 text-gray-700 font-bold py-2 px-4 rounded-xl text-xs transition">Kembali Ke Aturan</button>
+                                                    <button onClick={() => setMisi3Step('materi')} className="bg-white border border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-xl text-xs transition">Kembali Ke Aturan</button>
                                                 </div>
                                             </div>
                                         )}
                                     </div>
                                 )}
 
-                                {}
-                                {/* TAB CONTENT: KUIS & KELULUSAN (25 SOAL DENGAN SISTEM PENILAIAN SPESIFIK & REVIEW JAWABAN TRANSPARAN) */}
                                 {activeTab === 'misi4' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-amber-100 space-y-6 animate-fadeIn">
                                         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-150 pb-5">
@@ -1955,7 +1938,6 @@
                                         {!quizSubmitted ? (
                                             <div className="max-w-3xl mx-auto space-y-6">
                                                 
-                                                {/* Progres Navigasi Grid Visual */}
                                                 <div className="space-y-2">
                                                     <label className="text-[10px] font-black text-gray-400 uppercase tracking-wider block">Navigasi Lembar Jawaban ({Object.keys(quizAnswers).length}/25 Terjawab):</label>
                                                     <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
@@ -1995,7 +1977,6 @@
                                                     <div className="bg-indigo-600 h-full transition-all duration-300" style={{ width: `${((currentQuiz) / quizQuestions.length) * 100}%` }}></div>
                                                 </div>
 
-                                                {/* Soal Panel */}
                                                 <div className="bg-indigo-50/50 border-2 border-indigo-100 p-5 rounded-2xl shadow-sm">
                                                     <p className="text-[10px] font-black text-indigo-500 uppercase tracking-wider mb-1">PERTANYAAN KUIS #{currentQuiz + 1}</p>
                                                     <h4 className="font-extrabold text-indigo-955 text-sm md:text-base leading-relaxed">
@@ -2003,15 +1984,12 @@
                                                     </h4>
                                                 </div>
 
-                                                {/* RENDERING BERDASARKAN FORMAT SOAL */}
-                                                
-                                                {/* FORMAT 1: PILIHAN GANDA BIASA (MC) */}
                                                 {quizQuestions[currentQuiz].type === 'mc' && (
                                                     <div className="space-y-2.5">
                                                         {quizQuestions[currentQuiz].options.map((opt, idx) => {
                                                             const isSelected = quizAnswers[currentQuiz] === idx;
                                                             return (
-                                                                <button key={idx} onClick={() => handleQuizAnswer(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md transform translate-x-1' : 'bg-white hover:bg-amber-50/50 hover:border-amber-300 border-gray-200 text-gray-800'}`}>
+                                                                <button key={idx} onClick={() => handleQuizAnswer(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md transform translate-x-1' : 'bg-white hover:bg-amber-50/50 hover:border-amber-300 border-gray-200 text-gray-850'}`}>
                                                                     <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 font-black border ${isSelected ? 'bg-indigo-500 text-white border-indigo-600' : 'bg-gray-100 text-gray-500'}`}>{String.fromCharCode(65 + idx)}</span>
                                                                     <span className="flex-1 leading-relaxed">{opt}</span>
                                                                 </button>
@@ -2020,10 +1998,9 @@
                                                     </div>
                                                 )}
 
-                                                {/* FORMAT 2: PILIHAN GANDA KOMPLEKS (COMPLEX_MC) */}
                                                 {quizQuestions[currentQuiz].type === 'complex_mc' && (
                                                     <div className="space-y-3">
-                                                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-805 font-bold mb-2 flex items-center gap-2">
+                                                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-850 font-bold mb-2 flex items-center gap-2">
                                                             <Icons.Lightbulb className="w-4 h-4 text-amber-500 shrink-0" />
                                                             <span>Petunjuk: Pilih tepat 3 pernyataan yang menurutmu benar! ({tempComplexSelections.length} / 3 terpilih)</span>
                                                         </div>
@@ -2031,7 +2008,7 @@
                                                             {quizQuestions[currentQuiz].options.map((opt, idx) => {
                                                                 const isSelected = tempComplexSelections.includes(idx);
                                                                 return (
-                                                                    <button key={idx} onClick={() => handleComplexMCToggle(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md' : 'bg-white hover:bg-indigo-50 border-gray-200 text-gray-855'}`}>
+                                                                    <button key={idx} onClick={() => handleComplexMCToggle(idx)} className={`w-full p-4 rounded-2xl text-left text-xs md:text-sm font-bold border transition-all flex items-start gap-3.5 ${isSelected ? 'bg-indigo-600 text-white border-indigo-700 shadow-md' : 'bg-white hover:bg-indigo-50 border-gray-200 text-gray-850'}`}>
                                                                         <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 font-black border ${isSelected ? 'bg-indigo-500 text-white border-indigo-600' : 'bg-gray-100 text-gray-500'}`}>{idx + 1}</span>
                                                                         <span className="flex-1 leading-relaxed">{opt}</span>
                                                                     </button>
@@ -2041,10 +2018,9 @@
                                                     </div>
                                                 )}
 
-                                                {/* FORMAT 3: BENAR / SALAH (TRUE_FALSE) */}
                                                 {quizQuestions[currentQuiz].type === 'true_false' && (
                                                     <div className="space-y-4">
-                                                        <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-xl text-xs text-emerald-805 font-bold mb-2 flex items-center gap-2">
+                                                        <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-xl text-xs text-emerald-850 font-bold mb-2 flex items-center gap-2">
                                                             <Icons.Lightbulb className="w-4 h-4 text-emerald-500 shrink-0" />
                                                             <span>Petunjuk: Tentukan status kebenaran tiap pernyataan di bawah ini!</span>
                                                         </div>
@@ -2058,8 +2034,8 @@
                                                                             <p className="text-xs md:text-sm text-gray-800 font-bold mt-1 inline">{statement}</p>
                                                                         </div>
                                                                         <div className="flex gap-2 shrink-0 pt-2 md:pt-0">
-                                                                            <button onClick={() => handleTrueFalseToggle(idx, true)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === true ? 'bg-emerald-600 text-white border-emerald-700 shadow-sm' : 'bg-white text-gray-750 border-gray-200 hover:bg-emerald-50'}`}>🟢 BENAR</button>
-                                                                            <button onClick={() => handleTrueFalseToggle(idx, false)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === false ? 'bg-rose-600 text-white border-rose-700 shadow-sm' : 'bg-white text-gray-750 border-gray-200 hover:bg-rose-50'}`}>🔴 SALAH</button>
+                                                                            <button onClick={() => handleTrueFalseToggle(idx, true)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === true ? 'bg-emerald-600 text-white border-emerald-700 shadow-sm' : 'bg-white text-gray-700 border-gray-200 hover:bg-emerald-50'}`}>🟢 BENAR</button>
+                                                                            <button onClick={() => handleTrueFalseToggle(idx, false)} className={`px-4 py-2 rounded-xl text-xs font-black border transition ${curValue === false ? 'bg-rose-600 text-white border-rose-700 shadow-sm' : 'bg-white text-gray-700 border-gray-200 hover:bg-rose-50'}`}>🔴 SALAH</button>
                                                                         </div>
                                                                     </div>
                                                                 );
@@ -2068,16 +2044,14 @@
                                                     </div>
                                                 )}
 
-                                                {/* FORMAT 4: MENJODOHKAN (MATCHING) */}
                                                 {quizQuestions[currentQuiz].type === 'matching' && (
                                                     <div className="space-y-6">
-                                                        <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-xl text-xs text-indigo-805 font-bold mb-2 flex items-center gap-2">
+                                                        <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-xl text-xs text-indigo-850 font-bold mb-2 flex items-center gap-2">
                                                             <Icons.Lightbulb className="w-4 h-4 text-indigo-500 shrink-0" />
                                                             <span>Petunjuk: Klik satu item di sebelah kiri, lalu klik pasangannya di sebelah kanan!</span>
                                                         </div>
 
                                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                            {/* Kolom Kiri */}
                                                             <div className="space-y-2">
                                                                 <p className="text-center text-[11px] font-black uppercase text-gray-400">Pertanyaan (Kiri)</p>
                                                                 {quizQuestions[currentQuiz].leftItems.map((leftVal, leftIdx) => {
@@ -2096,7 +2070,6 @@
                                                                 })}
                                                             </div>
 
-                                                            {/* Kolom Kanan */}
                                                             <div className="space-y-2">
                                                                 <p className="text-center text-[11px] font-black uppercase text-gray-400">Pilihan Pasangan (Kanan)</p>
                                                                 {quizQuestions[currentQuiz].rightItems.map((rightVal, rightIdx) => {
@@ -2111,10 +2084,9 @@
                                                             </div>
                                                         </div>
 
-                                                        {/* List Hasil Jodoh Sementara */}
                                                         {Object.keys(tempMatchingSelections).length > 0 && (
                                                             <div className="bg-gray-50 border p-4 rounded-2xl">
-                                                                <p className="text-[10px] font-black text-gray-400 uppercase tracking-wider mb-2">Daftar Pasangan yang Terbentuk:</p>
+                                                                <p className="text-[10px] font-black text-gray-400 uppercase tracking-wider mb-2">Daftar Pasangan yang Terhubung:</p>
                                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
                                                                     {Object.entries(tempMatchingSelections).map(([leftK, rightV]) => (
                                                                         <div key={leftK} className="bg-white border p-2 rounded-xl flex items-center justify-between font-bold">
@@ -2128,7 +2100,6 @@
                                                     </div>
                                                 )}
 
-                                                {/* Navigasi kuis bawah */}
                                                 <div className="flex justify-between pt-3 border-t">
                                                     <button
                                                         disabled={currentQuiz === 0}
@@ -2147,10 +2118,8 @@
                                                 </div>
                                             </div>
                                         ) : (
-                                            /* HASIL PENILAIAN & SERTIFIKAT DIGITAL + TRANSPARANSI REVIEW SOAL */
                                             <div className="max-w-3xl mx-auto space-y-8 animate-fadeIn">
                                                 
-                                                {/* Switch Tab Hasil */}
                                                 <div className="flex bg-gray-100 p-1.5 rounded-2xl border border-gray-200 max-w-sm mx-auto">
                                                     <button 
                                                         onClick={() => setShowReviewMode(false)} 
@@ -2167,7 +2136,6 @@
                                                 </div>
 
                                                 {!showReviewMode ? (
-                                                    /* TAMPILAN PIAGAM KELULUSAN */
                                                     <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-8 border-double border-emerald-400 rounded-[36px] p-6 md:p-10 text-center space-y-6 shadow-md relative overflow-hidden">
                                                         <div className="absolute top-0 right-0 w-24 h-24 bg-amber-400 text-amber-955 font-bold flex items-center justify-center rounded-bl-[36px] shadow-sm border-l border-b border-amber-300">
                                                             <Icons.Trophy className="w-10 h-10 text-amber-955 animate-bounce" />
@@ -2191,21 +2159,20 @@
 
                                                         <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto pt-4 text-xs font-bold text-emerald-900">
                                                             <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
-                                                                <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider">Nilai Ujian Akhir</p>
+                                                                <p className="text-[10px] text-gray-500 font-extrabold uppercase tracking-wider">Nilai Ujian Akhir</p>
                                                                 <p className="text-xl text-emerald-955 font-black">{quizScore} / 100</p>
                                                             </div>
                                                             <div className="bg-white/70 border border-emerald-200 p-3 rounded-xl shadow-inner">
-                                                                <p className="text-[10px] text-gray-550 font-extrabold uppercase tracking-wider font-mono">Nilai Rata-Rata</p>
+                                                                <p className="text-[10px] text-gray-500 font-extrabold uppercase tracking-wider font-mono">Nilai Rata-Rata</p>
                                                                 <p className="text-xl text-amber-600 font-black">{averageNilaiLive} / 100</p>
                                                             </div>
                                                         </div>
 
-                                                        <div className="pt-4 text-[10px] text-gray-550">
+                                                        <div className="pt-4 text-[10px] text-gray-500">
                                                             Disertifikasi secara digital oleh <strong className="text-emerald-900 font-extrabold">Kurikulum Merdeka Koding Indonesia</strong> pada Tahun 2026.
                                                         </div>
                                                     </div>
                                                 ) : (
-                                                    /* REVIEW TRANSPARAN JAWABAN SISWA */
                                                     <div className="space-y-6 animate-fadeIn">
                                                         <div className="bg-indigo-50 border border-indigo-200 p-5 rounded-2xl flex justify-between items-center flex-wrap gap-4">
                                                             <div>
@@ -2216,7 +2183,7 @@
                                                             </div>
                                                             <div className="bg-white border-2 border-indigo-200 px-4 py-2.5 rounded-xl text-center shadow-sm">
                                                                 <span className="text-[9px] uppercase font-black text-gray-400 block">TOTAL AKUMULASI NILAI</span>
-                                                                <strong className="text-indigo-950 text-2xl font-black">{quizScore} <span className="text-xs text-gray-450 font-semibold">/ 100</span></strong>
+                                                                <strong className="text-indigo-955 text-2xl font-black">{quizScore} <span className="text-xs text-gray-400 font-semibold">/ 100</span></strong>
                                                             </div>
                                                         </div>
 
@@ -2261,10 +2228,8 @@
 
                                                                         <p className="text-xs md:text-sm font-extrabold text-gray-900 mt-3 leading-relaxed">{q.question}</p>
 
-                                                                        {/* Tampilan Jawaban Siswa & Kunci */}
                                                                         <div className="mt-4 p-3.5 bg-gray-50 rounded-xl space-y-2 text-xs font-semibold">
                                                                             
-                                                                            {/* 1. PG Biasa */}
                                                                             {q.type === 'mc' && (
                                                                                 <div>
                                                                                     <p className="text-gray-600">Jawaban Kamu: <span className={isFullyCorrect ? 'text-emerald-700' : 'text-rose-700'}>{studentAns !== undefined ? `${String.fromCharCode(65 + studentAns)}. ${q.options[studentAns]}` : 'Belum Dijawab'}</span></p>
@@ -2274,7 +2239,6 @@
                                                                                 </div>
                                                                             )}
 
-                                                                            {/* 2. PG Kompleks */}
                                                                             {q.type === 'complex_mc' && (
                                                                                 <div className="space-y-1">
                                                                                     <p className="text-gray-600">Pernyataan yang Kamu Pilih:</p>
@@ -2292,11 +2256,10 @@
                                                                                 </div>
                                                                             )}
 
-                                                                            {/* 3. Benar Salah */}
                                                                             {q.type === 'true_false' && (
                                                                                 <div className="space-y-2">
                                                                                     <p className="text-gray-600">Evaluasi Pernyataan:</p>
-                                                                                    <ul className="space-y-1 pl-3 text-gray-750">
+                                                                                    <ul className="space-y-1 pl-3 text-gray-700">
                                                                                         {q.statements.map((stmt, sIdx) => {
                                                                                             const userVal = studentAns ? studentAns[sIdx] : null;
                                                                                             const correctVal = q.correctAnswers[sIdx];
@@ -2315,11 +2278,10 @@
                                                                                 </div>
                                                                             )}
 
-                                                                            {/* 4. Menjodohkan */}
                                                                             {q.type === 'matching' && (
                                                                                 <div className="space-y-2">
                                                                                     <p className="text-gray-600">Pasangan yang Kamu Hubungkan:</p>
-                                                                                    <ul className="space-y-1 pl-3 text-gray-750">
+                                                                                    <ul className="space-y-1 pl-3 text-gray-700">
                                                                                         {q.leftItems.map((leftV, leftI) => {
                                                                                             const userRightVal = studentAns ? studentAns[leftI] : null;
                                                                                             const correctRightVal = q.correctPairs[leftI];
@@ -2342,7 +2304,6 @@
 
                                                                         </div>
 
-                                                                        {/* Penjelasan Edukatif */}
                                                                         <div className="mt-3 border-t pt-2.5 flex items-start gap-2 text-xs text-gray-600">
                                                                             <Icons.Lightbulb className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                                                                             <p className="leading-relaxed italic">
@@ -2364,10 +2325,10 @@
                                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                                                         <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-150">
                                                             <h5 className="font-extrabold text-blue-900 mb-1 flex items-center gap-1">👁️ Padanan Sensor (Misi 1)</h5>
-                                                            <p className="text-gray-655 leading-relaxed">Mata biologis sepadan dengan sensor **Kamera LDR**. Telinga sepadan dengan **Sensor Mikrofon**. Kulit sepadan dengan **Ultrasonik**.</p>
+                                                            <p className="text-gray-550 leading-relaxed">Mata biologis sepadan dengan sensor **Kamera LDR**. Telinga sepadan dengan **Sensor Mikrofon**. Kulit sepadan dengan **Ultrasonik**.</p>
                                                         </div>
-                                                        <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-155">
-                                                            <h5 className="font-extrabold text-emerald-955 mb-1 flex items-center gap-1">🧠 Hakikat Mesin AI (Misi 2)</h5>
+                                                        <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-200">
+                                                            <h5 className="font-extrabold text-emerald-950 mb-1 flex items-center gap-1">🧠 Hakikat Mesin AI (Misi 2)</h5>
                                                             <p className="text-emerald-900 leading-relaxed">Mesin biasa bekerja kaku mengikuti program kaku sirkuit, sedangkan mesin berbasis **AI (Kecerdasan Artifisial)** belajar mandiri dari pola data.</p>
                                                         </div>
                                                         <div className="bg-rose-50/50 p-4 rounded-xl border border-rose-150">
@@ -2404,7 +2365,6 @@
                                     </div>
                                 )}
 
-                                {/* TAB CONTENT: REKAP KELAS */}
                                 {activeTab === 'rekap' && (
                                     <div className="bg-white rounded-[32px] p-6 md:p-8 shadow-md border border-indigo-100 space-y-8 animate-fadeIn">
                                         
@@ -2418,10 +2378,9 @@
                                             </p>
                                         </div>
 
-                                        {/* PENGATURAN DOMAIN SEKOLAH */}
                                         <div className="bg-amber-50 border border-amber-200 p-5 rounded-3xl space-y-3">
                                             <h4 className="font-extrabold text-sm text-amber-955 flex items-center gap-1.5">
-                                                ⚠️ Tips: Mengatasi Link Siswa Tidak Bisa Dibuka
+                                                ⚠️ Tips: Mengatasi Link Siswa Tidak Bisa Buku
                                             </h4>
                                             <p className="text-xs text-amber-900 leading-relaxed">
                                                 Jika Bapak/Ibu menyalin link langsung saat masih dalam mode <strong>Preview Editor</strong>, browser akan memblokir link tersebut karena dianggap sebagai URL sandbox sementara.
@@ -2455,7 +2414,6 @@
                                             </div>
                                         </div>
 
-                                        {/* GURU CARDS GRID */}
                                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                             {TEACHERS.map((teacher) => {
                                                 const isCurrentActive = classCode === teacher.code;
@@ -2482,7 +2440,6 @@
                                             })}
                                         </div>
 
-                                        {/* LEADERBOARD ZONE */}
                                         <div className="space-y-4 pt-4">
                                             <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-3">
                                                 <div>
@@ -2518,12 +2475,11 @@
                                                 </div>
                                             </div>
 
-                                            {/* Student Table */}
                                             <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                                                 <table className="w-full text-left text-xs border-collapse">
                                                     <thead>
                                                         <tr className="bg-indigo-900 text-white font-extrabold uppercase tracking-wider text-[10px]">
-                                                            <th className="p-4 border-b border-indigo-950">Nama Siswa</th>
+                                                            <th className="p-4 border-b border-indigo-955">Nama Siswa</th>
                                                             <th className="p-4 border-b border-indigo-955">ID Unik (UID)</th>
                                                             <th className="p-4 border-b border-indigo-955 text-center">Nilai Misi 1</th>
                                                             <th className="p-4 border-b border-indigo-955 text-center">Nilai Misi 2</th>
@@ -2540,7 +2496,7 @@
                                                             </tr>
                                                         ) : (
                                                             filteredStudents.map((student) => {
-                                                                const avgVal = Math.round(((student.misi1Nilai || 0) + (student.misi2Nilai || 0) + (student.misi3Nilai || 0) + (student.quizScore || 0)) / 4);
+                                                                const avgVal = Math.round(((student.misi1Nilai || 0) + (student.misi1Nilai || 0) + (student.misi3Nilai || 0) + (student.quizScore || 0)) / 4);
                                                                 return (
                                                                     <tr key={student.uid} className="hover:bg-indigo-50/30 transition-colors">
                                                                         <td className="p-4 font-bold text-indigo-955 text-sm">{student.name}</td>
@@ -2556,7 +2512,7 @@
                                                                         </td>
                                                                         <td className="p-4 text-center font-black text-indigo-900 text-sm">
                                                                             {student.quizScore !== undefined && student.quizScore !== null ? (
-                                                                                <span className="bg-indigo-100 border border-indigo-200 text-indigo-800 px-2 py-1 rounded-lg">{student.quizScore}</span>
+                                                                                <span className="bg-indigo-100 border border-indigo-200 text-indigo-850 px-2 py-1 rounded-lg">{student.quizScore}</span>
                                                                             ) : (
                                                                                 <span className="text-gray-300">-</span>
                                                                             )}
@@ -2574,10 +2530,9 @@
                                             </div>
                                         </div>
 
-                                        {/* INSTRUCTIONS */}
                                         <div className="bg-indigo-50/50 p-5 rounded-3xl border border-indigo-100 space-y-3">
                                             <h4 className="font-extrabold text-sm text-indigo-955 flex items-center gap-1.5">💡 Panduan Pemanfaatan Terdistribusi 4 Kelas:</h4>
-                                            <ul className="list-disc pl-4 text-xs text-gray-655 space-y-1.5 leading-relaxed">
+                                            <ul className="list-disc pl-4 text-xs text-gray-550 space-y-1.5 leading-relaxed">
                                                 <li>Berikan link dengan akhiran <code className="bg-indigo-100 px-1 py-0.5 rounded font-mono">?kelas=kelas-isa</code> kepada murid Bu Devika, akhiran <code className="bg-indigo-100 px-1 py-0.5 rounded font-mono">?kelas=kelas-yahya</code> kepada murid Bu Nana, dan seterusnya.</li>
                                                 <li>Ketika murid membuka link tersebut, mereka otomatis masuk ke dalam kelas guru masing-masing secara rapi dan tidak akan bercampur di papan kendali guru lainnya.</li>
                                                 <li>Setiap guru dapat membuka halaman **Portal Guru** ini dari komputer pendidik untuk mengunduh rekap nilai siswa mereka dalam format CSV/Excel.</li>
@@ -2589,7 +2544,6 @@
                         )}
                     </main>
 
-                    {/* Footer */}
                     <footer className="bg-indigo-950 text-white py-6 mt-20 border-t-4 border-indigo-900">
                         <div className="max-w-6xl mx-auto px-4 text-center space-y-2">
                             <p className="text-xs md:text-sm">Tercetak di Banjarnegara, Jawa Tengah | Dibuat dengan ❤️ untuk Sekolah Masa Depan Merdeka</p>
