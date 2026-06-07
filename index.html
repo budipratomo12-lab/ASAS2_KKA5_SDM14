@@ -47,6 +47,7 @@
   appId: "1:386075209574:web:a04942bf5edd28635be2a7",
   measurementId: "G-8FKH8NWFN7"
 };
+
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
         }
@@ -797,7 +798,7 @@
                     document.execCommand('copy');
                     showToast(`Tautan Guru ${teacherCode.toUpperCase()} berhasil disalin!`);
                 } catch (err) {
-                    console.error("Gagal menyalin link guru:", err);
+                    console.error("Gagal menyalin link:", err);
                 }
                 document.body.removeChild(el);
             };
@@ -820,7 +821,8 @@
                     ];
                 });
                 
-                let csvContent = "\uFEFF"; 
+                // Menambahkan deklarasi sep=, agar Excel langsung membagi data ke kolom yang benar secara otomatis
+                let csvContent = "\uFEFFsep=,\r\n"; 
                 csvContent += [headers.join(','), ...rows.map(e => e.map(val => `"${val}"`).join(','))].join('\r\n');
                 
                 const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
